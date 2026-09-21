@@ -7,7 +7,6 @@ import Footer from "../components/Footer/Footer";
 
 import Product from "../Pages/Products/Product";
 import ProductDetails from "../Pages/Products/ProductDetails";
-
 import About from "../Pages/About/About";
 import Search from "../Pages/Search";
 import Wishlist from "../Pages/Wishlist";
@@ -25,10 +24,27 @@ const ScrollToTop = () => {
 };
 
 const Router = () => {
+  const location = useLocation();
+
+  // 404 page check
+  const is404Page = ![
+    "/",
+    "/products",
+    "/about",
+    "/search",
+    "/wishlist",
+    "/cart",
+  ].includes(location.pathname) &&
+    !location.pathname.match(
+      /^\/products\/(garments|cosmetics|grocery)\/[^/]+$/
+    );
+
   return (
     <>
       <ScrollToTop />
       <Nav />
+      {/* Navbar 404 page par hide */}
+      {!is404Page && <Nav />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -38,6 +54,23 @@ const Router = () => {
           path="/products/:categorySlug/:productSlug"
           element={<ProductDetails />}
         />
+
+        <Route path="/products">
+          <Route
+            path="garments/:id"
+            element={<ProductDetails />}
+          />
+
+          <Route
+            path="cosmetics/:id"
+            element={<ProductDetails />}
+          />
+
+          <Route
+            path="grocery/:id"
+            element={<ProductDetails />}
+          />
+        </Route>
 
         <Route path="/about" element={<About />} />
 
@@ -50,7 +83,8 @@ const Router = () => {
         <Route path="*" element={<Page404 />} />
       </Routes>
 
-      <Footer />
+      {/* Footer 404 page par hide */}
+      {!is404Page && <Footer />}
     </>
   );
 };

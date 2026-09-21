@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
+<<<<<<< HEAD
 *::-webkit-scrollbar {
   display: none;
 }
+=======
+*::-webkit-scrollbar{
+    display: none;
+}
+
+.font-logo {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-nav {
+  font-family: 'DM Sans', sans-serif;
+}
+>>>>>>> 5a05511 (made cart, wishlist,about etc)
