@@ -10,7 +10,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="relative z-50 bg-[#F1E8DF] px-6 py-3 sm:px-8 lg:px-12 xl:px-20">
+    <nav className="w-full z-50 bg-[#F1E8DF] px-6 py-3 sm:px-8 lg:px-12 xl:px-20 border-b-1 fixed border-[#a9937d]">
       {/* Navbar Header */}
       <div className="flex items-center justify-between">
         {/* Logo */}

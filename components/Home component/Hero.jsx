@@ -4,7 +4,7 @@ import NewArival from "../../assists/img.png";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-[#F1E8DF] sm:flex-row">
+    <div className="flex flex-col items-center justify-center bg-[#F1E8DF] sm:flex-row pt-17">
 
       <div className="flex flex-col self-center mb-6 sm:self-end sm:mb-20">
 
@@ -12,7 +12,7 @@ const Hero = () => {
           New Arival
         </small>
 
-        <h1 className="text-3xl font-extrabold text-black sm:text-4xl md:text-5xl">
+        <h1 className="text-3xl font-extrabold text-[#E56B42] sm:text-4xl md:text-5xl">
           The Boxy Cross
         </h1>
 
