@@ -1,0 +1,1668 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Garments",
+      "slug": "garments",
+      "description": "Trendy and comfortable fashion for everyday wear.",
+      "products": [
+        {
+          "id": 101,
+          "name": "Oversized Cotton T-Shirt",
+          "slug": "oversized-cotton-t-shirt",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Essentials",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Oversized+Cotton+T-Shirt+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Oversized+Cotton+T-Shirt+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Oversized+Cotton+T-Shirt+Detail"
+          ],
+          "details": {
+            "brief": "Relaxed-fit cotton t-shirt for everyday comfort.",
+            "detailed": "A soft cotton oversized t-shirt suitable for casual outings, college wear and relaxed weekends."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 799,
+            "original": 1199,
+            "discountPercentage": 33
+          },
+          "specifications": {
+            "material": "100% Cotton",
+            "color": "Off White",
+            "availableColors": [
+              "Off White",
+              "Black",
+              "Beige"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
+            "fit": "Oversized",
+            "sleeveType": "Half Sleeve",
+            "neckType": "Round Neck",
+            "pattern": "Solid",
+            "gender": "Unisex",
+            "washCare": "Machine Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-001",
+            "stock": 120,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.5,
+            "count": 50
+          },
+          "tags": [
+            "Cotton",
+            "Oversized",
+            "Casual"
+          ],
+          "isFeatured": true,
+          "isNewArrival": true
+        },
+        {
+          "id": 102,
+          "name": "Women's Casual Blazer",
+          "slug": "womens-casual-blazer",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Studio",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Women's+Casual+Blazer+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Women's+Casual+Blazer+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Women's+Casual+Blazer+Detail"
+          ],
+          "details": {
+            "brief": "Elegant blazer for modern everyday styling.",
+            "detailed": "A versatile blazer with a structured silhouette that can be paired with trousers, jeans or dresses."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 1899,
+            "original": 2999,
+            "discountPercentage": 37
+          },
+          "specifications": {
+            "material": "Polyester Blend",
+            "color": "Beige",
+            "availableColors": [
+              "Beige",
+              "Black",
+              "Cream"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
+            "fit": "Regular Fit",
+            "sleeveType": "Full Sleeve",
+            "closure": "Button",
+            "pattern": "Solid",
+            "gender": "Women",
+            "washCare": "Dry Clean Recommended"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-002",
+            "stock": 45,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.7,
+            "count": 51
+          },
+          "tags": [
+            "Blazer",
+            "Women",
+            "Formal"
+          ],
+          "isFeatured": true,
+          "isNewArrival": true
+        },
+        {
+          "id": 103,
+          "name": "Slim Fit Denim Jeans",
+          "slug": "slim-fit-denim-jeans",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Denim",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Slim+Fit+Denim+Jeans+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Slim+Fit+Denim+Jeans+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Slim+Fit+Denim+Jeans+Detail"
+          ],
+          "details": {
+            "brief": "Classic stretch denim jeans with a slim fit.",
+            "detailed": "Comfortable denim jeans designed for daily wear, casual styling and easy pairing with shirts or t-shirts."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 1299,
+            "original": 1999,
+            "discountPercentage": 35
+          },
+          "specifications": {
+            "material": "Cotton Denim",
+            "color": "Dark Blue",
+            "availableColors": [
+              "Dark Blue",
+              "Black",
+              "Light Blue"
+            ],
+            "sizes": [
+              "28",
+              "30",
+              "32",
+              "34",
+              "36"
+            ],
+            "fit": "Slim Fit",
+            "rise": "Mid Rise",
+            "closure": "Zip and Button",
+            "pattern": "Solid",
+            "gender": "Unisex",
+            "washCare": "Machine Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-003",
+            "stock": 90,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.4,
+            "count": 52
+          },
+          "tags": [
+            "Jeans",
+            "Denim",
+            "Casual"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 104,
+          "name": "Linen Blend Shirt",
+          "slug": "linen-blend-shirt",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Studio",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Linen+Blend+Shirt+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Linen+Blend+Shirt+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Linen+Blend+Shirt+Detail"
+          ],
+          "details": {
+            "brief": "Breathable shirt for smart casual outfits.",
+            "detailed": "A lightweight linen-blend shirt with a clean silhouette, suitable for warm weather and semi-formal occasions."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 999,
+            "original": 1499,
+            "discountPercentage": 33
+          },
+          "specifications": {
+            "material": "Linen Cotton Blend",
+            "color": "Sky Blue",
+            "availableColors": [
+              "Sky Blue",
+              "White",
+              "Olive"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
+            "fit": "Regular Fit",
+            "sleeveType": "Full Sleeve",
+            "collar": "Spread Collar",
+            "pattern": "Solid",
+            "gender": "Men",
+            "washCare": "Gentle Machine Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-004",
+            "stock": 70,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.3,
+            "count": 53
+          },
+          "tags": [
+            "Shirt",
+            "Linen",
+            "Summer"
+          ],
+          "isFeatured": false,
+          "isNewArrival": true
+        },
+        {
+          "id": 105,
+          "name": "Pleated Midi Dress",
+          "slug": "pleated-midi-dress",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Women",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Pleated+Midi+Dress+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Pleated+Midi+Dress+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Pleated+Midi+Dress+Detail"
+          ],
+          "details": {
+            "brief": "Elegant pleated dress for casual and occasion wear.",
+            "detailed": "A comfortable midi dress with pleated detailing and a flattering silhouette for outings, brunches and events."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 1599,
+            "original": 2499,
+            "discountPercentage": 36
+          },
+          "specifications": {
+            "material": "Polyester",
+            "color": "Sage Green",
+            "availableColors": [
+              "Sage Green",
+              "Black",
+              "Maroon"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
+            "fit": "Regular Fit",
+            "length": "Midi",
+            "sleeveType": "Short Sleeve",
+            "pattern": "Pleated",
+            "gender": "Women",
+            "washCare": "Hand Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-005",
+            "stock": 38,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.6,
+            "count": 54
+          },
+          "tags": [
+            "Dress",
+            "Women",
+            "Occasion"
+          ],
+          "isFeatured": true,
+          "isNewArrival": true
+        },
+        {
+          "id": 106,
+          "name": "Classic Hoodie",
+          "slug": "classic-hoodie",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Essentials",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Classic+Hoodie+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Classic+Hoodie+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Classic+Hoodie+Detail"
+          ],
+          "details": {
+            "brief": "Warm everyday hoodie with a relaxed fit.",
+            "detailed": "A soft hoodie designed for comfortable layering during cool weather, travel and casual activities."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 1099,
+            "original": 1699,
+            "discountPercentage": 35
+          },
+          "specifications": {
+            "material": "Cotton Fleece",
+            "color": "Charcoal",
+            "availableColors": [
+              "Charcoal",
+              "Black",
+              "Navy"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
+            "fit": "Relaxed Fit",
+            "sleeveType": "Full Sleeve",
+            "hood": "Attached Hood",
+            "pockets": "Front Kangaroo Pocket",
+            "gender": "Unisex",
+            "washCare": "Machine Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-006",
+            "stock": 64,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.5,
+            "count": 55
+          },
+          "tags": [
+            "Hoodie",
+            "Winter",
+            "Casual"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 107,
+          "name": "Cotton Kurta",
+          "slug": "cotton-kurta",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Ethnic",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Cotton+Kurta+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Cotton+Kurta+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Cotton+Kurta+Detail"
+          ],
+          "details": {
+            "brief": "Comfortable cotton kurta for traditional styling.",
+            "detailed": "A breathable cotton kurta that works well for festivals, family occasions and everyday ethnic wear."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 899,
+            "original": 1299,
+            "discountPercentage": 31
+          },
+          "specifications": {
+            "material": "Cotton",
+            "color": "Mustard",
+            "availableColors": [
+              "Mustard",
+              "White",
+              "Blue"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
+            "fit": "Regular Fit",
+            "sleeveType": "Full Sleeve",
+            "neckType": "Mandarin Collar",
+            "pattern": "Printed",
+            "gender": "Men",
+            "washCare": "Hand Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-007",
+            "stock": 55,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.2,
+            "count": 56
+          },
+          "tags": [
+            "Kurta",
+            "Ethnic",
+            "Cotton"
+          ],
+          "isFeatured": false,
+          "isNewArrival": true
+        },
+        {
+          "id": 108,
+          "name": "High Waist Trousers",
+          "slug": "high-waist-trousers",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Women",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=High+Waist+Trousers+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=High+Waist+Trousers+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=High+Waist+Trousers+Detail"
+          ],
+          "details": {
+            "brief": "Tailored high-waist trousers for polished outfits.",
+            "detailed": "Comfortable high-waist trousers with a clean finish, suitable for office looks and smart casual styling."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 1199,
+            "original": 1799,
+            "discountPercentage": 33
+          },
+          "specifications": {
+            "material": "Poly Viscose",
+            "color": "Black",
+            "availableColors": [
+              "Black",
+              "Beige",
+              "Grey"
+            ],
+            "sizes": [
+              "28",
+              "30",
+              "32",
+              "34",
+              "36"
+            ],
+            "fit": "Straight Fit",
+            "rise": "High Waist",
+            "closure": "Hook and Zip",
+            "pattern": "Solid",
+            "gender": "Women",
+            "washCare": "Gentle Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-008",
+            "stock": 48,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.4,
+            "count": 57
+          },
+          "tags": [
+            "Trousers",
+            "Office Wear",
+            "Women"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 109,
+          "name": "Printed Summer Top",
+          "slug": "printed-summer-top",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Women",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Printed+Summer+Top+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Printed+Summer+Top+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Printed+Summer+Top+Detail"
+          ],
+          "details": {
+            "brief": "Lightweight printed top for summer outfits.",
+            "detailed": "A breathable printed top with a comfortable fit that pairs well with jeans, skirts and trousers."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 649,
+            "original": 999,
+            "discountPercentage": 35
+          },
+          "specifications": {
+            "material": "Rayon",
+            "color": "Floral Print",
+            "availableColors": [
+              "Floral",
+              "Blue Print",
+              "Pink Print"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
+            "fit": "Regular Fit",
+            "sleeveType": "Short Sleeve",
+            "neckType": "Round Neck",
+            "pattern": "Floral",
+            "gender": "Women",
+            "washCare": "Hand Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-009",
+            "stock": 82,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.1,
+            "count": 58
+          },
+          "tags": [
+            "Top",
+            "Summer",
+            "Printed"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 110,
+          "name": "Unisex Cotton Joggers",
+          "slug": "unisex-cotton-joggers",
+          "category": "Garments",
+          "categoryId": 1,
+          "brand": "ECOM Active",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Unisex+Cotton+Joggers+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Unisex+Cotton+Joggers+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Unisex+Cotton+Joggers+Detail"
+          ],
+          "details": {
+            "brief": "Stretchable joggers for travel, workouts and lounging.",
+            "detailed": "Soft cotton-blend joggers with an elastic waistband and practical pockets for everyday movement."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 899,
+            "original": 1399,
+            "discountPercentage": 36
+          },
+          "specifications": {
+            "material": "Cotton Blend",
+            "color": "Olive",
+            "availableColors": [
+              "Olive",
+              "Black",
+              "Grey"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
+            "fit": "Regular Fit",
+            "waistband": "Elastic",
+            "pockets": "Side Pockets",
+            "pattern": "Solid",
+            "gender": "Unisex",
+            "washCare": "Machine Wash"
+          },
+          "inventory": {
+            "sku": "ECOM-GAR-010",
+            "stock": 105,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.5,
+            "count": 59
+          },
+          "tags": [
+            "Joggers",
+            "Activewear",
+            "Comfort"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Grocery",
+      "slug": "grocery",
+      "description": "Everyday grocery essentials for your home and kitchen.",
+      "products": [
+        {
+          "id": 201,
+          "name": "Premium Basmati Rice",
+          "slug": "premium-basmati-rice",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Foods",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Premium+Basmati+Rice+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Premium+Basmati+Rice+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Premium+Basmati+Rice+Detail"
+          ],
+          "details": {
+            "brief": "Long-grain basmati rice for everyday meals.",
+            "detailed": "Premium long-grain rice suitable for biryani, pulao and regular meals. Store in a cool, dry place."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 449,
+            "original": 499,
+            "discountPercentage": 10
+          },
+          "specifications": {
+            "weight": "5 kg",
+            "variety": "Basmati",
+            "grainType": "Long Grain",
+            "ingredients": [
+              "Basmati Rice"
+            ],
+            "vegetarian": true,
+            "packagingType": "Food Grade Bag",
+            "shelfLife": "12 Months",
+            "storage": "Cool and dry place",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-001",
+            "stock": 200,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.6,
+            "count": 150
+          },
+          "tags": [
+            "Rice",
+            "Basmati",
+            "Food"
+          ],
+          "isFeatured": true,
+          "isNewArrival": false
+        },
+        {
+          "id": 202,
+          "name": "Organic Honey",
+          "slug": "organic-honey",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "Nature Basket",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Organic+Honey+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Organic+Honey+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Organic+Honey+Detail"
+          ],
+          "details": {
+            "brief": "Honey for everyday food and beverage use.",
+            "detailed": "A honey product for beverages, breakfast and recipes. Check packaging for ingredients and storage information."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 299,
+            "original": 349,
+            "discountPercentage": 14
+          },
+          "specifications": {
+            "weight": "250 g",
+            "ingredients": [
+              "Honey"
+            ],
+            "vegetarian": true,
+            "packagingType": "Glass Jar",
+            "shelfLife": "12 Months",
+            "storage": "Cool and dry place",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-002",
+            "stock": 85,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.4,
+            "count": 50
+          },
+          "tags": [
+            "Honey",
+            "Natural",
+            "Breakfast"
+          ],
+          "isFeatured": false,
+          "isNewArrival": true
+        },
+        {
+          "id": 203,
+          "name": "Whole Wheat Atta",
+          "slug": "whole-wheat-atta",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Foods",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Whole+Wheat+Atta+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Whole+Wheat+Atta+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Whole+Wheat+Atta+Detail"
+          ],
+          "details": {
+            "brief": "Everyday whole wheat flour for homemade rotis.",
+            "detailed": "Finely milled whole wheat flour intended for rotis, parathas and other home-cooked recipes."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 289,
+            "original": 329,
+            "discountPercentage": 12
+          },
+          "specifications": {
+            "weight": "5 kg",
+            "ingredients": [
+              "Whole Wheat"
+            ],
+            "vegetarian": true,
+            "packagingType": "Food Grade Bag",
+            "shelfLife": "6 Months",
+            "storage": "Keep sealed in a dry place",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-003",
+            "stock": 160,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.3,
+            "count": 51
+          },
+          "tags": [
+            "Atta",
+            "Wheat",
+            "Kitchen Essentials"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 204,
+          "name": "Toor Dal",
+          "slug": "toor-dal",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Foods",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Toor+Dal+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Toor+Dal+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Toor+Dal+Detail"
+          ],
+          "details": {
+            "brief": "Protein-rich everyday lentil for Indian meals.",
+            "detailed": "Toor dal suitable for preparing dal, soups and traditional home-cooked recipes."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 159,
+            "original": 189,
+            "discountPercentage": 16
+          },
+          "specifications": {
+            "weight": "1 kg",
+            "ingredients": [
+              "Toor Dal"
+            ],
+            "vegetarian": true,
+            "packagingType": "Food Grade Pouch",
+            "shelfLife": "9 Months",
+            "storage": "Store in an airtight container",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-004",
+            "stock": 130,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.2,
+            "count": 52
+          },
+          "tags": [
+            "Dal",
+            "Pulses",
+            "Kitchen"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 205,
+          "name": "Cold Pressed Mustard Oil",
+          "slug": "cold-pressed-mustard-oil",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Naturals",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Mustard+Oil+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Mustard+Oil+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Mustard+Oil+Detail"
+          ],
+          "details": {
+            "brief": "Mustard oil for everyday Indian cooking.",
+            "detailed": "Cold pressed mustard oil suitable for cooking and traditional food preparation. Follow label instructions for storage."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 199,
+            "original": 239,
+            "discountPercentage": 17
+          },
+          "specifications": {
+            "quantity": "1 L",
+            "ingredients": [
+              "Mustard Oil"
+            ],
+            "vegetarian": true,
+            "packagingType": "Bottle",
+            "shelfLife": "12 Months",
+            "storage": "Keep away from direct sunlight",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-005",
+            "stock": 95,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.1,
+            "count": 53
+          },
+          "tags": [
+            "Oil",
+            "Cooking",
+            "Mustard"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 206,
+          "name": "Green Tea Bags",
+          "slug": "green-tea-bags",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Wellness",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Green+Tea+Bags+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Green+Tea+Bags+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Green+Tea+Bags+Detail"
+          ],
+          "details": {
+            "brief": "Convenient green tea bags for daily beverages.",
+            "detailed": "Tea bags designed for quick preparation. Brew according to personal taste and the instructions on the package."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 149,
+            "original": 199,
+            "discountPercentage": 25
+          },
+          "specifications": {
+            "quantity": "25 Tea Bags",
+            "ingredients": [
+              "Green Tea Leaves"
+            ],
+            "vegetarian": true,
+            "packagingType": "Box",
+            "shelfLife": "18 Months",
+            "storage": "Store in a dry place",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-006",
+            "stock": 110,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.3,
+            "count": 54
+          },
+          "tags": [
+            "Tea",
+            "Beverage",
+            "Wellness"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 207,
+          "name": "Roasted Almonds",
+          "slug": "roasted-almonds",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Nuts",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Roasted+Almonds+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Roasted+Almonds+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Roasted+Almonds+Detail"
+          ],
+          "details": {
+            "brief": "Crunchy roasted almonds for snacking.",
+            "detailed": "Roasted almonds suitable for snacks, breakfast bowls and recipe toppings. Check allergen information before consumption."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 349,
+            "original": 399,
+            "discountPercentage": 13
+          },
+          "specifications": {
+            "weight": "200 g",
+            "ingredients": [
+              "Almonds",
+              "Salt"
+            ],
+            "vegetarian": true,
+            "packagingType": "Resealable Pouch",
+            "shelfLife": "6 Months",
+            "storage": "Keep sealed in a cool place",
+            "allergens": [
+              "Tree Nuts"
+            ],
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-007",
+            "stock": 72,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.5,
+            "count": 55
+          },
+          "tags": [
+            "Nuts",
+            "Snacks",
+            "Almonds"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 208,
+          "name": "Oats Breakfast Pack",
+          "slug": "oats-breakfast-pack",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Wellness",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Oats+Breakfast+Pack+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Oats+Breakfast+Pack+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Oats+Breakfast+Pack+Detail"
+          ],
+          "details": {
+            "brief": "Whole grain oats for easy breakfast recipes.",
+            "detailed": "Whole grain oats suitable for porridge, smoothies and homemade breakfast bowls."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 179,
+            "original": 229,
+            "discountPercentage": 22
+          },
+          "specifications": {
+            "weight": "500 g",
+            "ingredients": [
+              "Whole Grain Oats"
+            ],
+            "vegetarian": true,
+            "packagingType": "Pouch",
+            "shelfLife": "9 Months",
+            "storage": "Store in a cool dry place",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-008",
+            "stock": 125,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.4,
+            "count": 56
+          },
+          "tags": [
+            "Oats",
+            "Breakfast",
+            "Healthy"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 209,
+          "name": "Turmeric Powder",
+          "slug": "turmeric-powder",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Spices",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Turmeric+Powder+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Turmeric+Powder+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Turmeric+Powder+Detail"
+          ],
+          "details": {
+            "brief": "Ground turmeric powder for everyday cooking.",
+            "detailed": "A commonly used kitchen spice for curries, vegetables and other recipes. Store away from moisture."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 89,
+            "original": 109,
+            "discountPercentage": 18
+          },
+          "specifications": {
+            "weight": "200 g",
+            "ingredients": [
+              "Turmeric"
+            ],
+            "vegetarian": true,
+            "packagingType": "Pouch",
+            "shelfLife": "12 Months",
+            "storage": "Keep sealed away from moisture",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-009",
+            "stock": 180,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.2,
+            "count": 57
+          },
+          "tags": [
+            "Spices",
+            "Turmeric",
+            "Cooking"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 210,
+          "name": "Dark Chocolate Bar",
+          "slug": "dark-chocolate-bar",
+          "category": "Grocery",
+          "categoryId": 2,
+          "brand": "ECOM Treats",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Dark+Chocolate+Bar+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Dark+Chocolate+Bar+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Dark+Chocolate+Bar+Detail"
+          ],
+          "details": {
+            "brief": "Dark chocolate bar for occasional snacking.",
+            "detailed": "A chocolate bar intended for occasional enjoyment. Review ingredients and allergen information on the packaging."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 129,
+            "original": 159,
+            "discountPercentage": 19
+          },
+          "specifications": {
+            "weight": "80 g",
+            "ingredients": [
+              "Cocoa Solids",
+              "Sugar",
+              "Cocoa Butter"
+            ],
+            "vegetarian": true,
+            "packagingType": "Wrapper",
+            "shelfLife": "9 Months",
+            "storage": "Store in a cool dry place",
+            "allergens": [
+              "May contain Milk"
+            ],
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-GRO-010",
+            "stock": 98,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.3,
+            "count": 58
+          },
+          "tags": [
+            "Chocolate",
+            "Snacks",
+            "Treats"
+          ],
+          "isFeatured": false,
+          "isNewArrival": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cosmetics",
+      "slug": "cosmetics",
+      "description": "Beauty and personal care essentials for your routine.",
+      "products": [
+        {
+          "id": 301,
+          "name": "Hydrating Face Moisturizer",
+          "slug": "hydrating-face-moisturizer",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Beauty",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Hydrating+Face+Moisturizer+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Hydrating+Face+Moisturizer+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Hydrating+Face+Moisturizer+Detail"
+          ],
+          "details": {
+            "brief": "Lightweight moisturizer for everyday skincare.",
+            "detailed": "A lightweight moisturizer intended for regular skincare routines. Check the ingredient list and perform a patch test when appropriate."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 349,
+            "original": 499,
+            "discountPercentage": 30
+          },
+          "specifications": {
+            "quantity": "50 g",
+            "skinType": [
+              "Normal",
+              "Dry"
+            ],
+            "productType": "Face Moisturizer",
+            "texture": "Cream",
+            "finish": "Hydrating",
+            "ingredients": [
+              "Glycerin",
+              "Moisturizing Ingredients"
+            ],
+            "fragrance": "Check Packaging",
+            "usage": "Use as directed on label",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-001",
+            "stock": 75,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.3,
+            "count": 149
+          },
+          "tags": [
+            "Skincare",
+            "Moisturizer",
+            "Beauty"
+          ],
+          "isFeatured": true,
+          "isNewArrival": true
+        },
+        {
+          "id": 302,
+          "name": "Matte Lipstick",
+          "slug": "matte-lipstick",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Beauty",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Matte+Lipstick+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Matte+Lipstick+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Matte+Lipstick+Detail"
+          ],
+          "details": {
+            "brief": "Matte-finish lipstick for everyday makeup.",
+            "detailed": "A matte lipstick designed for different makeup looks. Check shade, ingredients and usage information on the product label."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 499,
+            "original": 699,
+            "discountPercentage": 29
+          },
+          "specifications": {
+            "quantity": "3.5 g",
+            "productType": "Lipstick",
+            "finish": "Matte",
+            "shade": "Rose Nude",
+            "availableShades": [
+              "Rose Nude",
+              "Classic Red",
+              "Berry Pink",
+              "Mocha Brown"
+            ],
+            "texture": "Creamy Matte",
+            "usage": "Apply as directed",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-002",
+            "stock": 60,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.5,
+            "count": 150
+          },
+          "tags": [
+            "Makeup",
+            "Lipstick",
+            "Matte"
+          ],
+          "isFeatured": false,
+          "isNewArrival": true
+        },
+        {
+          "id": 303,
+          "name": "Vitamin C Face Serum",
+          "slug": "vitamin-c-face-serum",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Skin",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Vitamin+C+Face+Serum+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Vitamin+C+Face+Serum+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Vitamin+C+Face+Serum+Detail"
+          ],
+          "details": {
+            "brief": "Lightweight facial serum for a skincare routine.",
+            "detailed": "A facial serum product intended for use as directed. Check concentration, ingredients and skin compatibility before regular use."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 599,
+            "original": 899,
+            "discountPercentage": 33
+          },
+          "specifications": {
+            "quantity": "30 ml",
+            "productType": "Face Serum",
+            "skinType": [
+              "Normal",
+              "Combination"
+            ],
+            "texture": "Liquid",
+            "keyIngredient": "Vitamin C",
+            "usage": "Use as directed on label",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-003",
+            "stock": 48,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.4,
+            "count": 50
+          },
+          "tags": [
+            "Serum",
+            "Vitamin C",
+            "Skincare"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 304,
+          "name": "Aloe Vera Gel",
+          "slug": "aloe-vera-gel",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Naturals",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Aloe+Vera+Gel+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Aloe+Vera+Gel+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Aloe+Vera+Gel+Detail"
+          ],
+          "details": {
+            "brief": "Multi-purpose aloe vera gel for personal care.",
+            "detailed": "Aloe vera gel intended for cosmetic personal care use. Check the label for recommended application and ingredients."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 199,
+            "original": 299,
+            "discountPercentage": 33
+          },
+          "specifications": {
+            "quantity": "150 g",
+            "productType": "Aloe Vera Gel",
+            "texture": "Gel",
+            "skinType": [
+              "Normal",
+              "Oily"
+            ],
+            "keyIngredient": "Aloe Vera",
+            "fragrance": "Check Packaging",
+            "usage": "Use as directed",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-004",
+            "stock": 92,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.2,
+            "count": 51
+          },
+          "tags": [
+            "Aloe Vera",
+            "Gel",
+            "Personal Care"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 305,
+          "name": "Sunscreen SPF 50",
+          "slug": "sunscreen-spf-50",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Sun Care",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Sunscreen+SPF+50+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Sunscreen+SPF+50+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Sunscreen+SPF+50+Detail"
+          ],
+          "details": {
+            "brief": "Daily sunscreen with SPF 50 protection claim.",
+            "detailed": "A sunscreen product to be used according to label directions. Reapply as instructed and check the product's protection and ingredient information."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 449,
+            "original": 649,
+            "discountPercentage": 31
+          },
+          "specifications": {
+            "quantity": "50 g",
+            "productType": "Sunscreen",
+            "spf": "SPF 50",
+            "texture": "Cream",
+            "skinType": [
+              "Normal",
+              "Combination"
+            ],
+            "finish": "Lightweight",
+            "usage": "Apply as directed on label",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-005",
+            "stock": 88,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.5,
+            "count": 52
+          },
+          "tags": [
+            "Sunscreen",
+            "SPF",
+            "Skincare"
+          ],
+          "isFeatured": true,
+          "isNewArrival": true
+        },
+        {
+          "id": 306,
+          "name": "Gentle Face Cleanser",
+          "slug": "gentle-face-cleanser",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Skin",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Gentle+Face+Cleanser+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Gentle+Face+Cleanser+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Gentle+Face+Cleanser+Detail"
+          ],
+          "details": {
+            "brief": "Gentle cleanser for daily face-washing routines.",
+            "detailed": "A face cleanser intended to remove everyday impurities. Use according to the label and stop use if irritation occurs."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 279,
+            "original": 399,
+            "discountPercentage": 30
+          },
+          "specifications": {
+            "quantity": "100 ml",
+            "productType": "Face Cleanser",
+            "skinType": [
+              "Normal",
+              "Sensitive"
+            ],
+            "texture": "Gel",
+            "fragrance": "Check Packaging",
+            "usage": "Use as directed",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-006",
+            "stock": 115,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.3,
+            "count": 53
+          },
+          "tags": [
+            "Cleanser",
+            "Face Wash",
+            "Skincare"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 307,
+          "name": "Body Lotion",
+          "slug": "body-lotion",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Care",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Body+Lotion+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Body+Lotion+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Body+Lotion+Detail"
+          ],
+          "details": {
+            "brief": "Moisturizing body lotion for everyday use.",
+            "detailed": "A body lotion designed for routine moisturizing. Check ingredients and product directions for the best application method."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 249,
+            "original": 349,
+            "discountPercentage": 29
+          },
+          "specifications": {
+            "quantity": "200 ml",
+            "productType": "Body Lotion",
+            "skinType": [
+              "Normal",
+              "Dry"
+            ],
+            "texture": "Lotion",
+            "fragrance": "Mild",
+            "usage": "Apply as directed",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-007",
+            "stock": 104,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.1,
+            "count": 54
+          },
+          "tags": [
+            "Body Care",
+            "Lotion",
+            "Moisturizer"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 308,
+          "name": "Kajal Eyeliner",
+          "slug": "kajal-eyeliner",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Beauty",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Kajal+Eyeliner+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Kajal+Eyeliner+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Kajal+Eyeliner+Detail"
+          ],
+          "details": {
+            "brief": "Easy-to-apply kajal for eye makeup looks.",
+            "detailed": "A kajal product intended for cosmetic eye makeup use. Follow hygiene instructions and avoid sharing eye products."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 179,
+            "original": 249,
+            "discountPercentage": 28
+          },
+          "specifications": {
+            "quantity": "0.35 g",
+            "productType": "Eye Kajal",
+            "finish": "Matte",
+            "shade": "Black",
+            "waterResistant": "Check Packaging",
+            "usage": "Apply as directed",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-008",
+            "stock": 67,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.2,
+            "count": 55
+          },
+          "tags": [
+            "Kajal",
+            "Eye Makeup",
+            "Beauty"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 309,
+          "name": "Nourishing Hair Oil",
+          "slug": "nourishing-hair-oil",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Hair Care",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Nourishing+Hair+Oil+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Nourishing+Hair+Oil+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Nourishing+Hair+Oil+Detail"
+          ],
+          "details": {
+            "brief": "Hair oil for regular scalp and hair care routines.",
+            "detailed": "A cosmetic hair oil product intended for routine hair care. Review ingredients and directions before use."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 229,
+            "original": 329,
+            "discountPercentage": 30
+          },
+          "specifications": {
+            "quantity": "100 ml",
+            "productType": "Hair Oil",
+            "texture": "Oil",
+            "keyIngredients": [
+              "Coconut Oil",
+              "Herbal Extracts"
+            ],
+            "fragrance": "Herbal",
+            "usage": "Use as directed",
+            "shelfLife": "Refer to Packaging",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-009",
+            "stock": 80,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.3,
+            "count": 56
+          },
+          "tags": [
+            "Hair Care",
+            "Hair Oil",
+            "Nourishment"
+          ],
+          "isFeatured": false,
+          "isNewArrival": false
+        },
+        {
+          "id": 310,
+          "name": "Makeup Brush Set",
+          "slug": "makeup-brush-set",
+          "category": "Cosmetics",
+          "categoryId": 3,
+          "brand": "ECOM Beauty Tools",
+          "images": [
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Makeup+Brush+Set+Front",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Makeup+Brush+Set+Back",
+            "https://placehold.co/600x700/F1E8DF/624E3C?text=Makeup+Brush+Set+Detail"
+          ],
+          "details": {
+            "brief": "Multi-piece brush set for basic makeup application.",
+            "detailed": "A set of cosmetic brushes for applying and blending makeup. Clean brushes regularly and store them in a dry place."
+          },
+          "price": {
+            "currency": "INR",
+            "current": 399,
+            "original": 599,
+            "discountPercentage": 33
+          },
+          "specifications": {
+            "quantity": "8 Pieces",
+            "productType": "Makeup Brushes",
+            "bristleType": "Synthetic",
+            "handleMaterial": "Plastic",
+            "use": "Face and Eye Makeup",
+            "care": "Clean Regularly",
+            "countryOfOrigin": "India"
+          },
+          "inventory": {
+            "sku": "ECOM-COS-010",
+            "stock": 54,
+            "availability": "In Stock"
+          },
+          "rating": {
+            "average": 4.4,
+            "count": 57
+          },
+          "tags": [
+            "Makeup Tools",
+            "Brushes",
+            "Beauty"
+          ],
+          "isFeatured": false,
+          "isNewArrival": true
+        }
+      ]
+    }
+  ]
+}
