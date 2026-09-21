@@ -1,5 +1,5 @@
 import ShapeGrid from "./ShapeGrid";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,11 +20,11 @@ const Footer = () => {
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <Link to="/" className="text-3xl font-extrabold">
-          <span className="text-[#E56B42]">E</span>
-          <span className="bg-[radial-gradient(circle,_rgba(34,193,195,1)_0%,_rgba(253,187,45,1)_100%)] bg-clip-text text-transparent">
-            COM
-          </span>
-        </Link>
+              <span className="text-[#E56B42]">E</span>
+              <span className="bg-[radial-gradient(circle,_rgba(229,107,66,1)_0%,_rgba(253,187,45,1)_100%)] bg-clip-text text-transparent">
+                COM
+              </span>
+            </Link>
             <p className="mt-5 text-sm leading-6 text-white/60">
               Better everyday essentials, thoughtfully chosen and delivered with
               care.

@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Home from "../Pages/Home/Home";
 import Nav from "../components/Home component/Nav";
@@ -13,20 +14,30 @@ import Wishlist from "../Pages/Wishlist";
 import Cart from "../Pages/Cart";
 import Page404 from "../Pages/page404";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+};
+
 const Router = () => {
   return (
     <>
+      <ScrollToTop />
       <Nav />
 
       <Routes>
         <Route path="/" element={<Home />} />
 
         <Route path="/products" element={<Product />} />
-        <Route path="/products/">
-          <Route path="garments/:id" element={<ProductDetails />} />
-          <Route path="cosmetics/:id" element={<ProductDetails />} />
-          <Route path="grocery/:id" element={<ProductDetails />} />
-        </Route>
+        <Route
+          path="/products/:categorySlug/:productSlug"
+          element={<ProductDetails />}
+        />
 
         <Route path="/about" element={<About />} />
 

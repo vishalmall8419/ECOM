@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 import img from "../../assists/gar.png";
@@ -9,13 +8,11 @@ const CateoriesCards = ({ data }) => {
 
   return (
     <div className="mx-auto mt-2 grid w-full max-w-7xl grid-cols-1 gap-1 px-0 sm:grid-cols-2 sm:gap-1 lg:grid-cols-3 lg:gap-1">
-
       {categories.map((item) => (
         <div
           key={item.id}
           className="relative mx-auto h-64 w-full max-w-[414px] overflow-hidden bg-[#F1E8DF] sm:h-72 lg:h-80"
         >
-
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-contain bg-center bg-no-repeat"
@@ -27,7 +24,7 @@ const CateoriesCards = ({ data }) => {
 
           {/* Shop Now */}
           <Link
-            className="absolute bottom-5 left-5 z-10 text-sm font-semibold text-[#624e3c] underline transition hover:text-[#22a3a5]"
+            className="absolute bottom-5 left-5 z-10 text-sm font-semibold text-[#624e3c] underline transition hover:text-[#E56B42]"
             to={item.link || "/"}
           >
             Shop Now
@@ -35,15 +32,13 @@ const CateoriesCards = ({ data }) => {
 
           {/* Category Title */}
           <Link
-            className="absolute right-[-32px] top-15 z-10 rotate-90 text-sm font-semibold text-[#624e3c] transition hover:text-[#22a3a5]"
+            className="absolute right-[-32px] top-15 z-10 rotate-90 text-sm font-semibold text-[#624e3c] transition hover:text-[#E56B42]"
             to={item.link || "/"}
           >
             {item.title}
           </Link>
-
         </div>
       ))}
-
     </div>
   );
 };

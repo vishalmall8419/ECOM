@@ -16,7 +16,7 @@ const Nav = () => {
         {/* Logo */}
         <Link to="/" className="text-3xl font-extrabold">
           <span className="text-[#E56B42]">E</span>
-          <span className="bg-[radial-gradient(circle,_rgba(34,193,195,1)_0%,_rgba(253,187,45,1)_100%)] bg-clip-text text-transparent">
+          <span className="bg-[radial-gradient(circle,_rgba(229,107,66,1)_0%,_rgba(253,187,45,1)_100%)] bg-clip-text text-transparent">
             COM
           </span>
         </Link>
@@ -24,7 +24,7 @@ const Nav = () => {
         {/* Desktop Navigation */}
         <ul className="hidden items-center gap-6 font-semibold text-[#624e3c] lg:flex">
           <li>
-            <Link to="/" className="transition-colors hover:text-[#22a3a5]">
+            <Link to="/" className="transition-colors hover:text-[#E56B42]">
               HOME
             </Link>
           </li>
@@ -32,7 +32,7 @@ const Nav = () => {
           <li>
             <Link
               to="/products"
-              className="transition-colors hover:text-[#22a3a5]"
+              className="transition-colors hover:text-[#E56B42]"
             >
               PRODUCT
             </Link>
@@ -41,7 +41,7 @@ const Nav = () => {
           <li>
             <Link
               to="/about"
-              className="transition-colors hover:text-[#22a3a5]"
+              className="transition-colors hover:text-[#E56B42]"
             >
               ABOUT
             </Link>
@@ -54,7 +54,7 @@ const Nav = () => {
             <Link
               to="/search"
               aria-label="Search"
-              className="block transition hover:text-[#22a3a5]"
+              className="block transition hover:text-[#E56B42]"
             >
               <Search size={21} />
             </Link>
@@ -64,7 +64,7 @@ const Nav = () => {
             <Link
               to="/wishlist"
               aria-label="Wishlist"
-              className="block transition hover:text-[#22a3a5]"
+              className="block transition hover:text-[#E56B42]"
             >
               <Heart size={21} />
             </Link>
@@ -74,7 +74,7 @@ const Nav = () => {
             <Link
               to="/cart"
               aria-label="Shopping Cart"
-              className="block transition hover:text-[#22a3a5]"
+              className="block transition hover:text-[#E56B42]"
             >
               <ShoppingBag size={21} />
             </Link>
@@ -102,7 +102,7 @@ const Nav = () => {
               <Link
                 to="/"
                 onClick={closeMenu}
-                className="block py-1 transition hover:text-[#22a3a5]"
+                className="block py-1 transition hover:text-[#E56B42]"
               >
                 HOME
               </Link>
@@ -112,7 +112,7 @@ const Nav = () => {
               <Link
                 to="/products"
                 onClick={closeMenu}
-                className="block py-1 transition hover:text-[#22a3a5]"
+                className="block py-1 transition hover:text-[#E56B42]"
               >
                 PRODUCT
               </Link>
@@ -122,7 +122,7 @@ const Nav = () => {
               <Link
                 to="/about"
                 onClick={closeMenu}
-                className="block py-1 transition hover:text-[#22a3a5]"
+                className="block py-1 transition hover:text-[#E56B42]"
               >
                 ABOUT
               </Link>
@@ -135,7 +135,7 @@ const Nav = () => {
               to="/search"
               onClick={closeMenu}
               aria-label="Search"
-              className="text-[#624e3c] transition hover:text-[#22a3a5]"
+              className="text-[#624e3c] transition hover:text-[#E56B42]"
             >
               <Search size={21} />
             </Link>
@@ -144,7 +144,7 @@ const Nav = () => {
               to="/wishlist"
               onClick={closeMenu}
               aria-label="Wishlist"
-              className="text-[#624e3c] transition hover:text-[#22a3a5]"
+              className="text-[#624e3c] transition hover:text-[#E56B42]"
             >
               <Heart size={21} />
             </Link>
@@ -153,7 +153,7 @@ const Nav = () => {
               to="/cart"
               onClick={closeMenu}
               aria-label="Shopping Cart"
-              className="text-[#624e3c] transition hover:text-[#22a3a5]"
+              className="text-[#624e3c] transition hover:text-[#E56B42]"
             >
               <ShoppingBag size={21} />
             </Link>
