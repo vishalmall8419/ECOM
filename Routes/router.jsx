@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Home from "../Pages/Home/Home";
@@ -12,16 +11,6 @@ import Search from "../Pages/Search";
 import Wishlist from "../Pages/Wishlist";
 import Cart from "../Pages/Cart";
 import Page404 from "../Pages/page404";
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  }, [pathname]);
-
-  return null;
-};
 
 const Router = () => {
   const location = useLocation();
@@ -41,8 +30,6 @@ const Router = () => {
 
   return (
     <>
-      <ScrollToTop />
-      <Nav />
       {/* Navbar 404 page par hide */}
       {!is404Page && <Nav />}
 
@@ -50,10 +37,6 @@ const Router = () => {
         <Route path="/" element={<Home />} />
 
         <Route path="/products" element={<Product />} />
-        <Route
-          path="/products/:categorySlug/:productSlug"
-          element={<ProductDetails />}
-        />
 
         <Route path="/products">
           <Route

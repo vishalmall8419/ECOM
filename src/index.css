@@ -2,13 +2,8 @@
 
 @import "tailwindcss";
 
-<<<<<<< HEAD
 *::-webkit-scrollbar {
   display: none;
-}
-=======
-*::-webkit-scrollbar{
-    display: none;
 }
 
 .font-logo {
@@ -18,4 +13,3 @@
 .font-nav {
   font-family: 'DM Sans', sans-serif;
 }
->>>>>>> 5a05511 (made cart, wishlist,about etc)
