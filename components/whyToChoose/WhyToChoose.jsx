@@ -2,64 +2,55 @@ import CardSwap, { Card } from "./Cards";
 
 export default function WhyToChoose() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f3f1e9] px-6 py-8 text-[#17211b] sm:px-10 lg:px-16 lg:py-12">
-      {/* <nav className="mx-auto flex max-w-7xl items-center justify-between border-b border-[#17211b]/15 pb-6">
-        <a
-          className="font-display text-lg font-bold tracking-[-0.04em]"
-          href="#top"
-        >
-          good<span className="text-[#e56b42]">.</span>goods
-        </a>
-        <span className="hidden text-xs font-bold uppercase tracking-[0.2em] text-[#17211b]/55 sm:block">
-          The better way to shop
-        </span>
-        <button className="rounded-full border border-[#17211b]/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] transition hover:bg-[#17211b] hover:text-[#f3f1e9]">
-          Explore shop
-        </button>
-      </nav> */}
-
+    <main className="min-h-screen overflow-hidden bg-[#f3f1e9] px-4 py-6 text-[#17211b] sm:px-8 sm:py-8 lg:px-16 lg:py-12">
       <section
         id="top"
-        className="mx-auto grid min-h-[calc(100vh-9rem)] max-w-7xl items-center gap-12 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-4 lg:py-8"
+        className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-8 py-10 sm:gap-12 sm:py-14 lg:min-h-[calc(100vh-9rem)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-4 lg:py-8"
       >
         <div className="relative z-10 max-w-xl">
-          <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-[#e56b42]">
+          <p className="mb-5 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#e56b42] sm:mb-6 sm:text-xs sm:tracking-[0.24em]">
             <span className="h-2 w-2 rounded-full bg-[#e56b42]" />
             Why choose us
           </p>
-          <h1 className="font-display max-w-2xl text-5xl font-bold leading-[0.96] tracking-[-0.065em] sm:text-7xl">
+          <h1 className="font-display max-w-2xl text-4xl font-bold leading-[0.98] tracking-[-0.065em] sm:text-5xl lg:text-7xl">
             Shopping that feels{" "}
             <span className="text-[#e56b42]">worth it.</span>
           </h1>
-          <p className="mt-8 max-w-md text-base leading-7 text-[#17211b]/65 sm:text-lg">
+          <p className="mt-6 max-w-md text-sm leading-6 text-[#17211b]/65 sm:mt-8 sm:text-lg sm:leading-7">
             Thoughtfully chosen essentials, honest prices, and a smoother
             experience from your first click to your front door.
           </p>
-          <div className="mt-12 grid max-w-md grid-cols-3 gap-5 border-t border-[#17211b]/15 pt-5">
+          <div className="mt-8 grid max-w-md grid-cols-3 gap-3 border-t border-[#17211b]/15 pt-4 sm:mt-12 sm:gap-5 sm:pt-5">
             <div>
               <p className="font-display text-2xl font-bold tracking-[-0.05em]">
                 4.9/5
               </p>
-              <p className="mt-1 text-xs text-[#17211b]/55">Customer rating</p>
+              <p className="mt-1 text-[10px] leading-4 text-[#17211b]/55 sm:text-xs">
+                Customer rating
+              </p>
             </div>
             <div>
               <p className="font-display text-2xl font-bold tracking-[-0.05em]">
                 48h
               </p>
-              <p className="mt-1 text-xs text-[#17211b]/55">Dispatch time</p>
+              <p className="mt-1 text-[10px] leading-4 text-[#17211b]/55 sm:text-xs">
+                Dispatch time
+              </p>
             </div>
             <div>
               <p className="font-display text-2xl font-bold tracking-[-0.05em]">
                 30d
               </p>
-              <p className="mt-1 text-xs text-[#17211b]/55">Easy returns</p>
+              <p className="mt-1 text-[10px] leading-4 text-[#17211b]/55 sm:text-xs">
+                Easy returns
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="relative flex min-h-[560px] items-center justify-center lg:min-h-[600px]">
-          <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#e56b42]/25 sm:h-[540px] sm:w-[540px]" />
-          <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e5d7c0]/55 sm:h-[400px] sm:w-[400px]" />
+        <div className="relative flex min-h-[390px] items-center justify-center sm:min-h-[560px] lg:min-h-[600px]">
+          <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#e56b42]/25 sm:h-[420px] sm:w-[420px] lg:h-[540px] lg:w-[540px]" />
+          <div className="absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e5d7c0]/55 sm:h-[300px] sm:w-[300px] lg:h-[400px] lg:w-[400px]" />
           <div className="relative h-[500px] w-full max-w-[620px]">
             <CardSwap
               width={390}
