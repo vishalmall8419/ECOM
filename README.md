@@ -7,7 +7,7 @@ A modern, responsive, and user-friendly e-commerce website built with **React.js
 
 🔗 **Live Website:** Add your deployed website URL here
 
-📂 **GitHub Repository:** Add your GitHub repository URL here
+📂 **GitHub Repository:** https://github.com/vishalmall8419/ECOM
 
 ---
 
