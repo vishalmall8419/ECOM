@@ -38,7 +38,7 @@ const Router = () => {
 
         <Route path="/products" element={<Product />} />
 
-        <Route path="/products">
+        {/* <Route path="/products">
           <Route
             path="garments/:id"
             element={<ProductDetails />}
@@ -53,7 +53,9 @@ const Router = () => {
             path="grocery/:id"
             element={<ProductDetails />}
           />
-        </Route>
+        </Route> */}
+
+        <Route path="/products/:categorySlug/:productSlug" element={<ProductDetails />} />
 
         <Route path="/about" element={<About />} />
 

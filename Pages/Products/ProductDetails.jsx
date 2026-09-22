@@ -71,15 +71,15 @@ const ProductDetails = () => {
           <ArrowLeft size={16} /> Back to products
         </Link>
 
-        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.85fr)] lg:gap-14">
+        <div className="grid items-start  lg:grid-cols-[minmax(0,0.7fr)_minmax(360px,0.85fr)]">
           <section className="lg:sticky lg:top-24" aria-label="Product gallery">
             <div
-              className="relative overflow-hidden rounded-2xl border border-[#e4d8cc] bg-[#f7f2ed] shadow-[0_12px_32px_rgba(98,78,60,0.08)]"
+              className="relative overflow-hidden rounded-l-2xl border border-[#e4d8cc] bg-[#f7f2ed] shadow-[0_12px_32px_rgba(98,78,60,0.08)]"
               onTouchStart={(event) => setTouchStart(event.touches[0].clientX)}
               onTouchEnd={handleTouchEnd}
             >
               <div
-                className="flex aspect-[4/4.5] transition-transform duration-300"
+                className="flex aspect-square transition-transform duration-300"
                 style={{ transform: `translateX(-${activeImage * 100}%)` }}
               >
                 {images.map((image, index) => (
@@ -141,12 +141,12 @@ const ProductDetails = () => {
             </div>
           </section>
 
-          <section className="rounded-2xl border border-[#e4d8cc] bg-white p-5 shadow-[0_12px_32px_rgba(98,78,60,0.06)] sm:p-8">
+          <section className="rounded-r-2xl border border-[#e4d8cc] bg-white p-5 shadow-[0_12px_32px_rgba(98,78,60,0.06)] sm:p-8">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E56B42]">
               {product.category} / {product.brand}
             </p>
             <div className="mt-3 flex items-start justify-between gap-4">
-              <h1 className="text-3xl font-extrabold leading-tight text-[#241f1b] sm:text-4xl">
+              <h1 className="text-3xl font-bold leading-tight text-[#241f1b] sm:text-4xl">
                 {product.name}
               </h1>
               <button

@@ -12,7 +12,7 @@ const ProductCard = ({ product, categorySlug, onAdd }) => {
   return (
     <article className="group flex h-full w-full flex-col overflow-hidden rounded-xl border border-[#e4d8cc] bg-white shadow-[0_8px_24px_rgba(98,78,60,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(98,78,60,0.12)]">
       {/* Product Image */}
-      <div className="relative flex aspect-[5/6] items-center justify-center overflow-hidden bg-[#f7f2ed] p-4">
+      <div className="relative flex aspect-[5/6] items-center justify-center overflow-hidden bg-[#f7f2ed] ">
         {/* Discount Badge */}
         {product.price?.discountPercentage > 0 && (
           <div className="absolute left-0 top-0 z-10 bg-[#E56B42] px-3 py-2 text-center text-xs font-bold uppercase tracking-wider text-white">
@@ -71,7 +71,7 @@ const ProductCard = ({ product, categorySlug, onAdd }) => {
         <div className="mt-auto flex items-end justify-between gap-2 pt-5">
           {/* Price */}
           <div>
-            <h3 className="text-lg font-bold text-[#241f1b]">
+            <h3 className="text-xl font-bold text-[#241f1b]">
               ₹{product.price?.current?.toLocaleString("en-IN")}
             </h3>
 

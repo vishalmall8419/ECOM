@@ -37,10 +37,10 @@ const Product = () => {
       <section className="mx-auto max-w-7xl">
         <div className="flex flex-col justify-between gap-6 border-b border-[#d8cabe] pb-8 md:flex-row md:items-end">
           <div>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-[#E56B42]">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-[#E56B42]">
               The ECOM edit
             </p>
-            <h1 className="text-4xl font-extrabold tracking-tight text-[#241f1b] sm:text-5xl">
+            <h1 className="text-4xl font-extrabold uppercase tracking-normal text-[#241f1b] sm:text-5xl">
               Shop everyday well.
             </h1>
             <p className="mt-3 max-w-xl text-base leading-7 text-[#806c5d]">
@@ -95,7 +95,7 @@ const Product = () => {
           </label>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 pt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-5 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           {products.map((product) => (
             <ProductCard
               key={product.id}
