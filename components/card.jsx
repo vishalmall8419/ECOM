@@ -23,7 +23,7 @@ const ProductCard = ({ product, categorySlug, onAdd }) => {
   return (
     <article className="group flex h-full w-full flex-col overflow-hidden rounded-xl border border-[#e4d8cc] bg-white shadow-[0_8px_24px_rgba(98,78,60,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(98,78,60,0.12)]">
       {/* Product Image */}
-      <div className="relative flex aspect-[5/6] items-center justify-center overflow-hidden bg-[#f7f2ed] ">
+      <div className="relative flex aspect-[5/5] items-center justify-center overflow-hidden bg-[#f7f2ed] ">
         {/* Discount Badge */}
         {product.price?.discountPercentage > 0 && (
           <div className="absolute left-0 top-0 z-10 bg-[#E56B42] px-3 py-2 text-center text-xs font-bold uppercase tracking-wider text-white">
@@ -61,9 +61,9 @@ const ProductCard = ({ product, categorySlug, onAdd }) => {
       </div>
 
       {/* Product Details */}
-      <div className="flex flex-1 flex-col p-4">
+      <div className="flex flex-1 flex-col p-2">
         {/* Delivery Time */}
-        <div className="mb-3 inline-flex w-fit items-center gap-1 rounded-md bg-[#f1e8df] px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-[#624e3c]">
+        <div className="mb-1 inline-flex w-fit items-center gap-1 rounded-md bg-[#f1e8df] px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-[#624e3c]">
           <Timer size={13} />
           Ready to ship
         </div>
@@ -73,13 +73,13 @@ const ProductCard = ({ product, categorySlug, onAdd }) => {
           to={`/products/${categorySlug}/${product.slug}`}
           className="transition hover:text-[#E56B42]"
         >
-          <h2 className="line-clamp-2 text-lg font-semibold leading-6 text-[#241f1b]">
+          <h3 className="line-clamp-1 text-lg font-semibold leading-5 text-[#443b33ac]">
             {product.name}
-          </h2>
+          </h3>
         </Link>
 
         {/* Quantity */}
-        <div className="mt-2 flex items-center gap-2 text-sm text-[#8b7868]">
+        <div className="mt-1 flex items-center gap-2 text-sm text-[#8b7868]">
           <span>{quantity}</span>
           <span className="text-[#d2c1b3]">|</span>
           <span className="inline-flex items-center gap-1">
@@ -88,7 +88,7 @@ const ProductCard = ({ product, categorySlug, onAdd }) => {
         </div>
 
         {/* Price and Button */}
-        <div className="mt-auto flex items-end justify-between gap-2 pt-5">
+        <div className="flex items-end justify-between gap-2 pt-5">
           {/* Price */}
           <div>
             <h3 className="text-xl font-bold text-[#241f1b]">

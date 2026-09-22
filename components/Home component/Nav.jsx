@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import { Heart, Search, ShoppingBag, Menu, X } from "lucide-react";
+import { Heart, Search, ShoppingBag, Menu, X, LogIn } from "lucide-react";
 
 import { Link } from "react-router-dom";
 
@@ -364,6 +364,17 @@ const Nav = () => {
               )}
             </Link>
           </li>
+          <li>
+            <Link
+              ref={addDesktopIcon}
+              to="/login"
+              aria-label="Login"
+              className="relative inline-flex transition-colors hover:text-[#22a3a5]"
+            >
+              <LogIn size={21} strokeWidth={1.8} />
+             
+            </Link>
+          </li>
         </ul>
 
         {/* MOBILE MENU BUTTON */}
@@ -470,6 +481,18 @@ const Nav = () => {
               </span>
             )}
           </Link>
+          <Link
+            to="/login"
+            onClick={closeMenu}
+            aria-label="Login"
+            className="relative inline-flex text-[#624e3c] transition-colors hover:text-[#22a3a5]"
+          >
+            <LogIn size={21} strokeWidth={1.8} />
+  
+          </Link>
+           
+            
+       
         </div>
       </div>
     </nav>
