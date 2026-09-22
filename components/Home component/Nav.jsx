@@ -1,20 +1,20 @@
-
 import { useState, useEffect, useRef } from "react";
 
-import {
-  Heart,
-  Search,
-  ShoppingBag,
-  Menu,
-  X,
-} from "lucide-react";
+import { Heart, Search, ShoppingBag, Menu, X } from "lucide-react";
 
 import { Link } from "react-router-dom";
 
 import gsap from "gsap";
+import { CART_KEY, useStoredItems, WISHLIST_KEY } from "../../src/store";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [wishlistItems] = useStoredItems(WISHLIST_KEY);
+  const [cartItems] = useStoredItems(CART_KEY);
+  const cartItemCount = cartItems.reduce(
+    (total, item) => total + (item.quantity || 1),
+    0,
+  );
 
   // ==========================================
   // REFS
@@ -37,28 +37,19 @@ const Nav = () => {
   // ==========================================
 
   const addDesktopLink = (element) => {
-    if (
-      element &&
-      !desktopLinksRef.current.includes(element)
-    ) {
+    if (element && !desktopLinksRef.current.includes(element)) {
       desktopLinksRef.current.push(element);
     }
   };
 
   const addDesktopIcon = (element) => {
-    if (
-      element &&
-      !desktopIconsRef.current.includes(element)
-    ) {
+    if (element && !desktopIconsRef.current.includes(element)) {
       desktopIconsRef.current.push(element);
     }
   };
 
   const addMobileLink = (element) => {
-    if (
-      element &&
-      !mobileLinksRef.current.includes(element)
-    ) {
+    if (element && !mobileLinksRef.current.includes(element)) {
       mobileLinksRef.current.push(element);
     }
   };
@@ -95,7 +86,7 @@ const Nav = () => {
             opacity: 0,
             duration: 0.6,
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           desktopLinksRef.current,
@@ -105,7 +96,7 @@ const Nav = () => {
             duration: 0.5,
             stagger: 0.12,
           },
-          "-=0.3"
+          "-=0.3",
         )
         .from(
           desktopIconsRef.current,
@@ -116,7 +107,7 @@ const Nav = () => {
             stagger: 0.1,
             ease: "back.out(1.7)",
           },
-          "-=0.3"
+          "-=0.3",
         );
     }, navRef);
 
@@ -138,10 +129,7 @@ const Nav = () => {
       }
 
       // Scroll Down
-      if (
-        currentScrollY > lastScrollY.current &&
-        currentScrollY > 100
-      ) {
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
         gsap.to(navRef.current, {
           yPercent: -100,
           duration: 0.45,
@@ -210,7 +198,7 @@ const Nav = () => {
               duration: 0.4,
               stagger: 0.1,
             },
-            "-=0.2"
+            "-=0.2",
           )
           .from(
             mobileIconsRef.current,
@@ -219,7 +207,7 @@ const Nav = () => {
               opacity: 0,
               duration: 0.4,
             },
-            "-=0.2"
+            "-=0.2",
           );
       } else {
         gsap.killTweensOf(menu);
@@ -277,7 +265,6 @@ const Nav = () => {
       ========================================== */}
 
       <div className="flex items-center justify-between px-6 py-3 sm:px-8 lg:px-12 xl:px-20">
-
         {/* LOGO */}
 
         <Link
@@ -295,18 +282,13 @@ const Nav = () => {
         {/* DESKTOP NAVIGATION */}
 
         <ul className="font-nav hidden items-center gap-8 text-sm font-semibold tracking-[0.12em] text-[#624e3c] lg:flex">
-
           <li>
             <Link
               ref={addDesktopLink}
               to="/"
               className="inline-block transition-colors"
-              onMouseEnter={(e) =>
-                handleTextEnter(e.currentTarget)
-              }
-              onMouseLeave={(e) =>
-                handleTextLeave(e.currentTarget)
-              }
+              onMouseEnter={(e) => handleTextEnter(e.currentTarget)}
+              onMouseLeave={(e) => handleTextLeave(e.currentTarget)}
             >
               HOME
             </Link>
@@ -317,12 +299,8 @@ const Nav = () => {
               ref={addDesktopLink}
               to="/products"
               className="inline-block transition-colors"
-              onMouseEnter={(e) =>
-                handleTextEnter(e.currentTarget)
-              }
-              onMouseLeave={(e) =>
-                handleTextLeave(e.currentTarget)
-              }
+              onMouseEnter={(e) => handleTextEnter(e.currentTarget)}
+              onMouseLeave={(e) => handleTextLeave(e.currentTarget)}
             >
               PRODUCT
             </Link>
@@ -333,23 +311,17 @@ const Nav = () => {
               ref={addDesktopLink}
               to="/about"
               className="inline-block transition-colors"
-              onMouseEnter={(e) =>
-                handleTextEnter(e.currentTarget)
-              }
-              onMouseLeave={(e) =>
-                handleTextLeave(e.currentTarget)
-              }
+              onMouseEnter={(e) => handleTextEnter(e.currentTarget)}
+              onMouseLeave={(e) => handleTextLeave(e.currentTarget)}
             >
               ABOUT
             </Link>
           </li>
-
         </ul>
 
         {/* DESKTOP ICONS */}
 
         <ul className="font-nav hidden items-center gap-5 text-[#624e3c] lg:flex">
-
           <li>
             <Link
               ref={addDesktopIcon}
@@ -366,9 +338,14 @@ const Nav = () => {
               ref={addDesktopIcon}
               to="/wishlist"
               aria-label="Wishlist"
-              className="block transition-colors hover:text-[#22a3a5]"
+              className="relative inline-flex transition-colors hover:text-[#22a3a5]"
             >
               <Heart size={21} strokeWidth={1.8} />
+              {wishlistItems.length > 0 && (
+                <span className="absolute -right-3 -top-2 flex min-h-4 min-w-4 items-center justify-center rounded-full bg-[#C6532F] px-1 text-[10px] font-bold leading-none text-white">
+                  {wishlistItems.length}
+                </span>
+              )}
             </Link>
           </li>
 
@@ -377,12 +354,16 @@ const Nav = () => {
               ref={addDesktopIcon}
               to="/cart"
               aria-label="Shopping Cart"
-              className="block transition-colors hover:text-[#22a3a5]"
+              className="relative inline-flex transition-colors hover:text-[#22a3a5]"
             >
               <ShoppingBag size={21} strokeWidth={1.8} />
+              {cartItemCount > 0 && (
+                <span className="absolute -right-3 -top-2 flex min-h-4 min-w-4 items-center justify-center rounded-full bg-[#C6532F] px-1 text-[10px] font-bold leading-none text-white">
+                  {cartItemCount}
+                </span>
+              )}
             </Link>
           </li>
-
         </ul>
 
         {/* MOBILE MENU BUTTON */}
@@ -400,7 +381,6 @@ const Nav = () => {
             <Menu size={26} strokeWidth={1.8} />
           )}
         </button>
-
       </div>
 
       {/* ==========================================
@@ -411,11 +391,9 @@ const Nav = () => {
         ref={mobileMenuRef}
         className="hidden overflow-hidden border-t border-[#d8cabe] px-6 pb-3 pt-4 sm:px-8 lg:hidden"
       >
-
         {/* MOBILE NAVIGATION */}
 
         <ul className="font-nav flex flex-col gap-4 text-sm font-semibold tracking-[0.1em] text-[#624e3c]">
-
           <li>
             <Link
               ref={addMobileLink}
@@ -444,12 +422,10 @@ const Nav = () => {
               to="/about"
               onClick={closeMenu}
               className="block py-1 transition-colors hover:text-[#22a3a5]"
-
->
+            >
               ABOUT
             </Link>
           </li>
-
         </ul>
 
         {/* MOBILE ICONS */}
@@ -458,7 +434,6 @@ const Nav = () => {
           ref={mobileIconsRef}
           className="mt-5 flex items-center gap-5 border-t border-[#d8cabe] pt-4"
         >
-
           <Link
             to="/search"
             onClick={closeMenu}
@@ -472,24 +447,31 @@ const Nav = () => {
             to="/wishlist"
             onClick={closeMenu}
             aria-label="Wishlist"
-            className="text-[#624e3c] transition-colors hover:text-[#22a3a5]"
+            className="relative inline-flex text-[#624e3c] transition-colors hover:text-[#22a3a5]"
           >
             <Heart size={21} strokeWidth={1.8} />
+            {wishlistItems.length > 0 && (
+              <span className="absolute -right-3 -top-2 flex min-h-4 min-w-4 items-center justify-center rounded-full bg-[#C6532F] px-1 text-[10px] font-bold leading-none text-white">
+                {wishlistItems.length}
+              </span>
+            )}
           </Link>
 
           <Link
             to="/cart"
             onClick={closeMenu}
             aria-label="Shopping Cart"
-            className="text-[#624e3c] transition-colors hover:text-[#22a3a5]"
+            className="relative inline-flex text-[#624e3c] transition-colors hover:text-[#22a3a5]"
           >
             <ShoppingBag size={21} strokeWidth={1.8} />
+            {cartItemCount > 0 && (
+              <span className="absolute -right-3 -top-2 flex min-h-4 min-w-4 items-center justify-center rounded-full bg-[#C6532F] px-1 text-[10px] font-bold leading-none text-white">
+                {cartItemCount}
+              </span>
+            )}
           </Link>
-
         </div>
-
       </div>
-
     </nav>
   );
 };

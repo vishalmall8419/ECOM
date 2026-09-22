@@ -12,6 +12,13 @@ import {
 import { Link, useParams } from "react-router-dom";
 
 import catalog from "../../data/Product.json";
+import {
+  addToCart,
+  addToWishlist,
+  removeFromWishlist,
+  useStoredItems,
+  WISHLIST_KEY,
+} from "../../src/store";
 
 const formatValue = (value) => {
   if (Array.isArray(value)) return value.join(", ");
@@ -28,6 +35,7 @@ const ProductDetails = () => {
   const [activeImage, setActiveImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [touchStart, setTouchStart] = useState(null);
+  const [wishlistItems] = useStoredItems(WISHLIST_KEY);
 
   if (!product) {
     return (
@@ -47,6 +55,7 @@ const ProductDetails = () => {
 
   const images = product.images?.length ? product.images : ["/assists/gar.png"];
   const specifications = Object.entries(product.specifications || {});
+  const isWishlisted = wishlistItems.some((item) => item.id === product.id);
   const handleTouchEnd = (event) => {
     if (touchStart === null) return;
     const distance = touchStart - event.changedTouches[0].clientX;
@@ -151,10 +160,15 @@ const ProductDetails = () => {
               </h1>
               <button
                 type="button"
-                aria-label="Add product to wishlist"
-                className="shrink-0 rounded-full border border-[#d8cabe] p-3 text-[#624e3c] transition hover:border-[#E56B42] hover:bg-[#E56B42] hover:text-white"
+                aria-label={isWishlisted ? "Remove product from wishlist" : "Add product to wishlist"}
+                onClick={() =>
+                  isWishlisted
+                    ? removeFromWishlist(product.id)
+                    : addToWishlist(product)
+                }
+                className={`shrink-0 rounded-full border border-[#d8cabe] p-3 transition hover:border-[#E56B42] hover:bg-[#E56B42] hover:text-white ${isWishlisted ? "text-[#C6532F]" : "text-[#624e3c]"}`}
               >
-                <Heart size={19} />
+                <Heart size={19} fill={isWishlisted ? "currentColor" : "none"} />
               </button>
             </div>
 
@@ -225,6 +239,7 @@ const ProductDetails = () => {
               </div>
               <button
                 type="button"
+                onClick={() => addToCart(product, quantity)}
                 className="flex-1 rounded-lg bg-[#E56B42] px-6 py-3 font-bold text-white transition hover:bg-[#C6532F]"
               >
                 Add to cart

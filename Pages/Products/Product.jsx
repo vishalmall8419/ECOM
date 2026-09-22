@@ -3,6 +3,7 @@ import { ArrowDownUp, Check, SlidersHorizontal } from "lucide-react";
 
 import ProductCard from "../../components/card";
 import catalog from "../../data/Product.json";
+import { addToCart } from "../../src/store";
 
 const Product = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -101,6 +102,7 @@ const Product = () => {
               key={product.id}
               product={product}
               categorySlug={product.categorySlug}
+              onAdd={() => addToCart(product)}
             />
           ))}
         </div>

@@ -1,8 +1,19 @@
 import { Heart, Star, Timer } from "lucide-react";
 import { Link } from "react-router-dom";
 import img from "../assists/gar.png";
+import {
+  addToWishlist,
+  removeFromWishlist,
+  useStoredItems,
+  CART_KEY,
+  WISHLIST_KEY,
+} from "../src/store";
 
 const ProductCard = ({ product, categorySlug, onAdd }) => {
+  const [wishlistItems] = useStoredItems(WISHLIST_KEY);
+  const [cartItems] = useStoredItems(CART_KEY);
+  const isWishlisted = wishlistItems.some((item) => item.id === product.id);
+  const isInCart = cartItems.some((item) => item.id === product.id);
   const quantity =
     product.specifications?.quantity ||
     product.specifications?.weight ||
@@ -22,10 +33,19 @@ const ProductCard = ({ product, categorySlug, onAdd }) => {
 
         <button
           type="button"
-          aria-label={`Add ${product.name} to wishlist`}
-          className="absolute right-3 top-3 z-10 rounded-full bg-white/85 p-2 text-[#624e3c] opacity-0 shadow-sm transition group-hover:opacity-100 hover:bg-[#E56B42] hover:text-white"
+          aria-label={
+            isWishlisted
+              ? `Remove ${product.name} from wishlist`
+              : `Add ${product.name} to wishlist`
+          }
+          onClick={() =>
+            isWishlisted
+              ? removeFromWishlist(product.id)
+              : addToWishlist(product)
+          }
+          className={`absolute right-3 top-3 z-10 rounded-full bg-white/85 p-2 text-[#624e3c] opacity-0 shadow-sm transition group-hover:opacity-100 hover:bg-[#E56B42] hover:text-white ${isWishlisted ? "bg-white text-[#C6532F] opacity-100" : ""}`}
         >
-          <Heart size={17} />
+          <Heart size={17} fill={isWishlisted ? "currentColor" : "none"} />
         </button>
 
         <Link
@@ -84,9 +104,10 @@ const ProductCard = ({ product, categorySlug, onAdd }) => {
           <button
             type="button"
             onClick={() => onAdd?.(product)}
-            className="rounded-lg border border-[#E56B42] bg-[#fff1ec] px-5 py-2 text-base font-bold text-[#C6532F] transition hover:bg-[#E56B42] hover:text-white"
+            disabled={isInCart}
+            className={`rounded-lg border px-5 py-2 text-base font-bold transition ${isInCart ? "cursor-not-allowed border-[#cdbdad] bg-[#f1e8df] text-[#806c5d]" : "border-[#E56B42] bg-[#fff1ec] text-[#C6532F] hover:bg-[#E56B42] hover:text-white"}`}
           >
-            ADD
+            {isInCart ? "IN CART" : "ADD"}
           </button>
         </div>
       </div>

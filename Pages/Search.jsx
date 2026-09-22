@@ -1,14 +1,10 @@
-
 import { useMemo, useState } from "react";
-import {
-  Search as SearchIcon,
-  SlidersHorizontal,
-  X,
-} from "lucide-react";
+import { Search as SearchIcon, SlidersHorizontal, X } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 
 import data from "../data/Product.json";
 import ProductCard from "../components/card";
+import { addToCart } from "../src/store";
 
 // Flatten all category products into one array
 const products = data.categories.flatMap((category) =>
@@ -16,15 +12,13 @@ const products = data.categories.flatMap((category) =>
     ...product,
     categoryName: category.name,
     categorySlug: category.slug,
-  }))
+  })),
 );
 
 // Dynamic categories from JSON
 const categories = [
   "All",
-  ...Array.from(
-    new Set(data.categories.map((category) => category.name))
-  ),
+  ...Array.from(new Set(data.categories.map((category) => category.name))),
 ];
 
 const SearchPage = () => {
@@ -38,42 +32,6 @@ const SearchPage = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   // Add Product to Cart
-  const addToCart = (product) => {
-    const existingCart = JSON.parse(
-      localStorage.getItem("ecom-cart") || "[]"
-    );
-
-    const existingProduct = existingCart.find(
-      (item) => item.id === product.id
-    );
-
-    let updatedCart;
-
-    if (existingProduct) {
-      updatedCart = existingCart.map((item) =>
-        item.id === product.id
-          ? {
-              ...item,
-              quantity: (item.quantity || 1) + 1,
-            }
-          : item
-      );
-    } else {
-      updatedCart = [
-        ...existingCart,
-        {
-          ...product,
-          quantity: 1,
-        },
-      ];
-    }
-
-    localStorage.setItem(
-      "ecom-cart",
-      JSON.stringify(updatedCart)
-    );
-  };
-
   // Filter and Sort Products
   const filteredProducts = useMemo(() => {
     const query = searchQuery.toLowerCase().trim();
@@ -95,37 +53,32 @@ const SearchPage = () => {
       const matchesSearch = searchableText.includes(query);
 
       const matchesCategory =
-        category === "All" ||
-        product.categoryName === category;
+        category === "All" || product.categoryName === category;
 
       return matchesSearch && matchesCategory;
     });
 
     if (sortBy === "lowToHigh") {
       result = [...result].sort(
-        (a, b) =>
-          (a.price?.current || 0) - (b.price?.current || 0)
+        (a, b) => (a.price?.current || 0) - (b.price?.current || 0),
       );
     }
 
     if (sortBy === "highToLow") {
       result = [...result].sort(
-        (a, b) =>
-          (b.price?.current || 0) - (a.price?.current || 0)
+        (a, b) => (b.price?.current || 0) - (a.price?.current || 0),
       );
     }
 
     if (sortBy === "rating") {
       result = [...result].sort(
-        (a, b) =>
-          (b.rating?.average || 0) - (a.rating?.average || 0)
+        (a, b) => (b.rating?.average || 0) - (a.rating?.average || 0),
       );
     }
 
     if (sortBy === "newest") {
       result = [...result].sort(
-        (a, b) =>
-          Number(b.isNewArrival) - Number(a.isNewArrival)
+        (a, b) => Number(b.isNewArrival) - Number(a.isNewArrival),
       );
     }
 
@@ -174,8 +127,7 @@ const SearchPage = () => {
           </h1>
 
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-[#806B60] sm:text-base">
-            Find your favourite products and explore our latest
-            collection.
+            Find your favourite products and explore our latest collection.
           </p>
         </div>
 
@@ -184,17 +136,12 @@ const SearchPage = () => {
           onSubmit={handleSearch}
           className="mx-auto flex max-w-3xl items-center rounded-full border border-[#D2BFB0] bg-[#F8F2EC] p-2 shadow-sm"
         >
-          <SearchIcon
-            className="ml-4 shrink-0 text-[#9B7869]"
-            size={21}
-          />
+          <SearchIcon className="ml-4 shrink-0 text-[#9B7869]" size={21} />
 
           <input
             type="text"
             value={searchQuery}
-            onChange={(event) =>
-              setSearchQuery(event.target.value)
-            }
+            onChange={(event) => setSearchQuery(event.target.value)}
             placeholder="Search for products..."
             className="w-full bg-transparent px-4 py-3 text-sm text-[#3B2521] outline-none placeholder:text-[#A58D80] sm:text-base"
           />
@@ -251,12 +198,8 @@ const SearchPage = () => {
               className="rounded-full border border-[#D2BFB0] bg-[#F8F2EC] px-4 py-2 text-sm text-[#806052] outline-none focus:border-[#C65B45]"
             >
               <option value="default">Sort By</option>
-              <option value="lowToHigh">
-                Price: Low to High
-              </option>
-              <option value="highToLow">
-                Price: High to Low
-              </option>
+              <option value="lowToHigh">Price: Low to High</option>
+              <option value="highToLow">Price: High to Low</option>
               <option value="rating">Top Rated</option>
               <option value="newest">New Arrivals</option>
             </select>
@@ -330,10 +273,7 @@ const SearchPage = () => {
               /* Empty State */
               <div className="flex min-h-[350px] flex-col items-center justify-center rounded-2xl border border-dashed border-[#D2BFB0] bg-[#F8F2EC] px-5 text-center">
                 <div className="mb-5 rounded-full bg-[#E8DCD0] p-5">
-                  <SearchIcon
-                    size={28}
-                    className="text-[#806052]"
-                  />
+                  <SearchIcon size={28} className="text-[#806052]" />
                 </div>
 
                 <h2 className="font-serif text-xl font-semibold text-[#3B2521]">
@@ -341,8 +281,8 @@ const SearchPage = () => {
                 </h2>
 
                 <p className="mt-2 max-w-sm text-sm leading-6 text-[#806B60]">
-                  We couldn't find any products matching your
-                  search. Try another keyword or category.
+                  We couldn't find any products matching your search. Try
+                  another keyword or category.
                 </p>
 
                 <button

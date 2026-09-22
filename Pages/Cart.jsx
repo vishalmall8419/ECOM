@@ -1,5 +1,4 @@
-
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -13,29 +12,16 @@ import {
   Tag,
 } from "lucide-react";
 import gsap from "gsap";
+import { removeFromCart, useStoredItems, CART_KEY } from "../src/store";
 
 const Cart = () => {
   const pageRef = useRef(null);
   const itemsRef = useRef(null);
   const summaryRef = useRef(null);
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, updateCartItems] = useStoredItems(CART_KEY);
   const [coupon, setCoupon] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
-
-  // Load cart items from LocalStorage
-  useEffect(() => {
-    const storedCart = JSON.parse(
-      localStorage.getItem("ecom-cart") || "[]"
-    );
-
-    setCartItems(storedCart);
-  }, []);
-
-  // Save cart items to LocalStorage
-  useEffect(() => {
-    localStorage.setItem("ecom-cart", JSON.stringify(cartItems));
-  }, [cartItems]);
 
   // GSAP Animation
   useLayoutEffect(() => {
@@ -59,7 +45,7 @@ const Cart = () => {
             opacity: 0,
             duration: 0.8,
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           summaryRef.current,
@@ -68,7 +54,7 @@ const Cart = () => {
             opacity: 0,
             duration: 0.8,
           },
-          "-=0.6"
+          "-=0.6",
         );
     }, pageRef);
 
@@ -77,21 +63,21 @@ const Cart = () => {
 
   // Increase Quantity
   const increaseQuantity = (id) => {
-    setCartItems((previousItems) =>
+    updateCartItems((previousItems) =>
       previousItems.map((item) =>
         item.id === id
           ? {
               ...item,
               quantity: (item.quantity || 1) + 1,
             }
-          : item
-      )
+          : item,
+      ),
     );
   };
 
   // Decrease Quantity
   const decreaseQuantity = (id) => {
-    setCartItems((previousItems) =>
+    updateCartItems((previousItems) =>
       previousItems
         .map((item) =>
           item.id === id
@@ -99,41 +85,37 @@ const Cart = () => {
                 ...item,
                 quantity: Math.max((item.quantity || 1) - 1, 0),
               }
-            : item
+            : item,
         )
-        .filter((item) => item.quantity > 0)
+        .filter((item) => item.quantity > 0),
     );
   };
 
   // Remove Product
   const removeItem = (id) => {
-    setCartItems((previousItems) =>
-      previousItems.filter((item) => item.id !== id)
-    );
+    removeFromCart(id);
   };
 
   // Clear Cart
   const clearCart = () => {
-    setCartItems([]);
+    updateCartItems(() => []);
   };
 
   // Price Calculations
   const subtotal = cartItems.reduce(
-    (total, item) =>
-      total + (item.price?.current || 0) * (item.quantity || 1),
-    0
+    (total, item) => total + (item.price?.current || 0) * (item.quantity || 1),
+    0,
   );
 
   const discount = couponApplied ? Math.round(subtotal * 0.1) : 0;
 
-  const deliveryCharge =
-    subtotal === 0 ? 0 : subtotal >= 499 ? 0 : 40;
+  const deliveryCharge = subtotal === 0 ? 0 : subtotal >= 499 ? 0 : 40;
 
   const total = subtotal - discount + deliveryCharge;
 
   const totalItems = cartItems.reduce(
     (total, item) => total + (item.quantity || 1),
-    0
+    0,
   );
 
   const applyCoupon = () => {
@@ -161,8 +143,8 @@ const Cart = () => {
               </h1>
 
               <p className="mt-4 max-w-md text-sm leading-6 text-[#806B60] sm:text-base">
-                Everything you love, collected in one place.
-                Review your items before checkout.
+                Everything you love, collected in one place. Review your items
+                before checkout.
               </p>
             </div>
 
@@ -185,8 +167,8 @@ const Cart = () => {
             </h2>
 
             <p className="mt-3 max-w-sm text-sm leading-6 text-[#806B60]">
-              Your favourite products are waiting for you.
-              Explore our collection and find something special.
+              Your favourite products are waiting for you. Explore our
+              collection and find something special.
             </p>
 
             <Link
@@ -206,9 +188,7 @@ const Cart = () => {
               className="rounded-3xl border border-[#D9C8B9] bg-[#F8F2EC] p-4 shadow-sm sm:p-6"
             >
               <div className="mb-6 flex items-center justify-between border-b border-[#DDCFC3] pb-5">
-                <h2 className="font-serif text-2xl font-bold">
-                  Shopping Bag
-                </h2>
+                <h2 className="font-serif text-2xl font-bold">Shopping Bag</h2>
 
                 <button
                   type="button"
@@ -234,7 +214,7 @@ const Cart = () => {
                       <Link
                         to={`/products/${(
                           item.category || "garments"
-                        ).toLowerCase()}/${item.id}`}
+                        ).toLowerCase()}/${item.slug}`}
                         className="h-32 w-24 shrink-0 overflow-hidden rounded-2xl bg-[#E8DCD0] sm:h-40 sm:w-32"
                       >
                         <img
@@ -256,7 +236,7 @@ const Cart = () => {
                               <Link
                                 to={`/products/${(
                                   item.category || "garments"
-                                ).toLowerCase()}/${item.id}`}
+                                ).toLowerCase()}/${item.slug}`}
                               >
                                 <h3 className="line-clamp-2 font-serif text-lg font-bold leading-6 text-[#3B2521] transition hover:text-[#C65B45] sm:text-xl">
                                   {item.name}
@@ -310,7 +290,7 @@ const Cart = () => {
                             <p className="font-bold text-[#3B2521]">
                               ₹
                               {(currentPrice * quantity).toLocaleString(
-                                "en-IN"
+                                "en-IN",
                               )}
                             </p>
 
@@ -318,7 +298,7 @@ const Cart = () => {
                               <p className="text-xs text-[#A58D80] line-through">
                                 ₹
                                 {(originalPrice * quantity).toLocaleString(
-                                  "en-IN"
+                                  "en-IN",
                                 )}
                               </p>
                             )}
@@ -350,9 +330,7 @@ const Cart = () => {
               ref={summaryRef}
               className="rounded-3xl border border-[#D9C8B9] bg-[#F8F2EC] p-5 shadow-sm sm:p-7 lg:sticky lg:top-6"
             >
-              <h2 className="font-serif text-2xl font-bold">
-                Order Summary
-              </h2>
+              <h2 className="font-serif text-2xl font-bold">Order Summary</h2>
 
               <div className="mt-6 space-y-4 border-b border-[#DDCFC3] pb-6 text-sm">
                 <div className="flex items-center justify-between text-[#806B60]">
@@ -372,9 +350,7 @@ const Cart = () => {
                 <div className="flex items-center justify-between text-[#806B60]">
                   <span>Delivery</span>
                   <span className="font-semibold text-[#3B2521]">
-                    {deliveryCharge === 0
-                      ? "FREE"
-                      : `₹${deliveryCharge}`}
+                    {deliveryCharge === 0 ? "FREE" : `₹${deliveryCharge}`}
                   </span>
                 </div>
               </div>
@@ -430,9 +406,7 @@ const Cart = () => {
                   </p>
                 </div>
 
-                <span className="text-xs text-[#9B7869]">
-                  INR
-                </span>
+                <span className="text-xs text-[#9B7869]">INR</span>
               </div>
 
               {/* Checkout Button */}

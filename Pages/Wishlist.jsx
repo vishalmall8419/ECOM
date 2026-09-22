@@ -1,5 +1,4 @@
-
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -10,30 +9,19 @@ import {
   MoveRight,
 } from "lucide-react";
 import gsap from "gsap";
+import {
+  addToCart,
+  removeFromWishlist as removeStoredWishlist,
+  useStoredItems,
+  WISHLIST_KEY,
+} from "../src/store";
 
 const Wishlist = () => {
   const pageRef = useRef(null);
   const headingRef = useRef(null);
   const productsRef = useRef(null);
 
-  const [wishlistItems, setWishlistItems] = useState([]);
-
-  // Load wishlist from LocalStorage
-  useEffect(() => {
-    const storedWishlist = JSON.parse(
-      localStorage.getItem("ecom-wishlist") || "[]"
-    );
-
-    setWishlistItems(storedWishlist);
-  }, []);
-
-  // Save wishlist to LocalStorage
-  useEffect(() => {
-    localStorage.setItem(
-      "ecom-wishlist",
-      JSON.stringify(wishlistItems)
-    );
-  }, [wishlistItems]);
+  const [wishlistItems, updateWishlistItems] = useStoredItems(WISHLIST_KEY);
 
   // GSAP Animation
   useLayoutEffect(() => {
@@ -57,7 +45,7 @@ const Wishlist = () => {
             opacity: 0,
             duration: 0.8,
           },
-          "-=0.4"
+          "-=0.4",
         );
     }, pageRef);
 
@@ -66,53 +54,18 @@ const Wishlist = () => {
 
   // Remove item from wishlist
   const removeFromWishlist = (id) => {
-    setWishlistItems((previousItems) =>
-      previousItems.filter((item) => item.id !== id)
-    );
+    removeStoredWishlist(id);
   };
 
   // Add wishlist item to cart
   const moveToCart = (product) => {
-    const existingCart = JSON.parse(
-      localStorage.getItem("ecom-cart") || "[]"
-    );
-
-    const existingProduct = existingCart.find(
-      (item) => item.id === product.id
-    );
-
-    let updatedCart;
-
-    if (existingProduct) {
-      updatedCart = existingCart.map((item) =>
-        item.id === product.id
-          ? {
-              ...item,
-              quantity: (item.quantity || 1) + 1,
-            }
-          : item
-      );
-    } else {
-      updatedCart = [
-        ...existingCart,
-        {
-          ...product,
-          quantity: 1,
-        },
-      ];
-    }
-
-    localStorage.setItem(
-      "ecom-cart",
-      JSON.stringify(updatedCart)
-    );
-
-    removeFromWishlist(product.id);
+    addToCart(product);
+    removeStoredWishlist(product.id);
   };
 
   // Clear wishlist
   const clearWishlist = () => {
-    setWishlistItems([]);
+    updateWishlistItems(() => []);
   };
 
   return (
@@ -122,10 +75,7 @@ const Wishlist = () => {
     >
       <div className="mx-auto max-w-7xl">
         {/* Page Header */}
-        <section
-          ref={headingRef}
-          className="mb-10"
-        >
+        <section ref={headingRef} className="mb-10">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#9B7869]">
             Your Favourite Collection
           </p>
@@ -137,8 +87,8 @@ const Wishlist = () => {
               </h1>
 
               <p className="mt-4 max-w-md text-sm leading-6 text-[#806B60] sm:text-base">
-                Save the things you love and come back to them
-                whenever you want.
+                Save the things you love and come back to them whenever you
+                want.
               </p>
             </div>
 
@@ -161,8 +111,8 @@ const Wishlist = () => {
             </h2>
 
             <p className="mt-3 max-w-sm text-sm leading-6 text-[#806B60]">
-              You haven't saved any products yet. Explore our
-              collection and add your favourite items here.
+              You haven't saved any products yet. Explore our collection and add
+              your favourite items here.
             </p>
 
             <Link
@@ -197,8 +147,7 @@ const Wishlist = () => {
               {wishlistItems.map((product) => {
                 const currentPrice = product.price?.current || 0;
                 const originalPrice = product.price?.original || 0;
-                const discount =
-                  product.price?.discountPercentage || 0;
+                const discount = product.price?.discountPercentage || 0;
 
                 const categorySlug = (
                   product.category || "garments"
@@ -212,7 +161,7 @@ const Wishlist = () => {
                     {/* Product Image */}
                     <div className="relative h-72 overflow-hidden bg-[#E8DCD0]">
                       <Link
-                        to={`/products/${categorySlug}/${product.id}`}
+                        to={`/products/${categorySlug}/${product.slug}`}
                         className="block h-full w-full"
                       >
                         <img
@@ -233,9 +182,7 @@ const Wishlist = () => {
                       {/* Remove Button */}
                       <button
                         type="button"
-                        onClick={() =>
-                          removeFromWishlist(product.id)
-                        }
+                        onClick={() => removeFromWishlist(product.id)}
                         aria-label={`Remove ${product.name} from wishlist`}
                         className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#D9C8B9] bg-[#F8F2EC]/95 text-[#806052] shadow-sm transition hover:bg-[#C65B45] hover:text-white"
                       >
@@ -256,9 +203,7 @@ const Wishlist = () => {
                         {product.category || "Collection"}
                       </p>
 
-                      <Link
-                        to={`/products/${categorySlug}/${product.id}`}
-                      >
+                      <Link to={`/products/${categorySlug}/${product.slug}`}>
                         <h2 className="line-clamp-2 min-h-12 font-serif text-lg font-bold leading-6 text-[#3B2521] transition hover:text-[#C65B45]">
                           {product.name}
                         </h2>
