@@ -17,11 +17,18 @@ import AdminNavbar from "../Pages/Admin/Component/Navbar";
 import UserProfile from "../Pages/User/UserProfile";
 import AdminOrders from "../Pages/Admin/AdminOrders";
 import AdminProducts from "../Pages/Admin/AdminProducts";
-import AdminUsers from "../Pages/Admin/AdminUsers";
 import Wishlist from "../Pages/User/Wishlist";
 import UserCart from "../Pages/User/UserCart";
 import UserSettings from "../Pages/User/UserSettings";
 import Notification from "../Pages/User/Notification";
+import AdminCostumers from "../Pages/Admin/AdminCostumers";
+import Categories from "../Pages/Admin/Categories";
+import AdminCartOverview from "../Pages/Admin/AdminCartOverview";
+import AdminAnalytics from "../Pages/Admin/AdminAnalytics";
+import AdminProfile from "../Pages/Admin/AdminProfile";
+import Settings from "../Pages/Admin/Settings";
+import AdminStoreSettings from "../Pages/Admin/AdminStoreSettings";
+import Messages from "../Pages/Admin/Messages";
 
 const Dashboardroutes = () => {
   const role = sessionStorage.getItem("Role");
@@ -111,8 +118,29 @@ const Dashboardroutes = () => {
               <Route path="products">
                 <Route index element={<AdminProducts />} />
               </Route>
-              <Route path="users">
-                <Route index element={<AdminUsers />} />
+              <Route path="customers">
+                <Route index element={<AdminCostumers/>} />
+              </Route>
+              <Route path="categories">
+                <Route index element={<Categories/>} />
+              </Route>
+              <Route path="cart">
+                <Route index element={<AdminCartOverview/>} />
+              </Route>
+              <Route path="analytics">
+                <Route index element={<AdminAnalytics/>} />
+              </Route>
+              <Route path="store-settings">
+                <Route index element={<AdminStoreSettings/>} />
+              </Route>
+              <Route path="messages">
+                <Route index element={<Messages/>} />
+              </Route>
+              <Route path="profile">
+                <Route index element={<AdminProfile/>} />
+              </Route>
+              <Route path="settings">
+                <Route index element={<Settings/>} />
               </Route>
             </Routes>
           </div>

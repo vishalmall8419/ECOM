@@ -28,7 +28,7 @@ const AdminNavbar = ({ onMenuClick }) => {
 
     if (!query) return;
 
-    navigate(`/admin/search?query=${encodeURIComponent(query)}`);
+    navigate(`/dashboard/search?query=${encodeURIComponent(query)}`);
   };
 
   // Logout Handler
@@ -109,7 +109,7 @@ const AdminNavbar = ({ onMenuClick }) => {
           {/* Mobile Search */}
           <button
             type="button"
-            onClick={() => navigate("/admin/search")}
+            onClick={() => navigate("/dashboard/search")}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-[#624e3c]/15 bg-white/50 text-[#16231D] transition hover:bg-[#F3D45D] md:hidden"
             aria-label="Search"
           >
@@ -118,7 +118,7 @@ const AdminNavbar = ({ onMenuClick }) => {
 
           {/* Orders */}
           <Link
-            to="/admin/orders"
+            to="/dashboard/orders"
             className="hidden h-10 w-10 items-center justify-center rounded-full border border-[#624e3c]/15 bg-white/50 text-[#16231D] transition hover:bg-[#F3D45D] sm:flex"
             aria-label="Orders"
           >
@@ -128,7 +128,7 @@ const AdminNavbar = ({ onMenuClick }) => {
           {/* Notifications */}
           <button
             type="button"
-            onClick={() => navigate("/admin/notifications")}
+            onClick={() => navigate("/dashboard/notifications")}
             className="relative flex h-10 w-10 items-center justify-center rounded-full border border-[#624e3c]/15 bg-white/50 text-[#16231D] transition hover:bg-[#F3D45D]"
             aria-label="Notifications"
           >
@@ -200,7 +200,7 @@ const AdminNavbar = ({ onMenuClick }) => {
 
                 {/* Profile */}
                 <Link
-                  to="/admin/profile"
+                  to="/dashboard/profile"
                   onClick={() => setIsProfileOpen(false)}
                   className="flex items-center gap-3 rounded-xl px-3 py-3 text-xs font-semibold text-[#624e3c] transition hover:bg-[#F3D45D] hover:text-[#16231D]"
                 >
@@ -210,7 +210,7 @@ const AdminNavbar = ({ onMenuClick }) => {
 
                 {/* Settings */}
                 <Link
-                  to="/admin/settings"
+                  to="/dashboard/settings"
                   onClick={() => setIsProfileOpen(false)}
                   className="flex items-center gap-3 rounded-xl px-3 py-3 text-xs font-semibold text-[#624e3c] transition hover:bg-[#F3D45D] hover:text-[#16231D]"
                 >

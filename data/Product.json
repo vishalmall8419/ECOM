@@ -14,9 +14,9 @@
           "categoryId": 1,
           "brand": "ECOM Essentials",
           "images": [
-            "https://loremflickr.com/600/700/clothing,cotton,tshirt?lock=101",
-            "https://loremflickr.com/600/700/clothing,cotton,tshirt?lock=1101",
-            "https://loremflickr.com/600/700/clothing,cotton,tshirt?lock=2101"
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Relaxed-fit cotton t-shirt for everyday comfort.",
@@ -31,8 +31,18 @@
           "specifications": {
             "material": "100% Cotton",
             "color": "Off White",
-            "availableColors": ["Off White", "Black", "Beige"],
-            "sizes": ["S", "M", "L", "XL", "XXL"],
+            "availableColors": [
+              "Off White",
+              "Black",
+              "Beige"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
             "fit": "Oversized",
             "sleeveType": "Half Sleeve",
             "neckType": "Round Neck",
@@ -49,7 +59,11 @@
             "average": 4.5,
             "count": 50
           },
-          "tags": ["Cotton", "Oversized", "Casual"],
+          "tags": [
+            "Cotton",
+            "Oversized",
+            "Casual"
+          ],
           "isFeatured": true,
           "isNewArrival": true
         },
@@ -61,9 +75,9 @@
           "categoryId": 1,
           "brand": "ECOM Studio",
           "images": [
-            "https://loremflickr.com/600/700/womens,blazer,clothing?lock=102",
-            "https://loremflickr.com/600/700/womens,blazer,clothing?lock=1102",
-            "https://loremflickr.com/600/700/womens,blazer,clothing?lock=2102"
+            "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Elegant blazer for modern everyday styling.",
@@ -78,8 +92,17 @@
           "specifications": {
             "material": "Polyester Blend",
             "color": "Beige",
-            "availableColors": ["Beige", "Black", "Cream"],
-            "sizes": ["S", "M", "L", "XL"],
+            "availableColors": [
+              "Beige",
+              "Black",
+              "Cream"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
             "fit": "Regular Fit",
             "sleeveType": "Full Sleeve",
             "closure": "Button",
@@ -96,7 +119,11 @@
             "average": 4.7,
             "count": 51
           },
-          "tags": ["Blazer", "Women", "Formal"],
+          "tags": [
+            "Blazer",
+            "Women",
+            "Formal"
+          ],
           "isFeatured": true,
           "isNewArrival": true
         },
@@ -108,9 +135,9 @@
           "categoryId": 1,
           "brand": "ECOM Denim",
           "images": [
-            "https://loremflickr.com/600/700/denim,jeans,clothing?lock=103",
-            "https://loremflickr.com/600/700/denim,jeans,clothing?lock=1103",
-            "https://loremflickr.com/600/700/denim,jeans,clothing?lock=2103"
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Classic stretch denim jeans with a slim fit.",
@@ -125,8 +152,18 @@
           "specifications": {
             "material": "Cotton Denim",
             "color": "Dark Blue",
-            "availableColors": ["Dark Blue", "Black", "Light Blue"],
-            "sizes": ["28", "30", "32", "34", "36"],
+            "availableColors": [
+              "Dark Blue",
+              "Black",
+              "Light Blue"
+            ],
+            "sizes": [
+              "28",
+              "30",
+              "32",
+              "34",
+              "36"
+            ],
             "fit": "Slim Fit",
             "rise": "Mid Rise",
             "closure": "Zip and Button",
@@ -143,7 +180,11 @@
             "average": 4.4,
             "count": 52
           },
-          "tags": ["Jeans", "Denim", "Casual"],
+          "tags": [
+            "Jeans",
+            "Denim",
+            "Casual"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -155,9 +196,9 @@
           "categoryId": 1,
           "brand": "ECOM Studio",
           "images": [
-            "https://loremflickr.com/600/700/linen,shirt,clothing?lock=104",
-            "https://loremflickr.com/600/700/linen,shirt,clothing?lock=1104",
-            "https://loremflickr.com/600/700/linen,shirt,clothing?lock=2104"
+            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Breathable shirt for smart casual outfits.",
@@ -172,8 +213,17 @@
           "specifications": {
             "material": "Linen Cotton Blend",
             "color": "Sky Blue",
-            "availableColors": ["Sky Blue", "White", "Olive"],
-            "sizes": ["S", "M", "L", "XL"],
+            "availableColors": [
+              "Sky Blue",
+              "White",
+              "Olive"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
             "fit": "Regular Fit",
             "sleeveType": "Full Sleeve",
             "collar": "Spread Collar",
@@ -190,7 +240,11 @@
             "average": 4.3,
             "count": 53
           },
-          "tags": ["Shirt", "Linen", "Summer"],
+          "tags": [
+            "Shirt",
+            "Linen",
+            "Summer"
+          ],
           "isFeatured": false,
           "isNewArrival": true
         },
@@ -202,9 +256,9 @@
           "categoryId": 1,
           "brand": "ECOM Women",
           "images": [
-            "https://loremflickr.com/600/700/pleated,dress,clothing?lock=105",
-            "https://loremflickr.com/600/700/pleated,dress,clothing?lock=1105",
-            "https://loremflickr.com/600/700/pleated,dress,clothing?lock=2105"
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Elegant pleated dress for casual and occasion wear.",
@@ -219,8 +273,17 @@
           "specifications": {
             "material": "Polyester",
             "color": "Sage Green",
-            "availableColors": ["Sage Green", "Black", "Maroon"],
-            "sizes": ["S", "M", "L", "XL"],
+            "availableColors": [
+              "Sage Green",
+              "Black",
+              "Maroon"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
             "fit": "Regular Fit",
             "length": "Midi",
             "sleeveType": "Short Sleeve",
@@ -237,7 +300,11 @@
             "average": 4.6,
             "count": 54
           },
-          "tags": ["Dress", "Women", "Occasion"],
+          "tags": [
+            "Dress",
+            "Women",
+            "Occasion"
+          ],
           "isFeatured": true,
           "isNewArrival": true
         },
@@ -249,9 +316,9 @@
           "categoryId": 1,
           "brand": "ECOM Essentials",
           "images": [
-            "https://loremflickr.com/600/700/hoodie,sweatshirt,clothing?lock=106",
-            "https://loremflickr.com/600/700/hoodie,sweatshirt,clothing?lock=1106",
-            "https://loremflickr.com/600/700/hoodie,sweatshirt,clothing?lock=2106"
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Warm everyday hoodie with a relaxed fit.",
@@ -266,8 +333,18 @@
           "specifications": {
             "material": "Cotton Fleece",
             "color": "Charcoal",
-            "availableColors": ["Charcoal", "Black", "Navy"],
-            "sizes": ["S", "M", "L", "XL", "XXL"],
+            "availableColors": [
+              "Charcoal",
+              "Black",
+              "Navy"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
             "fit": "Relaxed Fit",
             "sleeveType": "Full Sleeve",
             "hood": "Attached Hood",
@@ -284,7 +361,11 @@
             "average": 4.5,
             "count": 55
           },
-          "tags": ["Hoodie", "Winter", "Casual"],
+          "tags": [
+            "Hoodie",
+            "Winter",
+            "Casual"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -296,9 +377,9 @@
           "categoryId": 1,
           "brand": "ECOM Ethnic",
           "images": [
-            "https://loremflickr.com/600/700/kurta,ethnic,clothing?lock=107",
-            "https://loremflickr.com/600/700/kurta,ethnic,clothing?lock=1107",
-            "https://loremflickr.com/600/700/kurta,ethnic,clothing?lock=2107"
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Comfortable cotton kurta for traditional styling.",
@@ -313,8 +394,18 @@
           "specifications": {
             "material": "Cotton",
             "color": "Mustard",
-            "availableColors": ["Mustard", "White", "Blue"],
-            "sizes": ["S", "M", "L", "XL", "XXL"],
+            "availableColors": [
+              "Mustard",
+              "White",
+              "Blue"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
             "fit": "Regular Fit",
             "sleeveType": "Full Sleeve",
             "neckType": "Mandarin Collar",
@@ -331,7 +422,11 @@
             "average": 4.2,
             "count": 56
           },
-          "tags": ["Kurta", "Ethnic", "Cotton"],
+          "tags": [
+            "Kurta",
+            "Ethnic",
+            "Cotton"
+          ],
           "isFeatured": false,
           "isNewArrival": true
         },
@@ -343,9 +438,9 @@
           "categoryId": 1,
           "brand": "ECOM Women",
           "images": [
-            "https://loremflickr.com/600/700/trousers,womens,clothing?lock=108",
-            "https://loremflickr.com/600/700/trousers,womens,clothing?lock=1108",
-            "https://loremflickr.com/600/700/trousers,womens,clothing?lock=2108"
+            "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Tailored high-waist trousers for polished outfits.",
@@ -360,8 +455,18 @@
           "specifications": {
             "material": "Poly Viscose",
             "color": "Black",
-            "availableColors": ["Black", "Beige", "Grey"],
-            "sizes": ["28", "30", "32", "34", "36"],
+            "availableColors": [
+              "Black",
+              "Beige",
+              "Grey"
+            ],
+            "sizes": [
+              "28",
+              "30",
+              "32",
+              "34",
+              "36"
+            ],
             "fit": "Straight Fit",
             "rise": "High Waist",
             "closure": "Hook and Zip",
@@ -378,7 +483,11 @@
             "average": 4.4,
             "count": 57
           },
-          "tags": ["Trousers", "Office Wear", "Women"],
+          "tags": [
+            "Trousers",
+            "Office Wear",
+            "Women"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -390,9 +499,9 @@
           "categoryId": 1,
           "brand": "ECOM Women",
           "images": [
-            "https://loremflickr.com/600/700/floral,summer,top?lock=109",
-            "https://loremflickr.com/600/700/floral,summer,top?lock=1109",
-            "https://loremflickr.com/600/700/floral,summer,top?lock=2109"
+            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Lightweight printed top for summer outfits.",
@@ -407,8 +516,17 @@
           "specifications": {
             "material": "Rayon",
             "color": "Floral Print",
-            "availableColors": ["Floral", "Blue Print", "Pink Print"],
-            "sizes": ["S", "M", "L", "XL"],
+            "availableColors": [
+              "Floral",
+              "Blue Print",
+              "Pink Print"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ],
             "fit": "Regular Fit",
             "sleeveType": "Short Sleeve",
             "neckType": "Round Neck",
@@ -425,7 +543,11 @@
             "average": 4.1,
             "count": 58
           },
-          "tags": ["Top", "Summer", "Printed"],
+          "tags": [
+            "Top",
+            "Summer",
+            "Printed"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -437,9 +559,9 @@
           "categoryId": 1,
           "brand": "ECOM Active",
           "images": [
-            "https://loremflickr.com/600/700/joggers,cotton,activewear?lock=110",
-            "https://loremflickr.com/600/700/joggers,cotton,activewear?lock=1110",
-            "https://loremflickr.com/600/700/joggers,cotton,activewear?lock=2110"
+            "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Stretchable joggers for travel, workouts and lounging.",
@@ -454,8 +576,18 @@
           "specifications": {
             "material": "Cotton Blend",
             "color": "Olive",
-            "availableColors": ["Olive", "Black", "Grey"],
-            "sizes": ["S", "M", "L", "XL", "XXL"],
+            "availableColors": [
+              "Olive",
+              "Black",
+              "Grey"
+            ],
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
             "fit": "Regular Fit",
             "waistband": "Elastic",
             "pockets": "Side Pockets",
@@ -472,7 +604,11 @@
             "average": 4.5,
             "count": 59
           },
-          "tags": ["Joggers", "Activewear", "Comfort"],
+          "tags": [
+            "Joggers",
+            "Activewear",
+            "Comfort"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         }
@@ -492,9 +628,9 @@
           "categoryId": 2,
           "brand": "ECOM Foods",
           "images": [
-            "https://loremflickr.com/600/700/basmati,rice,food?lock=201",
-            "https://loremflickr.com/600/700/basmati,rice,food?lock=1201",
-            "https://loremflickr.com/600/700/basmati,rice,food?lock=2201"
+            "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Long-grain basmati rice for everyday meals.",
@@ -510,7 +646,9 @@
             "weight": "5 kg",
             "variety": "Basmati",
             "grainType": "Long Grain",
-            "ingredients": ["Basmati Rice"],
+            "ingredients": [
+              "Basmati Rice"
+            ],
             "vegetarian": true,
             "packagingType": "Food Grade Bag",
             "shelfLife": "12 Months",
@@ -526,7 +664,11 @@
             "average": 4.6,
             "count": 150
           },
-          "tags": ["Rice", "Basmati", "Food"],
+          "tags": [
+            "Rice",
+            "Basmati",
+            "Food"
+          ],
           "isFeatured": true,
           "isNewArrival": false
         },
@@ -538,9 +680,9 @@
           "categoryId": 2,
           "brand": "Nature Basket",
           "images": [
-            "https://loremflickr.com/600/700/honey,jar,food?lock=202",
-            "https://loremflickr.com/600/700/honey,jar,food?lock=1202",
-            "https://loremflickr.com/600/700/honey,jar,food?lock=2202"
+            "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Honey for everyday food and beverage use.",
@@ -554,7 +696,9 @@
           },
           "specifications": {
             "weight": "250 g",
-            "ingredients": ["Honey"],
+            "ingredients": [
+              "Honey"
+            ],
             "vegetarian": true,
             "packagingType": "Glass Jar",
             "shelfLife": "12 Months",
@@ -570,7 +714,11 @@
             "average": 4.4,
             "count": 50
           },
-          "tags": ["Honey", "Natural", "Breakfast"],
+          "tags": [
+            "Honey",
+            "Natural",
+            "Breakfast"
+          ],
           "isFeatured": false,
           "isNewArrival": true
         },
@@ -582,9 +730,9 @@
           "categoryId": 2,
           "brand": "ECOM Foods",
           "images": [
-            "https://loremflickr.com/600/700/wheat,flour,food?lock=203",
-            "https://loremflickr.com/600/700/wheat,flour,food?lock=1203",
-            "https://loremflickr.com/600/700/wheat,flour,food?lock=2203"
+            "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Everyday whole wheat flour for homemade rotis.",
@@ -598,7 +746,9 @@
           },
           "specifications": {
             "weight": "5 kg",
-            "ingredients": ["Whole Wheat"],
+            "ingredients": [
+              "Whole Wheat"
+            ],
             "vegetarian": true,
             "packagingType": "Food Grade Bag",
             "shelfLife": "6 Months",
@@ -614,7 +764,11 @@
             "average": 4.3,
             "count": 51
           },
-          "tags": ["Atta", "Wheat", "Kitchen Essentials"],
+          "tags": [
+            "Atta",
+            "Wheat",
+            "Kitchen Essentials"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -626,9 +780,9 @@
           "categoryId": 2,
           "brand": "ECOM Foods",
           "images": [
-            "https://loremflickr.com/600/700/lentils,pulses,food?lock=204",
-            "https://loremflickr.com/600/700/lentils,pulses,food?lock=1204",
-            "https://loremflickr.com/600/700/lentils,pulses,food?lock=2204"
+            "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Protein-rich everyday lentil for Indian meals.",
@@ -642,7 +796,9 @@
           },
           "specifications": {
             "weight": "1 kg",
-            "ingredients": ["Toor Dal"],
+            "ingredients": [
+              "Toor Dal"
+            ],
             "vegetarian": true,
             "packagingType": "Food Grade Pouch",
             "shelfLife": "9 Months",
@@ -658,7 +814,11 @@
             "average": 4.2,
             "count": 52
           },
-          "tags": ["Dal", "Pulses", "Kitchen"],
+          "tags": [
+            "Dal",
+            "Pulses",
+            "Kitchen"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -670,9 +830,9 @@
           "categoryId": 2,
           "brand": "ECOM Naturals",
           "images": [
-            "https://loremflickr.com/600/700/mustard,oil,bottle?lock=205",
-            "https://loremflickr.com/600/700/mustard,oil,bottle?lock=1205",
-            "https://loremflickr.com/600/700/mustard,oil,bottle?lock=2205"
+            "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Mustard oil for everyday Indian cooking.",
@@ -686,7 +846,9 @@
           },
           "specifications": {
             "quantity": "1 L",
-            "ingredients": ["Mustard Oil"],
+            "ingredients": [
+              "Mustard Oil"
+            ],
             "vegetarian": true,
             "packagingType": "Bottle",
             "shelfLife": "12 Months",
@@ -702,7 +864,11 @@
             "average": 4.1,
             "count": 53
           },
-          "tags": ["Oil", "Cooking", "Mustard"],
+          "tags": [
+            "Oil",
+            "Cooking",
+            "Mustard"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -714,9 +880,9 @@
           "categoryId": 2,
           "brand": "ECOM Wellness",
           "images": [
-            "https://loremflickr.com/600/700/green,tea,beverage?lock=206",
-            "https://loremflickr.com/600/700/green,tea,beverage?lock=1206",
-            "https://loremflickr.com/600/700/green,tea,beverage?lock=2206"
+            "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Convenient green tea bags for daily beverages.",
@@ -730,7 +896,9 @@
           },
           "specifications": {
             "quantity": "25 Tea Bags",
-            "ingredients": ["Green Tea Leaves"],
+            "ingredients": [
+              "Green Tea Leaves"
+            ],
             "vegetarian": true,
             "packagingType": "Box",
             "shelfLife": "18 Months",
@@ -746,7 +914,11 @@
             "average": 4.3,
             "count": 54
           },
-          "tags": ["Tea", "Beverage", "Wellness"],
+          "tags": [
+            "Tea",
+            "Beverage",
+            "Wellness"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -758,9 +930,9 @@
           "categoryId": 2,
           "brand": "ECOM Nuts",
           "images": [
-            "https://loremflickr.com/600/700/almonds,nuts,food?lock=207",
-            "https://loremflickr.com/600/700/almonds,nuts,food?lock=1207",
-            "https://loremflickr.com/600/700/almonds,nuts,food?lock=2207"
+            "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Crunchy roasted almonds for snacking.",
@@ -774,12 +946,17 @@
           },
           "specifications": {
             "weight": "200 g",
-            "ingredients": ["Almonds", "Salt"],
+            "ingredients": [
+              "Almonds",
+              "Salt"
+            ],
             "vegetarian": true,
             "packagingType": "Resealable Pouch",
             "shelfLife": "6 Months",
             "storage": "Keep sealed in a cool place",
-            "allergens": ["Tree Nuts"],
+            "allergens": [
+              "Tree Nuts"
+            ],
             "countryOfOrigin": "India"
           },
           "inventory": {
@@ -791,7 +968,11 @@
             "average": 4.5,
             "count": 55
           },
-          "tags": ["Nuts", "Snacks", "Almonds"],
+          "tags": [
+            "Nuts",
+            "Snacks",
+            "Almonds"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -803,9 +984,9 @@
           "categoryId": 2,
           "brand": "ECOM Wellness",
           "images": [
-            "https://loremflickr.com/600/700/oats,breakfast,food?lock=208",
-            "https://loremflickr.com/600/700/oats,breakfast,food?lock=1208",
-            "https://loremflickr.com/600/700/oats,breakfast,food?lock=2208"
+            "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Whole grain oats for easy breakfast recipes.",
@@ -819,7 +1000,9 @@
           },
           "specifications": {
             "weight": "500 g",
-            "ingredients": ["Whole Grain Oats"],
+            "ingredients": [
+              "Whole Grain Oats"
+            ],
             "vegetarian": true,
             "packagingType": "Pouch",
             "shelfLife": "9 Months",
@@ -835,7 +1018,11 @@
             "average": 4.4,
             "count": 56
           },
-          "tags": ["Oats", "Breakfast", "Healthy"],
+          "tags": [
+            "Oats",
+            "Breakfast",
+            "Healthy"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -847,9 +1034,9 @@
           "categoryId": 2,
           "brand": "ECOM Spices",
           "images": [
-            "https://loremflickr.com/600/700/turmeric,spice,food?lock=209",
-            "https://loremflickr.com/600/700/turmeric,spice,food?lock=1209",
-            "https://loremflickr.com/600/700/turmeric,spice,food?lock=2209"
+            "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Ground turmeric powder for everyday cooking.",
@@ -863,7 +1050,9 @@
           },
           "specifications": {
             "weight": "200 g",
-            "ingredients": ["Turmeric"],
+            "ingredients": [
+              "Turmeric"
+            ],
             "vegetarian": true,
             "packagingType": "Pouch",
             "shelfLife": "12 Months",
@@ -879,7 +1068,11 @@
             "average": 4.2,
             "count": 57
           },
-          "tags": ["Spices", "Turmeric", "Cooking"],
+          "tags": [
+            "Spices",
+            "Turmeric",
+            "Cooking"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -891,9 +1084,9 @@
           "categoryId": 2,
           "brand": "ECOM Treats",
           "images": [
-            "https://loremflickr.com/600/700/dark,chocolate,food?lock=210",
-            "https://loremflickr.com/600/700/dark,chocolate,food?lock=1210",
-            "https://loremflickr.com/600/700/dark,chocolate,food?lock=2210"
+            "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Dark chocolate bar for occasional snacking.",
@@ -907,12 +1100,18 @@
           },
           "specifications": {
             "weight": "80 g",
-            "ingredients": ["Cocoa Solids", "Sugar", "Cocoa Butter"],
+            "ingredients": [
+              "Cocoa Solids",
+              "Sugar",
+              "Cocoa Butter"
+            ],
             "vegetarian": true,
             "packagingType": "Wrapper",
             "shelfLife": "9 Months",
             "storage": "Store in a cool dry place",
-            "allergens": ["May contain Milk"],
+            "allergens": [
+              "May contain Milk"
+            ],
             "countryOfOrigin": "India"
           },
           "inventory": {
@@ -924,7 +1123,11 @@
             "average": 4.3,
             "count": 58
           },
-          "tags": ["Chocolate", "Snacks", "Treats"],
+          "tags": [
+            "Chocolate",
+            "Snacks",
+            "Treats"
+          ],
           "isFeatured": false,
           "isNewArrival": true
         }
@@ -944,9 +1147,9 @@
           "categoryId": 3,
           "brand": "ECOM Beauty",
           "images": [
-            "https://loremflickr.com/600/700/moisturizer,skincare,cosmetics?lock=301",
-            "https://loremflickr.com/600/700/moisturizer,skincare,cosmetics?lock=1301",
-            "https://loremflickr.com/600/700/moisturizer,skincare,cosmetics?lock=2301"
+            "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1522335789203-aafd1fc54bc9?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Lightweight moisturizer for everyday skincare.",
@@ -960,11 +1163,17 @@
           },
           "specifications": {
             "quantity": "50 g",
-            "skinType": ["Normal", "Dry"],
+            "skinType": [
+              "Normal",
+              "Dry"
+            ],
             "productType": "Face Moisturizer",
             "texture": "Cream",
             "finish": "Hydrating",
-            "ingredients": ["Glycerin", "Moisturizing Ingredients"],
+            "ingredients": [
+              "Glycerin",
+              "Moisturizing Ingredients"
+            ],
             "fragrance": "Check Packaging",
             "usage": "Use as directed on label",
             "shelfLife": "Refer to Packaging",
@@ -979,7 +1188,11 @@
             "average": 4.3,
             "count": 149
           },
-          "tags": ["Skincare", "Moisturizer", "Beauty"],
+          "tags": [
+            "Skincare",
+            "Moisturizer",
+            "Beauty"
+          ],
           "isFeatured": true,
           "isNewArrival": true
         },
@@ -991,9 +1204,9 @@
           "categoryId": 3,
           "brand": "ECOM Beauty",
           "images": [
-            "https://loremflickr.com/600/700/lipstick,makeup,cosmetics?lock=302",
-            "https://loremflickr.com/600/700/lipstick,makeup,cosmetics?lock=1302",
-            "https://loremflickr.com/600/700/lipstick,makeup,cosmetics?lock=2302"
+            "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1522335789203-aafd1fc54bc9?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Matte-finish lipstick for everyday makeup.",
@@ -1030,7 +1243,11 @@
             "average": 4.5,
             "count": 150
           },
-          "tags": ["Makeup", "Lipstick", "Matte"],
+          "tags": [
+            "Makeup",
+            "Lipstick",
+            "Matte"
+          ],
           "isFeatured": false,
           "isNewArrival": true
         },
@@ -1042,9 +1259,9 @@
           "categoryId": 3,
           "brand": "ECOM Skin",
           "images": [
-            "https://loremflickr.com/600/700/serum,skincare,cosmetics?lock=303",
-            "https://loremflickr.com/600/700/serum,skincare,cosmetics?lock=1303",
-            "https://loremflickr.com/600/700/serum,skincare,cosmetics?lock=2303"
+            "https://images.unsplash.com/photo-1522335789203-aafd1fc54bc9?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Lightweight facial serum for a skincare routine.",
@@ -1059,7 +1276,10 @@
           "specifications": {
             "quantity": "30 ml",
             "productType": "Face Serum",
-            "skinType": ["Normal", "Combination"],
+            "skinType": [
+              "Normal",
+              "Combination"
+            ],
             "texture": "Liquid",
             "keyIngredient": "Vitamin C",
             "usage": "Use as directed on label",
@@ -1075,7 +1295,11 @@
             "average": 4.4,
             "count": 50
           },
-          "tags": ["Serum", "Vitamin C", "Skincare"],
+          "tags": [
+            "Serum",
+            "Vitamin C",
+            "Skincare"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -1087,9 +1311,9 @@
           "categoryId": 3,
           "brand": "ECOM Naturals",
           "images": [
-            "https://loremflickr.com/600/700/aloe,vera,skincare?lock=304",
-            "https://loremflickr.com/600/700/aloe,vera,skincare?lock=1304",
-            "https://loremflickr.com/600/700/aloe,vera,skincare?lock=2304"
+            "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Multi-purpose aloe vera gel for personal care.",
@@ -1105,7 +1329,10 @@
             "quantity": "150 g",
             "productType": "Aloe Vera Gel",
             "texture": "Gel",
-            "skinType": ["Normal", "Oily"],
+            "skinType": [
+              "Normal",
+              "Oily"
+            ],
             "keyIngredient": "Aloe Vera",
             "fragrance": "Check Packaging",
             "usage": "Use as directed",
@@ -1121,7 +1348,11 @@
             "average": 4.2,
             "count": 51
           },
-          "tags": ["Aloe Vera", "Gel", "Personal Care"],
+          "tags": [
+            "Aloe Vera",
+            "Gel",
+            "Personal Care"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -1133,9 +1364,9 @@
           "categoryId": 3,
           "brand": "ECOM Sun Care",
           "images": [
-            "https://loremflickr.com/600/700/sunscreen,skincare,cosmetics?lock=305",
-            "https://loremflickr.com/600/700/sunscreen,skincare,cosmetics?lock=1305",
-            "https://loremflickr.com/600/700/sunscreen,skincare,cosmetics?lock=2305"
+            "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Daily sunscreen with SPF 50 protection claim.",
@@ -1152,7 +1383,10 @@
             "productType": "Sunscreen",
             "spf": "SPF 50",
             "texture": "Cream",
-            "skinType": ["Normal", "Combination"],
+            "skinType": [
+              "Normal",
+              "Combination"
+            ],
             "finish": "Lightweight",
             "usage": "Apply as directed on label",
             "shelfLife": "Refer to Packaging",
@@ -1167,7 +1401,11 @@
             "average": 4.5,
             "count": 52
           },
-          "tags": ["Sunscreen", "SPF", "Skincare"],
+          "tags": [
+            "Sunscreen",
+            "SPF",
+            "Skincare"
+          ],
           "isFeatured": true,
           "isNewArrival": true
         },
@@ -1179,9 +1417,9 @@
           "categoryId": 3,
           "brand": "ECOM Skin",
           "images": [
-            "https://loremflickr.com/600/700/cleanser,skincare,cosmetics?lock=306",
-            "https://loremflickr.com/600/700/cleanser,skincare,cosmetics?lock=1306",
-            "https://loremflickr.com/600/700/cleanser,skincare,cosmetics?lock=2306"
+            "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Gentle cleanser for daily face-washing routines.",
@@ -1196,7 +1434,10 @@
           "specifications": {
             "quantity": "100 ml",
             "productType": "Face Cleanser",
-            "skinType": ["Normal", "Sensitive"],
+            "skinType": [
+              "Normal",
+              "Sensitive"
+            ],
             "texture": "Gel",
             "fragrance": "Check Packaging",
             "usage": "Use as directed",
@@ -1212,7 +1453,11 @@
             "average": 4.3,
             "count": 53
           },
-          "tags": ["Cleanser", "Face Wash", "Skincare"],
+          "tags": [
+            "Cleanser",
+            "Face Wash",
+            "Skincare"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -1224,9 +1469,9 @@
           "categoryId": 3,
           "brand": "ECOM Care",
           "images": [
-            "https://loremflickr.com/600/700/body,lotion,skincare?lock=307",
-            "https://loremflickr.com/600/700/body,lotion,skincare?lock=1307",
-            "https://loremflickr.com/600/700/body,lotion,skincare?lock=2307"
+            "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1522335789203-aafd1fc54bc9?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Moisturizing body lotion for everyday use.",
@@ -1241,7 +1486,10 @@
           "specifications": {
             "quantity": "200 ml",
             "productType": "Body Lotion",
-            "skinType": ["Normal", "Dry"],
+            "skinType": [
+              "Normal",
+              "Dry"
+            ],
             "texture": "Lotion",
             "fragrance": "Mild",
             "usage": "Apply as directed",
@@ -1257,7 +1505,11 @@
             "average": 4.1,
             "count": 54
           },
-          "tags": ["Body Care", "Lotion", "Moisturizer"],
+          "tags": [
+            "Body Care",
+            "Lotion",
+            "Moisturizer"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -1269,9 +1521,9 @@
           "categoryId": 3,
           "brand": "ECOM Beauty",
           "images": [
-            "https://loremflickr.com/600/700/eyeliner,makeup,cosmetics?lock=308",
-            "https://loremflickr.com/600/700/eyeliner,makeup,cosmetics?lock=1308",
-            "https://loremflickr.com/600/700/eyeliner,makeup,cosmetics?lock=2308"
+            "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1522335789203-aafd1fc54bc9?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Easy-to-apply kajal for eye makeup looks.",
@@ -1302,7 +1554,11 @@
             "average": 4.2,
             "count": 55
           },
-          "tags": ["Kajal", "Eye Makeup", "Beauty"],
+          "tags": [
+            "Kajal",
+            "Eye Makeup",
+            "Beauty"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -1314,9 +1570,9 @@
           "categoryId": 3,
           "brand": "ECOM Hair Care",
           "images": [
-            "https://loremflickr.com/600/700/hair,oil,cosmetics?lock=309",
-            "https://loremflickr.com/600/700/hair,oil,cosmetics?lock=1309",
-            "https://loremflickr.com/600/700/hair,oil,cosmetics?lock=2309"
+            "https://images.unsplash.com/photo-1522335789203-aafd1fc54bc9?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Hair oil for regular scalp and hair care routines.",
@@ -1332,7 +1588,10 @@
             "quantity": "100 ml",
             "productType": "Hair Oil",
             "texture": "Oil",
-            "keyIngredients": ["Coconut Oil", "Herbal Extracts"],
+            "keyIngredients": [
+              "Coconut Oil",
+              "Herbal Extracts"
+            ],
             "fragrance": "Herbal",
             "usage": "Use as directed",
             "shelfLife": "Refer to Packaging",
@@ -1347,7 +1606,11 @@
             "average": 4.3,
             "count": 56
           },
-          "tags": ["Hair Care", "Hair Oil", "Nourishment"],
+          "tags": [
+            "Hair Care",
+            "Hair Oil",
+            "Nourishment"
+          ],
           "isFeatured": false,
           "isNewArrival": false
         },
@@ -1359,9 +1622,9 @@
           "categoryId": 3,
           "brand": "ECOM Beauty Tools",
           "images": [
-            "https://loremflickr.com/600/700/makeup,brushes,cosmetics?lock=310",
-            "https://loremflickr.com/600/700/makeup,brushes,cosmetics?lock=1310",
-            "https://loremflickr.com/600/700/makeup,brushes,cosmetics?lock=2310"
+            "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&h=700&q=85",
+            "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&h=700&q=85"
           ],
           "details": {
             "brief": "Multi-piece brush set for basic makeup application.",
@@ -1391,7 +1654,11 @@
             "average": 4.4,
             "count": 57
           },
-          "tags": ["Makeup Tools", "Brushes", "Beauty"],
+          "tags": [
+            "Makeup Tools",
+            "Brushes",
+            "Beauty"
+          ],
           "isFeatured": false,
           "isNewArrival": true
         }
