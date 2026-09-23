@@ -18,6 +18,10 @@ import UserProfile from "../Pages/User/UserProfile";
 import AdminOrders from "../Pages/Admin/AdminOrders";
 import AdminProducts from "../Pages/Admin/AdminProducts";
 import AdminUsers from "../Pages/Admin/AdminUsers";
+import Wishlist from "../Pages/User/Wishlist";
+import UserCart from "../Pages/User/UserCart";
+import UserSettings from "../Pages/User/UserSettings";
+import Notification from "../Pages/User/Notification";
 
 const Dashboardroutes = () => {
   const role = sessionStorage.getItem("Role");
@@ -56,6 +60,22 @@ const Dashboardroutes = () => {
               <Route path="profile">
                 {/* /dashboard/orders */}
                 <Route index element={<UserProfile />} />
+              </Route>
+              <Route path="wishlist">
+                {/* /dashboard/orders */}
+                <Route index element={<Wishlist/>} />
+              </Route>
+              <Route path="cart">
+                {/* /dashboard/orders */}
+                <Route index element={<UserCart/>} />
+              </Route>
+              <Route path="settings">
+                {/* /dashboard/orders */}
+                <Route index element={<UserSettings/>} />
+              </Route>
+              <Route path="notifications">
+                {/* /dashboard/orders */}
+                <Route index element={<Notification/>} />
               </Route>
               {/* <Route path="orders" element={<UserOrders />} /> */}
             </Routes>

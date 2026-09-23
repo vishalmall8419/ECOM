@@ -51,11 +51,6 @@ const UserSidebar = () => {
     icon: UserRound,
   },
   {
-    name: "My Address",
-    path: "/dashboard/address",
-    icon: MapPin,
-  },
-  {
     name: "Settings",
     path: "/dashboard/settings",
     icon: Settings,

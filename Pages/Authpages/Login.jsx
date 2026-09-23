@@ -145,7 +145,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/dashboard");
-    const role = "admin"
+    const role = "user"
     const DummyToken = "ajkhdadsakjsdhadlkasdhadsnasdvavdjasdabdsakhdsakjdsavdsbkajdaksdnbasjd"
     sessionStorage.setItem("DummyToken", DummyToken)
     sessionStorage.setItem("Role", role)
