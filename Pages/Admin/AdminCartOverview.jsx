@@ -208,11 +208,11 @@ const formatCurrency = (amount) => {
 const getStatusStyle = (status) => {
   const styles = {
     Active: "bg-blue-100 text-blue-700",
-    Abandoned: "bg-orange-100 text-orange-700",
-    Converted: "bg-green-100 text-green-700",
+    Abandoned: "bg-orange-500/15 text-orange-700",
+    Converted: "bg-green-500/15 text-green-700",
   };
 
-  return styles[status] || "bg-gray-100 text-gray-700";
+  return styles[status] || "bg-[#244838] text-[#D8D0B8]";
 };
 
 
@@ -370,32 +370,32 @@ const AdminCartOverview = () => {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-[#102A20] p-4 sm:p-6 lg:p-8">
       <div className="mx-auto max-w-[1600px]">
 
         {/* Page Header */}
         <div className="mb-8 flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
           <div>
-            <p className="mb-1 text-sm font-medium text-indigo-600">
+            <p className="mb-1 text-sm font-medium text-[#F3D45D]">
               Admin Panel / Cart Management
             </p>
 
-            <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            <h1 className="text-2xl font-bold text-[#FFF4D6] sm:text-3xl">
               Cart Overview
             </h1>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Monitor customer carts, cart value and abandoned carts.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+          <div className="flex items-center gap-2 rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-3 shadow-sm">
             <ShoppingCart
               size={20}
-              className="text-indigo-600"
+              className="text-[#F3D45D]"
             />
 
-            <span className="text-sm font-semibold text-slate-700">
+            <span className="text-sm font-semibold text-[#D8D0B8]">
               {carts.length} Total Carts
             </span>
           </div>
@@ -406,110 +406,110 @@ const AdminCartOverview = () => {
         <div className="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-5">
 
           {/* Total Carts */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
-              <div className="rounded-xl bg-indigo-100 p-3 text-indigo-600">
+              <div className="rounded-xl bg-[#244838] p-3 text-[#F3D45D]">
                 <ShoppingCart size={21} />
               </div>
 
-              <span className="text-xs font-medium text-slate-400">
+              <span className="text-xs font-medium text-[#D8D0B8]/50">
                 Total
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {carts.length}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               Total customer carts
             </p>
           </div>
 
 
           {/* Cart Value */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
-              <div className="rounded-xl bg-green-100 p-3 text-green-600">
+              <div className="rounded-xl bg-green-500/15 p-3 text-green-600">
                 <IndianRupee size={21} />
               </div>
 
-              <span className="text-xs font-medium text-slate-400">
+              <span className="text-xs font-medium text-[#D8D0B8]/50">
                 Value
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {formatCurrency(summary.totalCartValue)}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               Combined cart value
             </p>
           </div>
 
 
           {/* Total Items */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
-              <div className="rounded-xl bg-purple-100 p-3 text-purple-600">
+              <div className="rounded-xl bg-purple-500/15 p-3 text-purple-600">
                 <ShoppingBag size={21} />
               </div>
 
-              <span className="text-xs font-medium text-slate-400">
+              <span className="text-xs font-medium text-[#D8D0B8]/50">
                 Items
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {summary.totalItems}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               Products in all carts
             </p>
           </div>
 
 
           {/* Active Carts */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
               <div className="rounded-xl bg-blue-100 p-3 text-blue-600">
                 <Users size={21} />
               </div>
 
-              <span className="text-xs font-medium text-slate-400">
+              <span className="text-xs font-medium text-[#D8D0B8]/50">
                 Active
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {summary.activeCarts}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               Currently active carts
             </p>
           </div>
 
 
           {/* Abandoned Carts */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
-              <div className="rounded-xl bg-orange-100 p-3 text-orange-600">
+              <div className="rounded-xl bg-orange-500/15 p-3 text-orange-600">
                 <AlertCircle size={21} />
               </div>
 
-              <span className="text-xs font-medium text-slate-400">
+              <span className="text-xs font-medium text-[#D8D0B8]/50">
                 Abandoned
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {summary.abandonedCarts}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               Carts left by customers
             </p>
           </div>
@@ -517,16 +517,16 @@ const AdminCartOverview = () => {
 
 
         {/* Main Card */}
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <div className="overflow-hidden rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] shadow-sm transition-shadow duration-200 hover:shadow-md">
 
           {/* Toolbar */}
-          <div className="flex flex-col gap-4 border-b border-slate-200 p-5 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-4 border-b border-[#6D5B3C]/40 p-5 lg:flex-row lg:items-center lg:justify-between">
 
             {/* Search */}
             <div className="relative w-full lg:max-w-md">
               <Search
                 size={18}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-[#D8D0B8]/50"
               />
 
               <input
@@ -536,7 +536,7 @@ const AdminCartOverview = () => {
                   handleSearchChange(event.target.value)
                 }
                 placeholder="Search by customer, email or cart ID..."
-                className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-700 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 py-3 pl-10 pr-4 text-sm text-[#D8D0B8] outline-none transition focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
               />
             </div>
 
@@ -545,7 +545,7 @@ const AdminCartOverview = () => {
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
               <label
                 htmlFor="cart-status"
-                className="text-sm font-medium text-slate-600"
+                className="text-sm font-medium text-[#D8D0B8]"
               >
                 Status:
               </label>
@@ -556,7 +556,7 @@ const AdminCartOverview = () => {
                 onChange={(event) =>
                   handleStatusFilterChange(event.target.value)
                 }
-                className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                className="rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
               >
                 <option value="All">All Carts</option>
                 <option value="Active">Active</option>
@@ -570,53 +570,53 @@ const AdminCartOverview = () => {
           {/* Table */}
           <div className="overflow-x-auto">
             <table className="w-full min-w-[1050px] text-left">
-              <thead className="bg-slate-50">
-                <tr className="border-b border-slate-200">
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+              <thead className="bg-[#244838]/60">
+                <tr className="border-b border-[#6D5B3C]/40">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Cart Details
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Customer
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Items
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Cart Value
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Status
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Last Updated
                   </th>
 
-                  <th className="px-5 py-4 text-right text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-right text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Actions
                   </th>
                 </tr>
               </thead>
 
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-[#244838]">
                 {paginatedCarts.length > 0 ? (
                   paginatedCarts.map((cart) => (
                     <tr
                       key={cart.id}
-                      className="transition hover:bg-slate-50"
+                      className="transition hover:bg-[#244838]/60"
                     >
                       {/* Cart Details */}
                       <td className="px-5 py-5">
                         <div>
-                          <p className="font-semibold text-slate-900">
+                          <p className="font-semibold text-[#FFF4D6]">
                             {cart.id}
                           </p>
 
-                          <p className="mt-1 text-xs text-slate-400">
+                          <p className="mt-1 text-xs text-[#D8D0B8]/50">
                             Created: {cart.createdAt}
                           </p>
                         </div>
@@ -626,11 +626,11 @@ const AdminCartOverview = () => {
                       {/* Customer */}
                       <td className="px-5 py-5">
                         <div>
-                          <p className="font-semibold text-slate-800">
+                          <p className="font-semibold text-[#FFF4D6]">
                             {cart.customer.name}
                           </p>
 
-                          <p className="mt-1 text-xs text-slate-500">
+                          <p className="mt-1 text-xs text-[#D8D0B8]/70">
                             {cart.customer.email}
                           </p>
                         </div>
@@ -642,10 +642,10 @@ const AdminCartOverview = () => {
                         <div className="flex items-center gap-2">
                           <Package
                             size={16}
-                            className="text-slate-400"
+                            className="text-[#D8D0B8]/50"
                           />
 
-                          <span className="text-sm font-semibold text-slate-700">
+                          <span className="text-sm font-semibold text-[#D8D0B8]">
                             {cart.totalItems} items
                           </span>
                         </div>
@@ -654,7 +654,7 @@ const AdminCartOverview = () => {
 
                       {/* Value */}
                       <td className="px-5 py-5">
-                        <p className="font-bold text-slate-900">
+                        <p className="font-bold text-[#FFF4D6]">
                           {formatCurrency(cart.subtotal)}
                         </p>
                       </td>
@@ -675,7 +675,7 @@ const AdminCartOverview = () => {
 
                       {/* Last Updated */}
                       <td className="px-5 py-5">
-                        <div className="flex items-center gap-2 text-sm text-slate-500">
+                        <div className="flex items-center gap-2 text-sm text-[#D8D0B8]/70">
                           <Clock size={15} />
                           {cart.lastUpdated}
                         </div>
@@ -689,7 +689,7 @@ const AdminCartOverview = () => {
                             type="button"
                             onClick={() => setSelectedCart(cart)}
                             title="View cart"
-                            className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600"
+                            className="rounded-lg border border-[#6D5B3C]/40 p-2 text-[#D8D0B8] transition hover:border-[#6D5B3C]/50 hover:bg-[#244838]/50 hover:text-[#F3D45D]"
                           >
                             <Eye size={17} />
                           </button>
@@ -698,7 +698,7 @@ const AdminCartOverview = () => {
                             type="button"
                             onClick={() => setCartToDelete(cart)}
                             title="Delete cart"
-                            className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:border-red-200 hover:bg-red-50 hover:text-red-600"
+                            className="rounded-lg border border-[#6D5B3C]/40 p-2 text-[#D8D0B8] transition hover:border-red-200 hover:bg-red-500/10 hover:text-red-600"
                           >
                             <Trash2 size={17} />
                           </button>
@@ -714,14 +714,14 @@ const AdminCartOverview = () => {
                     >
                       <ShoppingCart
                         size={40}
-                        className="mx-auto mb-3 text-slate-300"
+                        className="mx-auto mb-3 text-[#6D5B3C]/60"
                       />
 
-                      <h3 className="text-lg font-semibold text-slate-700">
+                      <h3 className="text-lg font-semibold text-[#D8D0B8]">
                         No carts found
                       </h3>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-[#D8D0B8]/70">
                         Try changing your search or status filter.
                       </p>
                     </td>
@@ -734,21 +734,21 @@ const AdminCartOverview = () => {
 
           {/* Pagination */}
           {filteredCarts.length > 0 && (
-            <div className="flex flex-col gap-4 border-t border-slate-200 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-slate-500">
+            <div className="flex flex-col gap-4 border-t border-[#6D5B3C]/40 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-[#D8D0B8]/70">
                 Showing{" "}
-                <span className="font-semibold text-slate-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {(currentPage - 1) * itemsPerPage + 1}
                 </span>{" "}
                 to{" "}
-                <span className="font-semibold text-slate-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {Math.min(
                     currentPage * itemsPerPage,
                     filteredCarts.length,
                   )}
                 </span>{" "}
                 of{" "}
-                <span className="font-semibold text-slate-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {filteredCarts.length}
                 </span>{" "}
                 carts
@@ -761,12 +761,12 @@ const AdminCartOverview = () => {
                   onClick={() =>
                     setCurrentPage((page) => Math.max(page - 1, 1))
                   }
-                  className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="rounded-lg border border-[#6D5B3C]/40 p-2 text-[#D8D0B8] transition hover:bg-[#244838] disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   <ChevronLeft size={18} />
                 </button>
 
-                <span className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white">
+                <span className="rounded-lg bg-[#F3D45D] px-4 py-2 text-sm font-semibold text-[#102A20]">
                   {currentPage}
                 </span>
 
@@ -780,7 +780,7 @@ const AdminCartOverview = () => {
                       Math.min(page + 1, totalPages),
                     )
                   }
-                  className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="rounded-lg border border-[#6D5B3C]/40 p-2 text-[#D8D0B8] transition hover:bg-[#244838] disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   <ChevronRight size={18} />
                 </button>
@@ -793,17 +793,17 @@ const AdminCartOverview = () => {
 
       {/* Cart Details Modal */}
       {selectedCart && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4">
-          <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white shadow-2xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0A150F]/60 p-4">
+          <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-[#18372A] shadow-2xl">
 
             {/* Modal Header */}
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white px-5 py-4">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#6D5B3C]/40 bg-[#18372A] px-5 py-4">
               <div>
-                <h2 className="text-lg font-bold text-slate-900">
+                <h2 className="text-lg font-bold text-[#FFF4D6]">
                   Cart Details
                 </h2>
 
-                <p className="mt-1 text-xs text-slate-500">
+                <p className="mt-1 text-xs text-[#D8D0B8]/70">
                   {selectedCart.id}
                 </p>
               </div>
@@ -811,7 +811,7 @@ const AdminCartOverview = () => {
               <button
                 type="button"
                 onClick={() => setSelectedCart(null)}
-                className="rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
+                className="rounded-lg p-2 text-[#D8D0B8]/70 transition hover:bg-[#244838] hover:text-[#FFF4D6]"
               >
                 <X size={20} />
               </button>
@@ -822,14 +822,14 @@ const AdminCartOverview = () => {
             <div className="space-y-6 p-5">
 
               {/* Customer Information */}
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-[#6D5B3C]/40 p-4">
                 <div className="mb-4 flex items-center gap-2">
                   <User
                     size={18}
-                    className="text-indigo-600"
+                    className="text-[#F3D45D]"
                   />
 
-                  <h3 className="font-bold text-slate-900">
+                  <h3 className="font-bold text-[#FFF4D6]">
                     Customer Information
                   </h3>
                 </div>
@@ -838,15 +838,15 @@ const AdminCartOverview = () => {
                   <div className="flex items-center gap-3">
                     <User
                       size={16}
-                      className="text-slate-400"
+                      className="text-[#D8D0B8]/50"
                     />
 
                     <div>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-[#D8D0B8]/50">
                         Customer Name
                       </p>
 
-                      <p className="text-sm font-semibold text-slate-700">
+                      <p className="text-sm font-semibold text-[#D8D0B8]">
                         {selectedCart.customer.name}
                       </p>
                     </div>
@@ -855,15 +855,15 @@ const AdminCartOverview = () => {
                   <div className="flex items-center gap-3">
                     <Mail
                       size={16}
-                      className="text-slate-400"
+                      className="text-[#D8D0B8]/50"
                     />
 
                     <div>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-[#D8D0B8]/50">
                         Email
                       </p>
 
-                      <p className="break-all text-sm font-semibold text-slate-700">
+                      <p className="break-all text-sm font-semibold text-[#D8D0B8]">
                         {selectedCart.customer.email}
                       </p>
                     </div>
@@ -872,15 +872,15 @@ const AdminCartOverview = () => {
                   <div className="flex items-center gap-3">
                     <Phone
                       size={16}
-                      className="text-slate-400"
+                      className="text-[#D8D0B8]/50"
                     />
 
                     <div>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-[#D8D0B8]/50">
                         Phone
                       </p>
 
-                      <p className="text-sm font-semibold text-slate-700">
+                      <p className="text-sm font-semibold text-[#D8D0B8]">
                         {selectedCart.customer.phone}
                       </p>
                     </div>
@@ -889,15 +889,15 @@ const AdminCartOverview = () => {
                   <div className="flex items-center gap-3">
                     <Clock
                       size={16}
-                      className="text-slate-400"
+                      className="text-[#D8D0B8]/50"
                     />
 
                     <div>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-[#D8D0B8]/50">
                         Last Updated
                       </p>
 
-                      <p className="text-sm font-semibold text-slate-700">
+                      <p className="text-sm font-semibold text-[#D8D0B8]">
                         {selectedCart.lastUpdated}
                       </p>
                     </div>
@@ -907,9 +907,9 @@ const AdminCartOverview = () => {
 
 
               {/* Cart Status */}
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-[#6D5B3C]/40 p-4">
                 <div className="mb-3 flex items-center justify-between gap-3">
-                  <h3 className="font-bold text-slate-900">
+                  <h3 className="font-bold text-[#FFF4D6]">
                     Cart Status
                   </h3>
 
@@ -931,7 +931,7 @@ const AdminCartOverview = () => {
                       event.target.value,
                     )
                   }
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                  className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
                 >
                   <option value="Active">Active</option>
                   <option value="Abandoned">Abandoned</option>
@@ -941,13 +941,13 @@ const AdminCartOverview = () => {
 
 
               {/* Cart Items */}
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-[#6D5B3C]/40 p-4">
                 <div className="mb-4 flex items-center justify-between">
-                  <h3 className="font-bold text-slate-900">
+                  <h3 className="font-bold text-[#FFF4D6]">
                     Cart Items
                   </h3>
 
-                  <span className="text-sm text-slate-500">
+                  <span className="text-sm text-[#D8D0B8]/70">
                     {selectedCart.totalItems} items
                   </span>
                 </div>
@@ -956,7 +956,7 @@ const AdminCartOverview = () => {
                   {selectedCart.items.map((item) => (
                     <div
                       key={item.id}
-                      className="flex items-center gap-3 rounded-xl bg-slate-50 p-3"
+                      className="flex items-center gap-3 rounded-xl bg-[#244838]/60 p-3"
                     >
                       <img
                         src={item.image}
@@ -965,25 +965,25 @@ const AdminCartOverview = () => {
                       />
 
                       <div className="min-w-0 flex-1">
-                        <h4 className="line-clamp-2 text-sm font-semibold text-slate-800">
+                        <h4 className="line-clamp-2 text-sm font-semibold text-[#FFF4D6]">
                           {item.name}
                         </h4>
 
-                        <p className="mt-1 text-xs text-slate-500">
+                        <p className="mt-1 text-xs text-[#D8D0B8]/70">
                           Quantity: {item.quantity}
                         </p>
 
-                        <p className="mt-1 text-sm font-bold text-indigo-600">
+                        <p className="mt-1 text-sm font-bold text-[#F3D45D]">
                           {formatCurrency(item.price)}
                         </p>
                       </div>
 
                       <div className="text-right">
-                        <p className="text-xs text-slate-400">
+                        <p className="text-xs text-[#D8D0B8]/50">
                           Total
                         </p>
 
-                        <p className="text-sm font-bold text-slate-800">
+                        <p className="text-sm font-bold text-[#FFF4D6]">
                           {formatCurrency(
                             item.price * item.quantity,
                           )}
@@ -996,24 +996,24 @@ const AdminCartOverview = () => {
 
 
               {/* Cart Summary */}
-              <div className="rounded-xl bg-indigo-50 p-4">
+              <div className="rounded-xl bg-[#244838]/50 p-4">
                 <div className="mb-3 flex items-center gap-2">
                   <CircleDollarSign
                     size={18}
-                    className="text-indigo-600"
+                    className="text-[#F3D45D]"
                   />
 
-                  <h3 className="font-bold text-slate-900">
+                  <h3 className="font-bold text-[#FFF4D6]">
                     Cart Summary
                   </h3>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-slate-600">
+                  <span className="text-sm text-[#D8D0B8]">
                     Total Cart Value
                   </span>
 
-                  <span className="text-xl font-bold text-indigo-700">
+                  <span className="text-xl font-bold text-[#DDBB45]">
                     {formatCurrency(selectedCart.subtotal)}
                   </span>
                 </div>
@@ -1022,11 +1022,11 @@ const AdminCartOverview = () => {
 
 
             {/* Modal Footer */}
-            <div className="flex justify-end gap-3 border-t border-slate-200 px-5 py-4">
+            <div className="flex justify-end gap-3 border-t border-[#6D5B3C]/40 px-5 py-4">
               <button
                 type="button"
                 onClick={() => setSelectedCart(null)}
-                className="rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                className="rounded-xl border border-[#6D5B3C]/40 px-5 py-2.5 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
               >
                 Close
               </button>
@@ -1050,20 +1050,20 @@ const AdminCartOverview = () => {
 
       {/* Delete Confirmation Modal */}
       {cartToDelete && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-950/60 p-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-[#0A150F]/60 p-4">
+          <div className="w-full max-w-md rounded-2xl bg-[#18372A] p-6 shadow-2xl">
 
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-100 text-red-600">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-500/15 text-red-600">
               <Trash2 size={24} />
             </div>
 
-            <h2 className="text-center text-xl font-bold text-slate-900">
+            <h2 className="text-center text-xl font-bold text-[#FFF4D6]">
               Delete Cart?
             </h2>
 
-            <p className="mt-2 text-center text-sm leading-6 text-slate-500">
+            <p className="mt-2 text-center text-sm leading-6 text-[#D8D0B8]/70">
               Are you sure you want to delete cart{" "}
-              <span className="font-semibold text-slate-700">
+              <span className="font-semibold text-[#D8D0B8]">
                 {cartToDelete.id}
               </span>
               ? This action cannot be undone.
@@ -1073,7 +1073,7 @@ const AdminCartOverview = () => {
               <button
                 type="button"
                 onClick={() => setCartToDelete(null)}
-                className="flex-1 rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                className="flex-1 rounded-xl border border-[#6D5B3C]/40 px-4 py-3 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
               >
                 Cancel
               </button>

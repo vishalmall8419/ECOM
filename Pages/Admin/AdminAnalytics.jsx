@@ -85,7 +85,7 @@ const categoryData = [
     name: "Garments",
     revenue: 142500,
     percentage: 42,
-    color: "bg-indigo-500",
+    color: "bg-[#F3D45D]",
   },
   {
     name: "Grocery",
@@ -170,7 +170,7 @@ const StatCard = ({
   isPositive = true,
 }) => {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
+    <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md transition hover:shadow-md">
       <div className="mb-4 flex items-start justify-between">
         <div className={`rounded-xl p-3 ${iconClass}`}>
           <Icon size={21} />
@@ -179,8 +179,8 @@ const StatCard = ({
         <div
           className={`flex items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${
             isPositive
-              ? "bg-emerald-50 text-emerald-600"
-              : "bg-red-50 text-red-600"
+              ? "bg-emerald-500/10 text-emerald-600"
+              : "bg-red-500/10 text-red-600"
           }`}
         >
           {isPositive ? (
@@ -193,15 +193,15 @@ const StatCard = ({
         </div>
       </div>
 
-      <p className="text-sm font-medium text-slate-500">
+      <p className="text-sm font-medium text-[#D8D0B8]/70">
         {title}
       </p>
 
-      <h3 className="mt-2 text-2xl font-bold text-slate-900">
+      <h3 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
         {value}
       </h3>
 
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-2 text-xs text-[#D8D0B8]/50">
         {subtitle}
       </p>
     </div>
@@ -217,7 +217,7 @@ const RevenueChart = ({ data }) => {
 
   return (
     <div className="mt-6">
-      <div className="flex h-72 items-end gap-2 overflow-x-auto border-b border-l border-slate-200 px-3 pb-0 sm:gap-4">
+      <div className="flex h-72 items-end gap-2 overflow-x-auto border-b border-l border-[#6D5B3C]/40 px-3 pb-0 sm:gap-4">
         {data.map((item) => {
           const height = (item.revenue / maxRevenue) * 100;
 
@@ -227,17 +227,17 @@ const RevenueChart = ({ data }) => {
               className="group flex min-w-[30px] flex-1 flex-col items-center justify-end gap-2"
             >
               <div className="relative flex h-full w-full items-end justify-center">
-                <div className="pointer-events-none absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-2 py-1 text-xs text-white group-hover:block">
+                <div className="pointer-events-none absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 whitespace-nowrap rounded-lg bg-[#FFF4D6] px-2 py-1 text-xs text-white group-hover:block">
                   {formatCurrency(item.revenue)}
                 </div>
 
                 <div
                   style={{ height: `${height}%` }}
-                  className="w-full min-w-[18px] rounded-t-lg bg-indigo-500 transition-all duration-300 hover:bg-indigo-700"
+                  className="w-full min-w-[18px] rounded-t-lg bg-[#F3D45D] transition-all duration-300 hover:bg-[#DDBB45]"
                 />
               </div>
 
-              <span className="text-xs font-medium text-slate-500">
+              <span className="text-xs font-medium text-[#D8D0B8]/70">
                 {item.month}
               </span>
             </div>
@@ -245,7 +245,7 @@ const RevenueChart = ({ data }) => {
         })}
       </div>
 
-      <div className="mt-4 flex items-center justify-between text-xs text-slate-400">
+      <div className="mt-4 flex items-center justify-between text-xs text-[#D8D0B8]/50">
         <span>Monthly Revenue</span>
         <span>Amount in INR</span>
       </div>
@@ -302,30 +302,30 @@ const AdminAnalytics = () => {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-[#102A20] p-4 sm:p-6 lg:p-8">
       <div className="mx-auto max-w-[1600px]">
 
         {/* Page Header */}
         <div className="mb-8 flex flex-col justify-between gap-5 lg:flex-row lg:items-center">
           <div>
-            <p className="mb-1 text-sm font-medium text-indigo-600">
+            <p className="mb-1 text-sm font-medium text-[#F3D45D]">
               Admin Panel / Business Insights
             </p>
 
-            <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            <h1 className="text-2xl font-bold text-[#FFF4D6] sm:text-3xl">
               Analytics
             </h1>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Track your business performance and sales growth.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2.5">
+            <div className="flex items-center gap-2 rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-3 py-2.5">
               <CalendarDays
                 size={17}
-                className="text-slate-500"
+                className="text-[#D8D0B8]/70"
               />
 
               <select
@@ -333,7 +333,7 @@ const AdminAnalytics = () => {
                 onChange={(event) =>
                   setDateRange(event.target.value)
                 }
-                className="bg-transparent text-sm font-medium text-slate-700 outline-none"
+                className="bg-transparent text-sm font-medium text-[#D8D0B8] outline-none"
               >
                 <option value="Today">Today</option>
                 <option value="This Week">This Week</option>
@@ -352,7 +352,7 @@ const AdminAnalytics = () => {
             value={formatCurrency(totalRevenue)}
             subtitle="Compared to previous period"
             icon={IndianRupee}
-            iconClass="bg-indigo-100 text-indigo-600"
+            iconClass="bg-[#244838] text-[#F3D45D]"
             trend="+18.4%"
           />
 
@@ -361,7 +361,7 @@ const AdminAnalytics = () => {
             value={totalOrders.toLocaleString("en-IN")}
             subtitle="Orders processed in selected period"
             icon={ShoppingCart}
-            iconClass="bg-emerald-100 text-emerald-600"
+            iconClass="bg-emerald-500/15 text-emerald-600"
             trend="+12.8%"
           />
 
@@ -370,7 +370,7 @@ const AdminAnalytics = () => {
             value={totalCustomers.toLocaleString("en-IN")}
             subtitle="Registered and active customers"
             icon={Users}
-            iconClass="bg-purple-100 text-purple-600"
+            iconClass="bg-purple-500/15 text-purple-600"
             trend="+15.2%"
           />
 
@@ -379,7 +379,7 @@ const AdminAnalytics = () => {
             value="8.42%"
             subtitle="Visitors converted into customers"
             icon={Target}
-            iconClass="bg-orange-100 text-orange-600"
+            iconClass="bg-orange-500/15 text-orange-600"
             trend="+4.6%"
           />
         </div>
@@ -389,19 +389,19 @@ const AdminAnalytics = () => {
         <div className="mb-8 grid grid-cols-1 gap-6 xl:grid-cols-3">
 
           {/* Revenue Chart */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm xl:col-span-2">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md xl:col-span-2">
             <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
               <div>
-                <h2 className="text-lg font-bold text-slate-900">
+                <h2 className="text-lg font-bold text-[#FFF4D6]">
                   Revenue Overview
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-[#D8D0B8]/70">
                   Monthly performance for {dateRange.toLowerCase()}.
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-600">
+              <div className="flex items-center gap-2 rounded-lg bg-emerald-500/10 px-3 py-2 text-xs font-semibold text-emerald-600">
                 <TrendingUp size={15} />
                 18.4% Growth
               </div>
@@ -412,21 +412,21 @@ const AdminAnalytics = () => {
 
 
           {/* Sales Summary */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-lg font-bold text-slate-900">
+                <h2 className="text-lg font-bold text-[#FFF4D6]">
                   Sales Summary
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-[#D8D0B8]/70">
                   Overall order status
                 </p>
               </div>
 
               <MoreHorizontal
                 size={20}
-                className="text-slate-400"
+                className="text-[#D8D0B8]/50"
               />
             </div>
 
@@ -441,17 +441,17 @@ const AdminAnalytics = () => {
                       className="text-emerald-500"
                     />
 
-                    <span className="text-sm font-medium text-slate-600">
+                    <span className="text-sm font-medium text-[#D8D0B8]">
                       Completed
                     </span>
                   </div>
 
-                  <span className="text-sm font-bold text-slate-800">
+                  <span className="text-sm font-bold text-[#FFF4D6]">
                     68%
                   </span>
                 </div>
 
-                <div className="h-2 overflow-hidden rounded-full bg-slate-100">
+                <div className="h-2 overflow-hidden rounded-full bg-[#244838]">
                   <div className="h-full w-[68%] rounded-full bg-emerald-500" />
                 </div>
               </div>
@@ -466,17 +466,17 @@ const AdminAnalytics = () => {
                       className="text-orange-500"
                     />
 
-                    <span className="text-sm font-medium text-slate-600">
+                    <span className="text-sm font-medium text-[#D8D0B8]">
                       Pending
                     </span>
                   </div>
 
-                  <span className="text-sm font-bold text-slate-800">
+                  <span className="text-sm font-bold text-[#FFF4D6]">
                     18%
                   </span>
                 </div>
 
-                <div className="h-2 overflow-hidden rounded-full bg-slate-100">
+                <div className="h-2 overflow-hidden rounded-full bg-[#244838]">
                   <div className="h-full w-[18%] rounded-full bg-orange-500" />
                 </div>
               </div>
@@ -491,28 +491,28 @@ const AdminAnalytics = () => {
                       className="text-red-500"
                     />
 
-                    <span className="text-sm font-medium text-slate-600">
+                    <span className="text-sm font-medium text-[#D8D0B8]">
                       Cancelled
                     </span>
                   </div>
 
-                  <span className="text-sm font-bold text-slate-800">
+                  <span className="text-sm font-bold text-[#FFF4D6]">
                     14%
                   </span>
                 </div>
 
-                <div className="h-2 overflow-hidden rounded-full bg-slate-100">
+                <div className="h-2 overflow-hidden rounded-full bg-[#244838]">
                   <div className="h-full w-[14%] rounded-full bg-red-500" />
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 rounded-xl bg-slate-50 p-4">
-              <p className="text-xs font-medium text-slate-500">
+            <div className="mt-8 rounded-xl bg-[#244838]/60 p-4">
+              <p className="text-xs font-medium text-[#D8D0B8]/70">
                 Average Order Value
               </p>
 
-              <h3 className="mt-2 text-2xl font-bold text-slate-900">
+              <h3 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                 {formatCurrency(totalRevenue / totalOrders)}
               </h3>
 
@@ -526,14 +526,14 @@ const AdminAnalytics = () => {
 
 
         {/* Metric Analysis */}
-        <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="mb-8 rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
           <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
             <div>
-              <h2 className="text-lg font-bold text-slate-900">
+              <h2 className="text-lg font-bold text-[#FFF4D6]">
                 Performance Analysis
               </h2>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-[#D8D0B8]/70">
                 Compare revenue, orders and customers.
               </p>
             </div>
@@ -544,8 +544,8 @@ const AdminAnalytics = () => {
                 onClick={() => setSelectedMetric("revenue")}
                 className={`rounded-lg px-4 py-2 text-sm font-semibold transition ${
                   selectedMetric === "revenue"
-                    ? "bg-indigo-600 text-white"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    ? "bg-[#F3D45D] text-[#102A20]"
+                    : "bg-[#244838] text-[#D8D0B8] hover:bg-[#6D5B3C]/40"
                 }`}
               >
                 Revenue
@@ -556,8 +556,8 @@ const AdminAnalytics = () => {
                 onClick={() => setSelectedMetric("orders")}
                 className={`rounded-lg px-4 py-2 text-sm font-semibold transition ${
                   selectedMetric === "orders"
-                    ? "bg-indigo-600 text-white"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    ? "bg-[#F3D45D] text-[#102A20]"
+                    : "bg-[#244838] text-[#D8D0B8] hover:bg-[#6D5B3C]/40"
                 }`}
               >
                 Orders
@@ -568,8 +568,8 @@ const AdminAnalytics = () => {
                 onClick={() => setSelectedMetric("customers")}
                 className={`rounded-lg px-4 py-2 text-sm font-semibold transition ${
                   selectedMetric === "customers"
-                    ? "bg-indigo-600 text-white"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    ? "bg-[#F3D45D] text-[#102A20]"
+                    : "bg-[#244838] text-[#D8D0B8] hover:bg-[#6D5B3C]/40"
                 }`}
               >
                 Customers
@@ -587,17 +587,17 @@ const AdminAnalytics = () => {
                   key={item.month}
                   className="flex flex-col items-center gap-2"
                 >
-                  <div className="flex h-36 w-full items-end justify-center rounded-lg bg-slate-50 p-2">
+                  <div className="flex h-36 w-full items-end justify-center rounded-lg bg-[#244838]/60 p-2">
                     <div
                       style={{
                         height: `${height}%`,
                       }}
-                      className="w-full rounded-md bg-indigo-500 transition-all hover:bg-indigo-700"
+                      className="w-full rounded-md bg-[#F3D45D] transition-all hover:bg-[#DDBB45]"
                       title={`${item.month}: ${item.value}`}
                     />
                   </div>
 
-                  <span className="text-xs font-medium text-slate-500">
+                  <span className="text-xs font-medium text-[#D8D0B8]/70">
                     {item.month}
                   </span>
                 </div>
@@ -611,21 +611,21 @@ const AdminAnalytics = () => {
         <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
 
           {/* Category Performance */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-lg font-bold text-slate-900">
+                <h2 className="text-lg font-bold text-[#FFF4D6]">
                   Category Performance
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-[#D8D0B8]/70">
                   Revenue distribution by category
                 </p>
               </div>
 
               <BarChart3
                 size={20}
-                className="text-indigo-500"
+                className="text-[#F3D45D]"
               />
             </div>
 
@@ -638,23 +638,23 @@ const AdminAnalytics = () => {
                         className={`h-3 w-3 rounded-full ${category.color}`}
                       />
 
-                      <span className="text-sm font-semibold text-slate-700">
+                      <span className="text-sm font-semibold text-[#D8D0B8]">
                         {category.name}
                       </span>
                     </div>
 
                     <div className="text-right">
-                      <span className="text-sm font-bold text-slate-800">
+                      <span className="text-sm font-bold text-[#FFF4D6]">
                         {formatCurrency(category.revenue)}
                       </span>
 
-                      <span className="ml-2 text-xs text-slate-400">
+                      <span className="ml-2 text-xs text-[#D8D0B8]/50">
                         {category.percentage}%
                       </span>
                     </div>
                   </div>
 
-                  <div className="h-2 overflow-hidden rounded-full bg-slate-100">
+                  <div className="h-2 overflow-hidden rounded-full bg-[#244838]">
                     <div
                       style={{
                         width: `${category.percentage}%`,
@@ -669,21 +669,21 @@ const AdminAnalytics = () => {
 
 
           {/* Top Products */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-lg font-bold text-slate-900">
+                <h2 className="text-lg font-bold text-[#FFF4D6]">
                   Top Selling Products
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-[#D8D0B8]/70">
                   Products generating the most sales
                 </p>
               </div>
 
               <Package
                 size={20}
-                className="text-indigo-500"
+                className="text-[#F3D45D]"
               />
             </div>
 
@@ -691,9 +691,9 @@ const AdminAnalytics = () => {
               {topProducts.map((product, index) => (
                 <div
                   key={product.id}
-                  className="flex items-center gap-3 rounded-xl p-2 transition hover:bg-slate-50"
+                  className="flex items-center gap-3 rounded-xl p-2 transition hover:bg-[#244838]/60"
                 >
-                  <span className="w-5 text-sm font-bold text-slate-400">
+                  <span className="w-5 text-sm font-bold text-[#D8D0B8]/50">
                     {index + 1}
                   </span>
 
@@ -704,17 +704,17 @@ const AdminAnalytics = () => {
                   />
 
                   <div className="min-w-0 flex-1">
-                    <h3 className="line-clamp-1 text-sm font-semibold text-slate-800">
+                    <h3 className="line-clamp-1 text-sm font-semibold text-[#FFF4D6]">
                       {product.name}
                     </h3>
 
-                    <p className="mt-1 text-xs text-slate-400">
+                    <p className="mt-1 text-xs text-[#D8D0B8]/50">
                       {product.category} • {product.sales} sales
                     </p>
                   </div>
 
                   <div className="text-right">
-                    <p className="text-sm font-bold text-slate-800">
+                    <p className="text-sm font-bold text-[#FFF4D6]">
                       {formatCurrency(product.revenue)}
                     </p>
 
@@ -730,12 +730,12 @@ const AdminAnalytics = () => {
 
 
         {/* Bottom Insight Banner */}
-        <div className="mt-8 flex flex-col gap-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white shadow-lg md:flex-row md:items-center md:justify-between">
+        <div className="mt-8 flex flex-col gap-4 rounded-2xl bg-gradient-to-r from-[#F3D45D] to-[#E88945] p-6 text-[#102A20] shadow-lg md:flex-row md:items-center md:justify-between">
           <div>
             <div className="mb-2 flex items-center gap-2">
               <TrendingUp size={20} />
 
-              <span className="text-sm font-semibold text-indigo-100">
+              <span className="text-sm font-semibold text-[#244838]">
                 Business Growth Insight
               </span>
             </div>
@@ -744,13 +744,13 @@ const AdminAnalytics = () => {
               Your sales performance is growing.
             </h2>
 
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-indigo-100">
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-[#244838]">
               Review your top-performing categories and products
               to understand where your revenue is coming from.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 rounded-xl bg-white/15 px-4 py-3 text-sm font-semibold backdrop-blur-sm">
+          <div className="flex items-center gap-2 rounded-xl bg-[#18372A]/15 px-4 py-3 text-sm font-semibold backdrop-blur-sm">
             <TrendingUp size={17} />
             +18.4% Growth
           </div>

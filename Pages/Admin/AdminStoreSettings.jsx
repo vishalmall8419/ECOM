@@ -172,7 +172,7 @@ const AdminStoreSettings = () => {
   }) => {
     return (
       <div>
-        <label className="mb-2 block text-sm font-semibold text-slate-700">
+        <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
           {label}
         </label>
 
@@ -180,7 +180,7 @@ const AdminStoreSettings = () => {
           {Icon && (
             <Icon
               size={17}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#D8D0B8]/50"
             />
           )}
 
@@ -197,7 +197,7 @@ const AdminStoreSettings = () => {
                   : event.target.value,
               )
             }
-            className={`w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 ${
+            className={`w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none transition focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838] ${
               Icon ? "pl-10" : ""
             }`}
           />
@@ -214,13 +214,13 @@ const AdminStoreSettings = () => {
     onChange,
   }) => {
     return (
-      <div className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 p-4">
+      <div className="flex items-center justify-between gap-4 rounded-xl border border-[#6D5B3C]/40 p-4">
         <div>
-          <p className="text-sm font-semibold text-slate-800">
+          <p className="text-sm font-semibold text-[#FFF4D6]">
             {label}
           </p>
 
-          <p className="mt-1 text-xs leading-5 text-slate-500">
+          <p className="mt-1 text-xs leading-5 text-[#D8D0B8]/70">
             {description}
           </p>
         </div>
@@ -231,11 +231,11 @@ const AdminStoreSettings = () => {
           aria-checked={checked}
           onClick={() => onChange(!checked)}
           className={`relative h-6 w-11 shrink-0 rounded-full transition ${
-            checked ? "bg-indigo-600" : "bg-slate-300"
+            checked ? "bg-[#F3D45D]" : "bg-[#6D5B3C]/60"
           }`}
         >
           <span
-            className={`absolute top-1 h-4 w-4 rounded-full bg-white shadow transition ${
+            className={`absolute top-1 h-4 w-4 rounded-full bg-[#18372A] shadow transition ${
               checked ? "left-6" : "left-1"
             }`}
           />
@@ -248,16 +248,16 @@ const AdminStoreSettings = () => {
   const SectionHeader = ({ icon: Icon, title, description }) => {
     return (
       <div className="mb-6 flex items-start gap-3">
-        <div className="rounded-xl bg-indigo-100 p-3 text-indigo-600">
+        <div className="rounded-xl bg-[#244838] p-3 text-[#F3D45D]">
           <Icon size={20} />
         </div>
 
         <div>
-          <h2 className="text-lg font-bold text-slate-900">
+          <h2 className="text-lg font-bold text-[#FFF4D6]">
             {title}
           </h2>
 
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-[#D8D0B8]/70">
             {description}
           </p>
         </div>
@@ -267,21 +267,21 @@ const AdminStoreSettings = () => {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-[#102A20] p-4 sm:p-6 lg:p-8">
       <div className="mx-auto max-w-[1500px]">
 
         {/* Page Header */}
         <div className="mb-8 flex flex-col justify-between gap-5 lg:flex-row lg:items-center">
           <div>
-            <p className="mb-1 text-sm font-medium text-indigo-600">
+            <p className="mb-1 text-sm font-medium text-[#F3D45D]">
               Admin Panel / Configuration
             </p>
 
-            <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            <h1 className="text-2xl font-bold text-[#FFF4D6] sm:text-3xl">
               Store Settings
             </h1>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Manage your store preferences and operational settings.
             </p>
           </div>
@@ -290,7 +290,7 @@ const AdminStoreSettings = () => {
             <button
               type="button"
               onClick={handleResetSettings}
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-3 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
             >
               <RotateCcw size={17} />
               Reset
@@ -299,7 +299,7 @@ const AdminStoreSettings = () => {
             <button
               type="button"
               onClick={handleSaveSettings}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#F3D45D] px-4 py-3 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
             >
               <Save size={17} />
               Save Changes
@@ -310,7 +310,7 @@ const AdminStoreSettings = () => {
 
         {/* Saved Message */}
         {savedMessage && (
-          <div className="mb-6 flex items-center gap-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">
+          <div className="mb-6 flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-700">
             <CheckCircle size={18} />
             {savedMessage}
           </div>
@@ -318,24 +318,24 @@ const AdminStoreSettings = () => {
 
 
         {/* Store Status */}
-        <div className="mb-6 flex flex-col justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center">
+        <div className="mb-6 flex flex-col justify-between gap-4 rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
             <div
               className={`rounded-xl p-3 ${
                 settings.isStoreOpen
-                  ? "bg-emerald-100 text-emerald-600"
-                  : "bg-red-100 text-red-600"
+                  ? "bg-emerald-500/15 text-emerald-600"
+                  : "bg-red-500/15 text-red-600"
               }`}
             >
               <Store size={21} />
             </div>
 
             <div>
-              <h2 className="font-bold text-slate-900">
+              <h2 className="font-bold text-[#FFF4D6]">
                 Store Status
               </h2>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-[#D8D0B8]/70">
                 {settings.isStoreOpen
                   ? "Your store is currently accepting customers."
                   : "Your store is currently closed."}
@@ -353,8 +353,8 @@ const AdminStoreSettings = () => {
             }
             className={`inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition ${
               settings.isStoreOpen
-                ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200"
-                : "bg-red-100 text-red-700 hover:bg-red-200"
+                ? "bg-emerald-500/15 text-emerald-700 hover:bg-emerald-500/30"
+                : "bg-red-500/15 text-red-700 hover:bg-red-200"
             }`}
           >
             <span
@@ -376,14 +376,14 @@ const AdminStoreSettings = () => {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[270px_minmax(0,1fr)]">
 
           {/* Sidebar */}
-          <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+          <aside className="h-fit rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-3 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-3 flex items-center gap-2 px-3 py-3">
               <Settings
                 size={19}
-                className="text-indigo-600"
+                className="text-[#F3D45D]"
               />
 
-              <span className="font-bold text-slate-900">
+              <span className="font-bold text-[#FFF4D6]">
                 Settings Menu
               </span>
             </div>
@@ -400,8 +400,8 @@ const AdminStoreSettings = () => {
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition ${
                       isActive
-                        ? "bg-indigo-600 text-white"
-                        : "text-slate-600 hover:bg-indigo-50 hover:text-indigo-600"
+                        ? "bg-[#F3D45D] text-[#102A20]"
+                        : "text-[#D8D0B8] hover:bg-[#244838]/50 hover:text-[#F3D45D]"
                     }`}
                   >
                     <Icon size={19} />
@@ -414,8 +414,8 @@ const AdminStoreSettings = () => {
                       <p
                         className={`mt-0.5 text-xs ${
                           isActive
-                            ? "text-indigo-100"
-                            : "text-slate-400"
+                            ? "text-[#244838]"
+                            : "text-[#D8D0B8]/50"
                         }`}
                       >
                         {tab.description}
@@ -429,7 +429,7 @@ const AdminStoreSettings = () => {
 
 
           {/* Content */}
-          <main className="min-w-0 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+          <main className="min-w-0 rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
 
             {/* General Settings */}
             {activeTab === "general" && (
@@ -479,14 +479,14 @@ const AdminStoreSettings = () => {
                   })}
 
                   <div className="md:col-span-2">
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                       Store Address
                     </label>
 
                     <div className="relative">
                       <MapPin
                         size={17}
-                        className="absolute left-3 top-3.5 text-slate-400"
+                        className="absolute left-3 top-3.5 text-[#D8D0B8]/50"
                       />
 
                       <textarea
@@ -499,13 +499,13 @@ const AdminStoreSettings = () => {
                           )
                         }
                         placeholder="Enter store address"
-                        className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-700 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                        className="w-full resize-none rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 py-3 pl-10 pr-4 text-sm text-[#D8D0B8] outline-none transition focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
                       />
                     </div>
                   </div>
 
                   <div className="md:col-span-2">
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                       Store Description
                     </label>
 
@@ -519,7 +519,7 @@ const AdminStoreSettings = () => {
                         )
                       }
                       placeholder="Write a short description about your store"
-                      className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                      className="w-full resize-none rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none transition focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
                     />
                   </div>
 
@@ -533,7 +533,7 @@ const AdminStoreSettings = () => {
                   })}
 
                   <div>
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                       Timezone
                     </label>
 
@@ -545,7 +545,7 @@ const AdminStoreSettings = () => {
                           event.target.value,
                         )
                       }
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
                     >
                       <option value="Asia/Kolkata">
                         Asia/Kolkata (IST)
@@ -709,7 +709,7 @@ const AdminStoreSettings = () => {
                   />
                 </div>
 
-                <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
+                <div className="mt-6 rounded-xl border border-amber-200 bg-amber-500/10 p-4">
                   <div className="flex gap-3">
                     <ShieldCheck
                       size={19}
@@ -764,7 +764,7 @@ const AdminStoreSettings = () => {
                   })}
 
                   <div className="md:col-span-2">
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                       Estimated Delivery
                     </label>
 
@@ -776,7 +776,7 @@ const AdminStoreSettings = () => {
                           event.target.value,
                         )
                       }
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                      className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
                     >
                       <option value="1-2 Business Days">
                         1-2 Business Days
@@ -797,29 +797,29 @@ const AdminStoreSettings = () => {
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-xl bg-slate-50 p-4">
+                <div className="mt-6 rounded-xl bg-[#244838]/60 p-4">
                   <div className="flex items-start gap-3">
                     <Truck
                       size={19}
-                      className="mt-0.5 text-indigo-600"
+                      className="mt-0.5 text-[#F3D45D]"
                     />
 
                     <div>
-                      <p className="text-sm font-semibold text-slate-800">
+                      <p className="text-sm font-semibold text-[#FFF4D6]">
                         Shipping Preview
                       </p>
 
-                      <p className="mt-1 text-sm leading-6 text-slate-500">
+                      <p className="mt-1 text-sm leading-6 text-[#D8D0B8]/70">
                         Customers will receive free shipping
                         on orders above{" "}
-                        <span className="font-semibold text-slate-700">
+                        <span className="font-semibold text-[#D8D0B8]">
                           ₹
                           {settings.freeShippingThreshold.toLocaleString(
                             "en-IN",
                           )}
                         </span>
                         . Otherwise, shipping charges will be{" "}
-                        <span className="font-semibold text-slate-700">
+                        <span className="font-semibold text-[#D8D0B8]">
                           ₹
                           {settings.shippingCharge.toLocaleString(
                             "en-IN",
@@ -893,14 +893,14 @@ const AdminStoreSettings = () => {
                   />
                 </div>
 
-                <div className="mt-6 rounded-xl border border-indigo-200 bg-indigo-50 p-4">
+                <div className="mt-6 rounded-xl border border-[#6D5B3C]/50 bg-[#244838]/50 p-4">
                   <div className="flex gap-3">
                     <Bell
                       size={19}
-                      className="mt-0.5 shrink-0 text-indigo-600"
+                      className="mt-0.5 shrink-0 text-[#F3D45D]"
                     />
 
-                    <p className="text-sm leading-6 text-indigo-700">
+                    <p className="text-sm leading-6 text-[#DDBB45]">
                       Email and notification delivery requires
                       backend integration with an email or
                       notification service.
@@ -912,11 +912,11 @@ const AdminStoreSettings = () => {
 
 
             {/* Bottom Save Buttons */}
-            <div className="mt-8 flex flex-col justify-end gap-3 border-t border-slate-200 pt-6 sm:flex-row">
+            <div className="mt-8 flex flex-col justify-end gap-3 border-t border-[#6D5B3C]/40 pt-6 sm:flex-row">
               <button
                 type="button"
                 onClick={handleResetSettings}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#6D5B3C]/40 px-5 py-3 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
               >
                 <RotateCcw size={17} />
                 Reset Settings
@@ -925,7 +925,7 @@ const AdminStoreSettings = () => {
               <button
                 type="button"
                 onClick={handleSaveSettings}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#F3D45D] px-5 py-3 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
               >
                 <Save size={17} />
                 Save Settings

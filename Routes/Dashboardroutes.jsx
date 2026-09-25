@@ -1,42 +1,98 @@
+import { useState, lazy, Suspense } from "react";
+
 import { Navigate, Route, Routes } from "react-router-dom";
 
-// User Pages
-import UserDashboard from "../Pages/User/UserDashboard";
-import UserOrders from "../Pages/User/UserOrders";
+// =====================================
+// USER PAGES
+// =====================================
 
-// Admin Pages
-import AdminDashboard from "../Pages/Admin/AdminDashboard";
+const UserDashboard = lazy(() => import("../Pages/User/UserDashboard"));
+const UserOrders = lazy(() => import("../Pages/User/UserOrders"));
+const UserProfile = lazy(() => import("../Pages/User/UserProfile"));
+const Wishlist = lazy(() => import("../Pages/User/Wishlist"));
+const UserCart = lazy(() => import("../Pages/User/UserCart"));
+const UserSettings = lazy(() => import("../Pages/User/UserSettings"));
+const Notification = lazy(() => import("../Pages/User/Notification"));
 
-// User Components
+// =====================================
+// ADMIN PAGES
+// =====================================
+
+const AdminOrders = lazy(() => import("../Pages/Admin2/AdminOrders"));
+const AdminProducts = lazy(() => import("../Pages/Admin2/AdminProducts"));
+const AdminCostumers = lazy(() => import("../Pages/Admin2/AdminCostumes"));
+const Categories = lazy(() => import("../Pages/Admin2/AdminCategories"));
+const AdminCartOverview = lazy(() => import("../Pages/Admin2/AdminCart"));
+const AdminAnalytics = lazy(() => import("../Pages/Admin2/AdminAnalytics"));
+const AdminProfile = lazy(() => import("../Pages/Admin2/AdminProfile"));
+const Settings = lazy(() => import("../Pages/Admin/Settings"));
+const AdminStoreSettings = lazy(() => import("../Pages/Admin2/AdminStoreSettings"));
+const Messages = lazy(() => import("../Pages/Admin2/AdminMessage"));
+
+// =====================================
+// USER COMPONENTS
+// =====================================
+
 import UserNavbar from "../Pages/User/Component/Navbar";
 import UserSidebar from "../Pages/User/Component/Sidebar";
 
-// Admin Components
-import AdminSidebar from "../Pages/Admin/Component/Sidebar";
-import AdminNavbar from "../Pages/Admin/Component/Navbar";
-import UserProfile from "../Pages/User/UserProfile";
-import AdminOrders from "../Pages/Admin/AdminOrders";
-import AdminProducts from "../Pages/Admin/AdminProducts";
-import Wishlist from "../Pages/User/Wishlist";
-import UserCart from "../Pages/User/UserCart";
-import UserSettings from "../Pages/User/UserSettings";
-import Notification from "../Pages/User/Notification";
-import AdminCostumers from "../Pages/Admin/AdminCostumers";
-import Categories from "../Pages/Admin/Categories";
-import AdminCartOverview from "../Pages/Admin/AdminCartOverview";
-import AdminAnalytics from "../Pages/Admin/AdminAnalytics";
-import AdminProfile from "../Pages/Admin/AdminProfile";
-import Settings from "../Pages/Admin/Settings";
-import AdminStoreSettings from "../Pages/Admin/AdminStoreSettings";
-import Messages from "../Pages/Admin/Messages";
+// =====================================
+// ADMIN COMPONENTS
+// =====================================
+
+const DashBoard = lazy(() => import("../Pages/Admin2/DashBoard"));
+import AnimatedBackground from "../Pages/Admin2/Component/AnimatedBackground";
+import Sidebar from "../Pages/Admin2/Component/Sidebar";
+import Navbar from "../Pages/Admin2/Component/Navbar";
 
 const Dashboardroutes = () => {
+  // =====================================
+  // AUTHENTICATION
+  // =====================================
+
   const role = sessionStorage.getItem("Role");
 
-  // Check user role
+  // =====================================
+  // SIDEBAR STATE
+  // =====================================
+
+  /*
+    Desktop (1024px+) par sidebar initially open rahega.
+    Mobile aur tablet par sidebar initially closed rahega.
+  */
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    return window.innerWidth >= 1024;
+  });
+
+  // =====================================
+  // SIDEBAR TOGGLE
+  // =====================================
+
+  const handleToggleSidebar = () => {
+    setIsSidebarOpen((previousState) => !previousState);
+  };
+
+  // =====================================
+  // CLOSE SIDEBAR
+  // =====================================
+
+  const handleCloseSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
+  // =====================================
+  // ROLE CHECK
+  // =====================================
+
   if (!role || role.trim() === "") {
     return <Navigate to="/login" replace />;
   }
+ 
 
   // =====================================
   // USER DASHBOARD
@@ -45,47 +101,90 @@ const Dashboardroutes = () => {
   if (role === "user") {
     return (
       <div className="min-h-screen bg-[#F1E8DF]">
-        {/* User Sidebar */}
+        {/* =====================================
+            USER SIDEBAR
+        ===================================== */}
+
         <UserSidebar />
 
-        {/* Main Content Area */}
+        {/* =====================================
+            USER MAIN CONTENT
+        ===================================== */}
+
         <main className="min-h-screen lg:ml-[280px]">
           {/* User Navbar */}
+
           <UserNavbar />
 
-          {/* User Routes */}
+          {/* =====================================
+              USER ROUTES
+          ===================================== */}
+
           <div>
-            <Routes>
+            <Suspense fallback={<div className="flex h-[80vh] items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-(--primary) border-t-transparent"></div></div>}>
+              <Routes>
               {/* /dashboard */}
-              <Route path="/" element={<UserDashboard />} />
+
+              <Route
+                path="/"
+                element={<UserDashboard />}
+              />
 
               {/* /dashboard/orders */}
+
               <Route path="orders">
-                {/* /dashboard/orders */}
-                <Route index element={<UserOrders />} />
+                <Route
+                  index
+                  element={<UserOrders />}
+                />
               </Route>
+
+              {/* /dashboard/profile */}
+
               <Route path="profile">
-                {/* /dashboard/orders */}
-                <Route index element={<UserProfile />} />
+                <Route
+                  index
+                  element={<UserProfile />}
+                />
               </Route>
+
+              {/* /dashboard/wishlist */}
+
               <Route path="wishlist">
-                {/* /dashboard/orders */}
-                <Route index element={<Wishlist/>} />
+                <Route
+                  index
+                  element={<Wishlist />}
+                />
               </Route>
+
+              {/* /dashboard/cart */}
+
               <Route path="cart">
-                {/* /dashboard/orders */}
-                <Route index element={<UserCart/>} />
+                <Route
+                  index
+                  element={<UserCart />}
+                />
               </Route>
+
+              {/* /dashboard/settings */}
+
               <Route path="settings">
-                {/* /dashboard/orders */}
-                <Route index element={<UserSettings/>} />
+                <Route
+                  index
+                  element={<UserSettings />}
+                />
               </Route>
+
+              {/* /dashboard/notifications */}
+
               <Route path="notifications">
-                {/* /dashboard/orders */}
-                <Route index element={<Notification/>} />
+                <Route
+                  index
+                  element={<Notification />}
+                />
               </Route>
-              {/* <Route path="orders" element={<UserOrders />} /> */}
             </Routes>
+            </Suspense>
           </div>
         </main>
       </div>
@@ -98,59 +197,189 @@ const Dashboardroutes = () => {
 
   if (role === "admin") {
     return (
-      <div className="min-h-screen bg-[#F1E8DF]">
-        {/* Admin Sidebar */}
-        <AdminSidebar />
+      <div
+        className="dashboard-page min-h-screen relative"
+      >
+        <AnimatedBackground />
 
-        {/* Main Content Area */}
-        <main className="min-h-screen lg:ml-[280px]">
-          {/* Admin Navbar */}
-          <AdminNavbar />
+        {/* =====================================
+            MOBILE AND TABLET OVERLAY
+        ===================================== */}
 
-          {/* Admin Routes */}
-          <div>
-            <Routes>
+        {isSidebarOpen && (
+          <button
+            type="button"
+            aria-label="Close sidebar"
+            onClick={handleCloseSidebar}
+            className="
+              fixed
+              inset-0
+              z-40
+              cursor-default
+              bg-black/40
+              backdrop-blur-[2px]
+              lg:hidden
+            "
+          />
+        )}
+
+        {/* =====================================
+            ADMIN SIDEBAR
+        ===================================== */}
+
+        <Sidebar
+          isSidebarOpen={isSidebarOpen}
+          onClose={handleCloseSidebar}
+        />
+
+        {/* =====================================
+            ADMIN MAIN CONTENT
+        ===================================== */}
+
+        <main
+          className={`
+            min-h-screen
+            min-w-0
+            transition-[margin]
+            duration-300
+            ease-in-out
+
+            ${
+              isSidebarOpen
+                ? "lg:ml-60"
+                : "lg:ml-0"
+            }
+          `}
+        >
+          {/* =====================================
+              ADMIN NAVBAR
+          ===================================== */}
+
+          <Navbar
+            isSidebarOpen={isSidebarOpen}
+            onToggleSidebar={handleToggleSidebar}
+          />
+
+          {/* =====================================
+              ADMIN ROUTES
+          ===================================== */}
+
+          <div className="min-w-0">
+            <Suspense fallback={<div className="flex h-[80vh] items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-4 border-(--primary) border-t-transparent"></div></div>}>
+              <Routes>
               {/* /dashboard */}
-              <Route path="/" element={<AdminDashboard />} />
+
+              <Route
+                path="/"
+                element={<DashBoard />}
+              />
+
+              {/* /dashboard/orders */}
+
               <Route path="orders">
-                <Route index element={<AdminOrders />} />
+                <Route
+                  index
+                  element={<AdminOrders />}
+                />
               </Route>
+
+              {/* /dashboard/products */}
+
               <Route path="products">
-                <Route index element={<AdminProducts />} />
+                <Route
+                  index
+                  element={<AdminProducts />}
+                />
               </Route>
+
+              {/* /dashboard/customers */}
+
               <Route path="customers">
-                <Route index element={<AdminCostumers/>} />
+                <Route
+                  index
+                  element={<AdminCostumers />}
+                />
               </Route>
+
+              {/* /dashboard/categories */}
+
               <Route path="categories">
-                <Route index element={<Categories/>} />
+                <Route
+                  index
+                  element={<Categories />}
+                />
               </Route>
+
+              {/* /dashboard/cart */}
+
               <Route path="cart">
-                <Route index element={<AdminCartOverview/>} />
+                <Route
+                  index
+                  element={<AdminCartOverview />}
+                />
               </Route>
+
+              {/* /dashboard/analytics */}
+
               <Route path="analytics">
-                <Route index element={<AdminAnalytics/>} />
+                <Route
+                  index
+                  element={<AdminAnalytics />}
+                />
               </Route>
+
+              {/* /dashboard/store-settings */}
+
               <Route path="store-settings">
-                <Route index element={<AdminStoreSettings/>} />
+                <Route
+                  index
+                  element={<AdminStoreSettings />}
+                />
               </Route>
+
+              {/* /dashboard/messages */}
+
               <Route path="messages">
-                <Route index element={<Messages/>} />
+                <Route
+                  index
+                  element={<Messages />}
+                />
               </Route>
+
+              {/* /dashboard/profile */}
+
               <Route path="profile">
-                <Route index element={<AdminProfile/>} />
+                <Route
+                  index
+                  element={<AdminProfile />}
+                />
               </Route>
+
+              {/* /dashboard/settings */}
+
               <Route path="settings">
-                <Route index element={<Settings/>} />
+                <Route
+                  index
+                  element={<Settings />}
+                />
               </Route>
             </Routes>
+            </Suspense>
           </div>
         </main>
       </div>
     );
   }
 
-  // Invalid role
+  // =====================================
+  // INVALID ROLE
+  // =====================================
+
   return <Navigate to="/login" replace />;
 };
 
 export default Dashboardroutes;
+
+
+
+

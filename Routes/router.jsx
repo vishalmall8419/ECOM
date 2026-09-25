@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
 import Home from "../Pages/Home/Home";
 import Nav from "../components/Home component/Nav";
@@ -19,18 +19,21 @@ const Router = () => {
   const location = useLocation();
 
   // 404 page check
-  const is404Page = ![
-    "/",
-    "/products",
-    "/products/:categorySlug/:productSlug",
-    "/about",
-    "/search",
-    "/wishlist",
-    "/cart",
-  ].includes(location.pathname) &&
+  const is404Page =
+    ![
+      "/",
+      "/products",
+      "/products/:categorySlug/:productSlug",
+      "/about",
+      "/search",
+      "/wishlist",
+      "/cart",
+    ].includes(location.pathname) &&
     !location.pathname.match(
-      /^\/products\/(garments|cosmetics|grocery)\/[^/]+$/
+      /^\/products\/(garments|cosmetics|grocery)\/[^/]+$/,
     );
+
+  const role = sessionStorage.getItem("Role");
 
   return (
     <>
@@ -42,7 +45,10 @@ const Router = () => {
 
         <Route path="/products" element={<Product />} />
 
-        <Route path="/products/:categorySlug/:productSlug" element={<ProductDetails />} />
+        <Route
+          path="/products/:categorySlug/:productSlug"
+          element={<ProductDetails />}
+        />
 
         <Route path="/about" element={<About />} />
 
@@ -51,9 +57,27 @@ const Router = () => {
         <Route path="/wishlist" element={<Wishlist />} />
 
         <Route path="/cart" element={<Cart />} />
-        <Route path="/login" element={<Login />} />
+
+      
+
+        <Route
+          path="/login"
+          element={
+            role !== null ? <Navigate to="/dashboard" replace /> : <Login />
+          }
+        />
+          <Route
+          path="/dashboard/*"
+          element={
+            role !== null ? (
+              <Dashboardroutes />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard/*" element={<Dashboardroutes/>}/>
+        <Route path="/dashboard/*" element={<Dashboardroutes />} />
 
         <Route path="*" element={<Page404 />} />
       </Routes>

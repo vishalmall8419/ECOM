@@ -35,43 +35,43 @@ const Categories = () => {
   }, [categories, searchTerm]);
 
   return (
-    <main className="min-h-screen bg-slate-50 px-4 py-8 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-[#102A20] px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <section className="mb-8">
-          <div className="mb-3 flex items-center gap-2 text-sm text-slate-500">
+          <div className="mb-3 flex items-center gap-2 text-sm text-[#D8D0B8]/70">
             <Link
               to="/"
-              className="transition hover:text-indigo-600"
+              className="transition hover:text-[#F3D45D]"
             >
               Home
             </Link>
 
             <span>/</span>
 
-            <span className="text-slate-700">
+            <span className="text-[#D8D0B8]">
               Categories
             </span>
           </div>
 
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700">
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#244838] px-3 py-1 text-sm font-medium text-[#DDBB45]">
                 <Grid3X3 size={16} />
                 Explore Categories
               </div>
 
-              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h1 className="text-3xl font-bold tracking-tight text-[#FFF4D6] sm:text-4xl">
                 Shop by Category
               </h1>
 
-              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-[#D8D0B8] sm:text-base">
                 Explore our different categories and find
                 products that match your needs.
               </p>
             </div>
 
-            <div className="flex items-center gap-2 text-sm text-slate-600">
+            <div className="flex items-center gap-2 text-sm text-[#D8D0B8]">
               <Package size={18} />
               <span>
                 {categories.length} Categories
@@ -85,7 +85,7 @@ const Categories = () => {
           <div className="relative max-w-xl">
             <Search
               size={20}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#D8D0B8]/50"
             />
 
             <input
@@ -95,7 +95,7 @@ const Categories = () => {
                 setSearchTerm(event.target.value)
               }
               placeholder="Search categories..."
-              className="w-full rounded-2xl border border-slate-200 bg-white py-3.5 pl-12 pr-4 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+              className="w-full rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] py-3.5 pl-12 pr-4 text-sm text-[#FFF4D6] outline-none transition placeholder:text-[#D8D0B8]/50 focus:border-[#F3D45D] focus:ring-4 focus:ring-[#244838]"
             />
           </div>
         </section>
@@ -106,10 +106,10 @@ const Categories = () => {
             {filteredCategories.map((category) => (
               <article
                 key={category.id}
-                className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group overflow-hidden rounded-3xl border border-[#6D5B3C]/40 bg-[#18372A] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 {/* Category Image */}
-                <div className="relative h-56 overflow-hidden bg-slate-100">
+                <div className="relative h-56 overflow-hidden bg-[#244838]">
                   <img
                     src={category.image}
                     alt={category.name}
@@ -123,7 +123,7 @@ const Categories = () => {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-                  <div className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-800 backdrop-blur">
+                  <div className="absolute bottom-4 left-4 rounded-full bg-[#18372A]/90 px-3 py-1 text-xs font-semibold text-[#FFF4D6] backdrop-blur">
                     {category.productCount} Products
                   </div>
                 </div>
@@ -132,23 +132,23 @@ const Categories = () => {
                 <div className="p-5">
                   <div className="mb-4 flex items-start justify-between gap-3">
                     <div>
-                      <h2 className="text-xl font-bold text-slate-900">
+                      <h2 className="text-xl font-bold text-[#FFF4D6]">
                         {category.name}
                       </h2>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-[#D8D0B8]/70">
                         Browse {category.name.toLowerCase()} products
                       </p>
                     </div>
 
-                    <div className="rounded-xl bg-indigo-50 p-2 text-indigo-600">
+                    <div className="rounded-xl bg-[#244838]/50 p-2 text-[#F3D45D]">
                       <FolderOpen size={19} />
                     </div>
                   </div>
 
                   <Link
                     to={`/products/${category.slug}`}
-                    className="flex items-center justify-between rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-600"
+                    className="flex items-center justify-between rounded-xl bg-[#FFF4D6] px-4 py-3 text-sm font-semibold text-[#102A20] transition hover:bg-[#F3D45D]"
                   >
                     <span>View Products</span>
                     <ArrowRight
@@ -162,23 +162,23 @@ const Categories = () => {
           </section>
         ) : (
           /* Empty Search Result */
-          <section className="rounded-3xl border border-dashed border-slate-300 bg-white px-5 py-16 text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 text-slate-400">
+          <section className="rounded-3xl border border-dashed border-[#6D5B3C]/60 bg-[#18372A] px-5 py-16 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#244838] text-[#D8D0B8]/50">
               <ShoppingBag size={28} />
             </div>
 
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 className="text-xl font-bold text-[#FFF4D6]">
               No Categories Found
             </h2>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Try searching with a different category name.
             </p>
 
             <button
               type="button"
               onClick={() => setSearchTerm("")}
-              className="mt-5 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700"
+              className="mt-5 rounded-xl bg-[#F3D45D] px-5 py-2.5 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
             >
               Clear Search
             </button>

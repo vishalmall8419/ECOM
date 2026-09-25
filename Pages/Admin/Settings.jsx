@@ -115,13 +115,13 @@ const Settings = () => {
   // Toggle component
   const Toggle = ({ name, label, description }) => {
     return (
-      <div className="flex items-center justify-between gap-4 border-b border-slate-100 py-4 last:border-b-0">
+      <div className="flex items-center justify-between gap-4 border-b border-[#244838] py-4 last:border-b-0">
         <div>
-          <p className="text-sm font-semibold text-slate-800">
+          <p className="text-sm font-semibold text-[#FFF4D6]">
             {label}
           </p>
 
-          <p className="mt-1 max-w-xl text-xs leading-5 text-slate-500">
+          <p className="mt-1 max-w-xl text-xs leading-5 text-[#D8D0B8]/70">
             {description}
           </p>
         </div>
@@ -135,12 +135,12 @@ const Settings = () => {
           }
           className={`relative h-6 w-11 shrink-0 rounded-full transition ${
             settings[name]
-              ? "bg-indigo-600"
-              : "bg-slate-300"
+              ? "bg-[#F3D45D]"
+              : "bg-[#6D5B3C]/60"
           }`}
         >
           <span
-            className={`absolute top-1 h-4 w-4 rounded-full bg-white shadow-sm transition ${
+            className={`absolute top-1 h-4 w-4 rounded-full bg-[#18372A] shadow-sm transition ${
               settings[name]
                 ? "left-6"
                 : "left-1"
@@ -154,7 +154,7 @@ const Settings = () => {
 
   // Input styles
   const inputClass =
-    "mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100";
+    "mt-2 w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none transition focus:border-[#F3D45D] focus:bg-[#18372A] focus:ring-2 focus:ring-[#244838]";
 
 
   // Sidebar items
@@ -188,27 +188,27 @@ const Settings = () => {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-[#102A20] p-4 sm:p-6 lg:p-8">
       <div className="mx-auto max-w-[1400px]">
 
         {/* Header */}
         <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div>
-            <p className="mb-1 text-sm font-medium text-indigo-600">
+            <p className="mb-1 text-sm font-medium text-[#F3D45D]">
               Admin Panel / Preferences
             </p>
 
-            <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            <h1 className="text-2xl font-bold text-[#FFF4D6] sm:text-3xl">
               Settings
             </h1>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Manage your admin panel preferences and system settings.
             </p>
           </div>
 
           {saved && (
-            <div className="inline-flex w-fit items-center gap-2 rounded-xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700">
+            <div className="inline-flex w-fit items-center gap-2 rounded-xl bg-emerald-500/10 px-4 py-3 text-sm font-semibold text-emerald-700">
               <CheckCircle size={17} />
               Settings saved
             </div>
@@ -220,9 +220,9 @@ const Settings = () => {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
 
           {/* Sidebar */}
-          <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+          <aside className="h-fit rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-3 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-3 px-3 py-2">
-              <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              <p className="text-xs font-bold uppercase tracking-wider text-[#D8D0B8]/50">
                 Settings Menu
               </p>
             </div>
@@ -237,8 +237,8 @@ const Settings = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`mb-1 flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
                     activeTab === tab.id
-                      ? "bg-indigo-600 text-white"
-                      : "text-slate-600 hover:bg-slate-100"
+                      ? "bg-[#F3D45D] text-[#102A20]"
+                      : "text-[#D8D0B8] hover:bg-[#244838]"
                   }`}
                 >
                   <Icon size={18} />
@@ -247,19 +247,19 @@ const Settings = () => {
               );
             })}
 
-            <div className="mt-5 rounded-xl bg-indigo-50 p-4">
+            <div className="mt-5 rounded-xl bg-[#244838]/50 p-4">
               <div className="mb-2 flex items-center gap-2">
                 <ShieldCheck
                   size={18}
-                  className="text-indigo-600"
+                  className="text-[#F3D45D]"
                 />
 
-                <p className="text-sm font-bold text-indigo-900">
+                <p className="text-sm font-bold text-[#F3D45D]">
                   Admin Settings
                 </p>
               </div>
 
-              <p className="text-xs leading-5 text-indigo-700">
+              <p className="text-xs leading-5 text-[#DDBB45]">
                 Changes made here are saved locally in this frontend demo.
               </p>
             </div>
@@ -271,18 +271,18 @@ const Settings = () => {
 
             {/* General Settings */}
             {activeTab === "general" && (
-              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+              <section className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                 <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-xl bg-indigo-100 p-3 text-indigo-600">
+                  <div className="rounded-xl bg-[#244838] p-3 text-[#F3D45D]">
                     <SettingsIcon size={20} />
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-slate-900">
+                    <h2 className="text-xl font-bold text-[#FFF4D6]">
                       General Settings
                     </h2>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#D8D0B8]/70">
                       Configure basic application preferences.
                     </p>
                   </div>
@@ -293,7 +293,7 @@ const Settings = () => {
                   <div>
                     <label
                       htmlFor="language"
-                      className="text-sm font-semibold text-slate-700"
+                      className="text-sm font-semibold text-[#D8D0B8]"
                     >
                       Language
                     </label>
@@ -318,7 +318,7 @@ const Settings = () => {
                   <div>
                     <label
                       htmlFor="timezone"
-                      className="text-sm font-semibold text-slate-700"
+                      className="text-sm font-semibold text-[#D8D0B8]"
                     >
                       Timezone
                     </label>
@@ -356,7 +356,7 @@ const Settings = () => {
                   <div>
                     <label
                       htmlFor="dateFormat"
-                      className="text-sm font-semibold text-slate-700"
+                      className="text-sm font-semibold text-[#D8D0B8]"
                     >
                       Date Format
                     </label>
@@ -387,7 +387,7 @@ const Settings = () => {
                   </div>
                 </div>
 
-                <div className="mt-6 border-t border-slate-100 pt-2">
+                <div className="mt-6 border-t border-[#244838] pt-2">
                   <Toggle
                     name="compactMode"
                     label="Compact Mode"
@@ -400,25 +400,25 @@ const Settings = () => {
 
             {/* Appearance Settings */}
             {activeTab === "appearance" && (
-              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+              <section className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                 <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-xl bg-purple-100 p-3 text-purple-600">
+                  <div className="rounded-xl bg-purple-500/15 p-3 text-purple-600">
                     <Palette size={20} />
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-slate-900">
+                    <h2 className="text-xl font-bold text-[#FFF4D6]">
                       Appearance
                     </h2>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#D8D0B8]/70">
                       Customize the appearance of your admin panel.
                     </p>
                   </div>
                 </div>
 
                 <div>
-                  <p className="text-sm font-semibold text-slate-700">
+                  <p className="text-sm font-semibold text-[#D8D0B8]">
                     Theme
                   </p>
 
@@ -458,8 +458,8 @@ const Settings = () => {
                           }
                           className={`flex items-center justify-center gap-3 rounded-xl border-2 px-4 py-5 text-sm font-semibold transition ${
                             isSelected
-                              ? "border-indigo-600 bg-indigo-50 text-indigo-700"
-                              : "border-slate-200 text-slate-600 hover:border-indigo-200"
+                              ? "border-[#F3D45D] bg-[#244838]/50 text-[#DDBB45]"
+                              : "border-[#6D5B3C]/40 text-[#D8D0B8] hover:border-[#6D5B3C]/50"
                           }`}
                         >
                           <Icon size={19} />
@@ -469,13 +469,13 @@ const Settings = () => {
                     })}
                   </div>
 
-                  <p className="mt-3 text-xs leading-5 text-slate-500">
+                  <p className="mt-3 text-xs leading-5 text-[#D8D0B8]/70">
                     Theme selection is stored locally. Actual dark mode
                     styling must be connected to your Tailwind theme.
                   </p>
                 </div>
 
-                <div className="mt-6 border-t border-slate-100 pt-2">
+                <div className="mt-6 border-t border-[#244838] pt-2">
                   <Toggle
                     name="compactMode"
                     label="Compact Layout"
@@ -488,18 +488,18 @@ const Settings = () => {
 
             {/* Notification Settings */}
             {activeTab === "notifications" && (
-              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+              <section className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                 <div className="mb-6 flex items-center gap-3">
                   <div className="rounded-xl bg-blue-100 p-3 text-blue-600">
                     <Bell size={20} />
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-slate-900">
+                    <h2 className="text-xl font-bold text-[#FFF4D6]">
                       Notification Settings
                     </h2>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#D8D0B8]/70">
                       Control which notifications you receive.
                     </p>
                   </div>
@@ -540,18 +540,18 @@ const Settings = () => {
 
             {/* Security Settings */}
             {activeTab === "security" && (
-              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+              <section className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                 <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-xl bg-emerald-100 p-3 text-emerald-600">
+                  <div className="rounded-xl bg-emerald-500/15 p-3 text-emerald-600">
                     <ShieldCheck size={20} />
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-slate-900">
+                    <h2 className="text-xl font-bold text-[#FFF4D6]">
                       Security Settings
                     </h2>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#D8D0B8]/70">
                       Manage account protection and login preferences.
                     </p>
                   </div>
@@ -569,10 +569,10 @@ const Settings = () => {
                   description="Receive alerts when a new login is detected."
                 />
 
-                <div className="mt-6 border-t border-slate-100 pt-5">
+                <div className="mt-6 border-t border-[#244838] pt-5">
                   <label
                     htmlFor="sessionTimeout"
-                    className="text-sm font-semibold text-slate-700"
+                    className="text-sm font-semibold text-[#D8D0B8]"
                   >
                     Session Timeout
                   </label>
@@ -594,7 +594,7 @@ const Settings = () => {
                     <option value="120">2 hours</option>
                   </select>
 
-                  <div className="mt-4 flex items-start gap-2 rounded-xl bg-amber-50 p-4 text-amber-700">
+                  <div className="mt-4 flex items-start gap-2 rounded-xl bg-amber-500/10 p-4 text-amber-700">
                     <AlertCircle
                       size={17}
                       className="mt-0.5 shrink-0"
@@ -612,18 +612,18 @@ const Settings = () => {
 
             {/* System Settings */}
             {activeTab === "system" && (
-              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+              <section className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                 <div className="mb-6 flex items-center gap-3">
-                  <div className="rounded-xl bg-orange-100 p-3 text-orange-600">
+                  <div className="rounded-xl bg-orange-500/15 p-3 text-orange-600">
                     <Globe size={20} />
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-slate-900">
+                    <h2 className="text-xl font-bold text-[#FFF4D6]">
                       System Settings
                     </h2>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#D8D0B8]/70">
                       Manage application-level system preferences.
                     </p>
                   </div>
@@ -641,7 +641,7 @@ const Settings = () => {
                   description="Enable additional debugging information during development."
                 />
 
-                <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
+                <div className="mt-6 rounded-xl border border-amber-200 bg-amber-500/10 p-4">
                   <div className="flex items-start gap-3">
                     <AlertCircle
                       size={19}
@@ -670,7 +670,7 @@ const Settings = () => {
               <button
                 type="button"
                 onClick={handleResetSettings}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-5 py-3 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
               >
                 <RotateCcw size={17} />
                 Reset Settings
@@ -679,7 +679,7 @@ const Settings = () => {
               <button
                 type="button"
                 onClick={handleSaveSettings}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#F3D45D] px-6 py-3 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
               >
                 <Save size={17} />
                 Save Changes

@@ -168,7 +168,7 @@ const AdminProfile = () => {
 
   // Reusable input class
   const inputClass =
-    "mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100 disabled:cursor-not-allowed disabled:opacity-70";
+    "mt-2 w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none transition focus:border-[#F3D45D] focus:bg-[#18372A] focus:ring-2 focus:ring-[#244838] disabled:cursor-not-allowed disabled:opacity-70";
 
 
   // Password field component
@@ -183,7 +183,7 @@ const AdminProfile = () => {
       <div>
         <label
           htmlFor={name}
-          className="text-sm font-semibold text-slate-700"
+          className="text-sm font-semibold text-[#D8D0B8]"
         >
           {label}
         </label>
@@ -202,7 +202,7 @@ const AdminProfile = () => {
           <button
             type="button"
             onClick={() => setVisible((previous) => !previous)}
-            className="absolute right-3 top-1/2 mt-1 -translate-y-1/2 rounded-lg p-1.5 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+            className="absolute right-3 top-1/2 mt-1 -translate-y-1/2 rounded-lg p-1.5 text-[#D8D0B8]/50 transition hover:bg-[#244838] hover:text-[#D8D0B8]"
             aria-label={visible ? "Hide password" : "Show password"}
           >
             {visible ? (
@@ -218,26 +218,26 @@ const AdminProfile = () => {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-[#102A20] p-4 sm:p-6 lg:p-8">
       <div className="mx-auto max-w-[1400px]">
 
         {/* Page Header */}
         <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div>
-            <p className="mb-1 text-sm font-medium text-indigo-600">
+            <p className="mb-1 text-sm font-medium text-[#F3D45D]">
               Admin Panel / Account
             </p>
 
-            <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            <h1 className="text-2xl font-bold text-[#FFF4D6] sm:text-3xl">
               Admin Profile
             </h1>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Manage your personal information and account security.
             </p>
           </div>
 
-          <div className="inline-flex w-fit items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700">
+          <div className="inline-flex w-fit items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm font-semibold text-emerald-700">
             <CheckCircle size={17} />
             Account Active
           </div>
@@ -245,33 +245,33 @@ const AdminProfile = () => {
 
 
         {/* Profile Hero */}
-        <div className="mb-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <div className="h-32 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-700 sm:h-40" />
+        <div className="mb-6 overflow-hidden rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] shadow-sm transition-shadow duration-200 hover:shadow-md">
+          <div className="h-32 bg-gradient-to-r from-[#F3D45D] via-violet-600 to-purple-700 sm:h-40" />
 
           <div className="px-5 pb-6 sm:px-8">
             <div className="-mt-14 flex flex-col gap-5 sm:-mt-16 sm:flex-row sm:items-end sm:justify-between">
 
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end">
                 {/* Avatar */}
-                <div className="flex h-28 w-28 items-center justify-center rounded-3xl border-4 border-white bg-indigo-100 text-3xl font-bold text-indigo-700 shadow-lg">
+                <div className="flex h-28 w-28 items-center justify-center rounded-3xl border-4 border-white bg-[#244838] text-3xl font-bold text-[#DDBB45] shadow-lg">
                   {adminInitials}
                 </div>
 
                 <div className="pb-1">
-                  <h2 className="text-2xl font-bold text-slate-900">
+                  <h2 className="text-2xl font-bold text-[#FFF4D6]">
                     {profile.firstName} {profile.lastName}
                   </h2>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-[#D8D0B8]/70">
                     {profile.email}
                   </p>
 
                   <div className="mt-2 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-700">
+                    <span className="rounded-full bg-[#244838] px-3 py-1 text-xs font-semibold text-[#DDBB45]">
                       {profile.role}
                     </span>
 
-                    <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
+                    <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-700">
                       Active
                     </span>
                   </div>
@@ -283,7 +283,7 @@ const AdminProfile = () => {
                 <button
                   type="button"
                   onClick={handleEditProfile}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#F3D45D] px-5 py-3 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
                 >
                   <Edit3 size={17} />
                   Edit Profile
@@ -298,7 +298,7 @@ const AdminProfile = () => {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
 
           {/* Sidebar */}
-          <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+          <aside className="h-fit rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-3 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <button
               type="button"
               onClick={() => {
@@ -307,8 +307,8 @@ const AdminProfile = () => {
               }}
               className={`flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
                 activeTab === "profile"
-                  ? "bg-indigo-600 text-white"
-                  : "text-slate-600 hover:bg-slate-100"
+                  ? "bg-[#F3D45D] text-[#102A20]"
+                  : "text-[#D8D0B8] hover:bg-[#244838]"
               }`}
             >
               <User size={18} />
@@ -323,29 +323,29 @@ const AdminProfile = () => {
               }}
               className={`mt-1 flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
                 activeTab === "security"
-                  ? "bg-indigo-600 text-white"
-                  : "text-slate-600 hover:bg-slate-100"
+                  ? "bg-[#F3D45D] text-[#102A20]"
+                  : "text-[#D8D0B8] hover:bg-[#244838]"
               }`}
             >
               <Lock size={18} />
               Security
             </button>
 
-            <div className="my-4 border-t border-slate-100" />
+            <div className="my-4 border-t border-[#244838]" />
 
-            <div className="rounded-xl bg-slate-50 p-4">
+            <div className="rounded-xl bg-[#244838]/60 p-4">
               <div className="mb-3 flex items-center gap-2">
                 <ShieldCheck
                   size={18}
-                  className="text-indigo-600"
+                  className="text-[#F3D45D]"
                 />
 
-                <p className="text-sm font-bold text-slate-800">
+                <p className="text-sm font-bold text-[#FFF4D6]">
                   Admin Access
                 </p>
               </div>
 
-              <p className="text-xs leading-5 text-slate-500">
+              <p className="text-xs leading-5 text-[#D8D0B8]/70">
                 Your account has administrative access to manage
                 store operations.
               </p>
@@ -367,15 +367,15 @@ const AdminProfile = () => {
 
                 <form
                   onSubmit={handleSaveProfile}
-                  className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7"
+                  className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7"
                 >
                   <div className="mb-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
                     <div>
-                      <h2 className="text-xl font-bold text-slate-900">
+                      <h2 className="text-xl font-bold text-[#FFF4D6]">
                         Personal Information
                       </h2>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-[#D8D0B8]/70">
                         Update your basic account information.
                       </p>
                     </div>
@@ -385,7 +385,7 @@ const AdminProfile = () => {
                         <button
                           type="button"
                           onClick={handleCancelEdit}
-                          className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-100"
+                          className="inline-flex items-center gap-2 rounded-xl border border-[#6D5B3C]/40 px-4 py-2.5 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
                         >
                           <X size={16} />
                           Cancel
@@ -393,7 +393,7 @@ const AdminProfile = () => {
 
                         <button
                           type="submit"
-                          className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700"
+                          className="inline-flex items-center gap-2 rounded-xl bg-[#F3D45D] px-4 py-2.5 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
                         >
                           <Save size={16} />
                           Save
@@ -409,7 +409,7 @@ const AdminProfile = () => {
                     <div>
                       <label
                         htmlFor="firstName"
-                        className="text-sm font-semibold text-slate-700"
+                        className="text-sm font-semibold text-[#D8D0B8]"
                       >
                         First Name
                       </label>
@@ -435,7 +435,7 @@ const AdminProfile = () => {
                     <div>
                       <label
                         htmlFor="lastName"
-                        className="text-sm font-semibold text-slate-700"
+                        className="text-sm font-semibold text-[#D8D0B8]"
                       >
                         Last Name
                       </label>
@@ -461,7 +461,7 @@ const AdminProfile = () => {
                     <div>
                       <label
                         htmlFor="email"
-                        className="text-sm font-semibold text-slate-700"
+                        className="text-sm font-semibold text-[#D8D0B8]"
                       >
                         Email Address
                       </label>
@@ -469,7 +469,7 @@ const AdminProfile = () => {
                       <div className="relative">
                         <Mail
                           size={17}
-                          className="absolute left-3 top-1/2 mt-1 -translate-y-1/2 text-slate-400"
+                          className="absolute left-3 top-1/2 mt-1 -translate-y-1/2 text-[#D8D0B8]/50"
                         />
 
                         <input
@@ -494,7 +494,7 @@ const AdminProfile = () => {
                     <div>
                       <label
                         htmlFor="phone"
-                        className="text-sm font-semibold text-slate-700"
+                        className="text-sm font-semibold text-[#D8D0B8]"
                       >
                         Phone Number
                       </label>
@@ -502,7 +502,7 @@ const AdminProfile = () => {
                       <div className="relative">
                         <Phone
                           size={17}
-                          className="absolute left-3 top-1/2 mt-1 -translate-y-1/2 text-slate-400"
+                          className="absolute left-3 top-1/2 mt-1 -translate-y-1/2 text-[#D8D0B8]/50"
                         />
 
                         <input
@@ -526,7 +526,7 @@ const AdminProfile = () => {
                     <div>
                       <label
                         htmlFor="gender"
-                        className="text-sm font-semibold text-slate-700"
+                        className="text-sm font-semibold text-[#D8D0B8]"
                       >
                         Gender
                       </label>
@@ -555,7 +555,7 @@ const AdminProfile = () => {
                     <div>
                       <label
                         htmlFor="dateOfBirth"
-                        className="text-sm font-semibold text-slate-700"
+                        className="text-sm font-semibold text-[#D8D0B8]"
                       >
                         Date of Birth
                       </label>
@@ -579,18 +579,18 @@ const AdminProfile = () => {
 
 
                 {/* Address Information */}
-                <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+                <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                   <div className="mb-6 flex items-center gap-3">
-                    <div className="rounded-xl bg-indigo-100 p-3 text-indigo-600">
+                    <div className="rounded-xl bg-[#244838] p-3 text-[#F3D45D]">
                       <MapPin size={20} />
                     </div>
 
                     <div>
-                      <h2 className="text-xl font-bold text-slate-900">
+                      <h2 className="text-xl font-bold text-[#FFF4D6]">
                         Address Information
                       </h2>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-[#D8D0B8]/70">
                         Your registered address details.
                       </p>
                     </div>
@@ -599,41 +599,41 @@ const AdminProfile = () => {
                   <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
 
                     <div className="md:col-span-2">
-                      <label className="text-sm font-semibold text-slate-700">
+                      <label className="text-sm font-semibold text-[#D8D0B8]">
                         Address
                       </label>
 
-                      <div className="mt-2 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                      <div className="mt-2 rounded-xl bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8]">
                         {profile.address || "Not available"}
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-sm font-semibold text-slate-700">
+                      <label className="text-sm font-semibold text-[#D8D0B8]">
                         City
                       </label>
 
-                      <div className="mt-2 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                      <div className="mt-2 rounded-xl bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8]">
                         {profile.city || "Not available"}
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-sm font-semibold text-slate-700">
+                      <label className="text-sm font-semibold text-[#D8D0B8]">
                         State
                       </label>
 
-                      <div className="mt-2 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                      <div className="mt-2 rounded-xl bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8]">
                         {profile.state || "Not available"}
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-sm font-semibold text-slate-700">
+                      <label className="text-sm font-semibold text-[#D8D0B8]">
                         Pincode
                       </label>
 
-                      <div className="mt-2 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                      <div className="mt-2 rounded-xl bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8]">
                         {profile.pincode || "Not available"}
                       </div>
                     </div>
@@ -642,18 +642,18 @@ const AdminProfile = () => {
 
 
                 {/* Account Overview */}
-                <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+                <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                   <div className="mb-6 flex items-center gap-3">
-                    <div className="rounded-xl bg-emerald-100 p-3 text-emerald-600">
+                    <div className="rounded-xl bg-emerald-500/15 p-3 text-emerald-600">
                       <Activity size={20} />
                     </div>
 
                     <div>
-                      <h2 className="text-xl font-bold text-slate-900">
+                      <h2 className="text-xl font-bold text-[#FFF4D6]">
                         Account Overview
                       </h2>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-[#D8D0B8]/70">
                         Basic account activity summary.
                       </p>
                     </div>
@@ -661,53 +661,53 @@ const AdminProfile = () => {
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
 
-                    <div className="rounded-xl bg-slate-50 p-4">
+                    <div className="rounded-xl bg-[#244838]/60 p-4">
                       <ShoppingBag
                         size={20}
-                        className="mb-3 text-indigo-600"
+                        className="mb-3 text-[#F3D45D]"
                       />
 
-                      <p className="text-2xl font-bold text-slate-900">
+                      <p className="text-2xl font-bold text-[#FFF4D6]">
                         248
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
+                      <p className="mt-1 text-xs text-[#D8D0B8]/70">
                         Orders Managed
                       </p>
                     </div>
 
-                    <div className="rounded-xl bg-slate-50 p-4">
+                    <div className="rounded-xl bg-[#244838]/60 p-4">
                       <Users
                         size={20}
                         className="mb-3 text-purple-600"
                       />
 
-                      <p className="text-2xl font-bold text-slate-900">
+                      <p className="text-2xl font-bold text-[#FFF4D6]">
                         1,248
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
+                      <p className="mt-1 text-xs text-[#D8D0B8]/70">
                         Customers
                       </p>
                     </div>
 
-                    <div className="rounded-xl bg-slate-50 p-4">
+                    <div className="rounded-xl bg-[#244838]/60 p-4">
                       <MessageSquare
                         size={20}
                         className="mb-3 text-emerald-600"
                       />
 
-                      <p className="text-2xl font-bold text-slate-900">
+                      <p className="text-2xl font-bold text-[#FFF4D6]">
                         86
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
+                      <p className="mt-1 text-xs text-[#D8D0B8]/70">
                         Messages Handled
                       </p>
                     </div>
                   </div>
 
-                  <div className="mt-5 flex items-center gap-2 text-sm text-slate-500">
+                  <div className="mt-5 flex items-center gap-2 text-sm text-[#D8D0B8]/70">
                     <CalendarDays size={16} />
 
                     Joined on {profile.joinedDate}
@@ -721,18 +721,18 @@ const AdminProfile = () => {
             {activeTab === "security" && (
               <div className="space-y-6">
 
-                <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+                <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                   <div className="mb-6 flex items-center gap-3">
-                    <div className="rounded-xl bg-indigo-100 p-3 text-indigo-600">
+                    <div className="rounded-xl bg-[#244838] p-3 text-[#F3D45D]">
                       <KeyRound size={20} />
                     </div>
 
                     <div>
-                      <h2 className="text-xl font-bold text-slate-900">
+                      <h2 className="text-xl font-bold text-[#FFF4D6]">
                         Change Password
                       </h2>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-[#D8D0B8]/70">
                         Keep your admin account secure with a strong password.
                       </p>
                     </div>
@@ -767,20 +767,20 @@ const AdminProfile = () => {
                     />
 
                     {passwordError && (
-                      <div className="rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+                      <div className="rounded-xl bg-red-500/10 px-4 py-3 text-sm font-medium text-red-700">
                         {passwordError}
                       </div>
                     )}
 
                     {passwordMessage && (
-                      <div className="rounded-xl bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">
+                      <div className="rounded-xl bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-700">
                         {passwordMessage}
                       </div>
                     )}
 
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#F3D45D] px-5 py-3 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
                     >
                       <Lock size={17} />
                       Update Password
@@ -790,63 +790,63 @@ const AdminProfile = () => {
 
 
                 {/* Security Status */}
-                <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+                <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-7">
                   <div className="mb-5 flex items-center gap-3">
-                    <div className="rounded-xl bg-emerald-100 p-3 text-emerald-600">
+                    <div className="rounded-xl bg-emerald-500/15 p-3 text-emerald-600">
                       <ShieldCheck size={20} />
                     </div>
 
                     <div>
-                      <h2 className="text-xl font-bold text-slate-900">
+                      <h2 className="text-xl font-bold text-[#FFF4D6]">
                         Security Status
                       </h2>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-[#D8D0B8]/70">
                         Current security information.
                       </p>
                     </div>
                   </div>
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between gap-4 border-b border-slate-100 pb-4">
+                    <div className="flex items-center justify-between gap-4 border-b border-[#244838] pb-4">
                       <div>
-                        <p className="text-sm font-semibold text-slate-700">
+                        <p className="text-sm font-semibold text-[#D8D0B8]">
                           Account Verification
                         </p>
 
-                        <p className="mt-1 text-xs text-slate-500">
+                        <p className="mt-1 text-xs text-[#D8D0B8]/70">
                           Your admin account verification status.
                         </p>
                       </div>
 
-                      <span className="rounded-full bg-emerald-100 px-3 py-1.5 text-xs font-semibold text-emerald-700">
+                      <span className="rounded-full bg-emerald-500/15 px-3 py-1.5 text-xs font-semibold text-emerald-700">
                         Verified
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between gap-4 border-b border-slate-100 pb-4">
+                    <div className="flex items-center justify-between gap-4 border-b border-[#244838] pb-4">
                       <div>
-                        <p className="text-sm font-semibold text-slate-700">
+                        <p className="text-sm font-semibold text-[#D8D0B8]">
                           Account Status
                         </p>
 
-                        <p className="mt-1 text-xs text-slate-500">
+                        <p className="mt-1 text-xs text-[#D8D0B8]/70">
                           Your account is currently active.
                         </p>
                       </div>
 
-                      <span className="rounded-full bg-emerald-100 px-3 py-1.5 text-xs font-semibold text-emerald-700">
+                      <span className="rounded-full bg-emerald-500/15 px-3 py-1.5 text-xs font-semibold text-emerald-700">
                         Active
                       </span>
                     </div>
 
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <p className="text-sm font-semibold text-slate-700">
+                        <p className="text-sm font-semibold text-[#D8D0B8]">
                           Two-Factor Authentication
                         </p>
 
-                        <p className="mt-1 text-xs text-slate-500">
+                        <p className="mt-1 text-xs text-[#D8D0B8]/70">
                           Connect your authentication system to enable 2FA.
                         </p>
                       </div>

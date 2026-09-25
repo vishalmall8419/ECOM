@@ -123,35 +123,35 @@ const initialMessages = [
 const getStatusStyle = (status) => {
   const styles = {
     Unread: "bg-blue-100 text-blue-700",
-    Read: "bg-slate-100 text-slate-600",
-    Replied: "bg-emerald-100 text-emerald-700",
+    Read: "bg-[#244838] text-[#D8D0B8]",
+    Replied: "bg-emerald-500/15 text-emerald-700",
   };
 
-  return styles[status] || "bg-slate-100 text-slate-600";
+  return styles[status] || "bg-[#244838] text-[#D8D0B8]";
 };
 
 
 // Priority style
 const getPriorityStyle = (priority) => {
   if (priority === "High") {
-    return "bg-red-100 text-red-700";
+    return "bg-red-500/15 text-red-700";
   }
 
-  return "bg-slate-100 text-slate-600";
+  return "bg-[#244838] text-[#D8D0B8]";
 };
 
 
 // Category style
 const getCategoryStyle = (category) => {
   const styles = {
-    Order: "bg-indigo-100 text-indigo-700",
-    Product: "bg-purple-100 text-purple-700",
-    Refund: "bg-red-100 text-red-700",
-    Payment: "bg-orange-100 text-orange-700",
-    Feedback: "bg-emerald-100 text-emerald-700",
+    Order: "bg-[#244838] text-[#DDBB45]",
+    Product: "bg-purple-500/15 text-purple-700",
+    Refund: "bg-red-500/15 text-red-700",
+    Payment: "bg-orange-500/15 text-orange-700",
+    Feedback: "bg-emerald-500/15 text-emerald-700",
   };
 
-  return styles[category] || "bg-slate-100 text-slate-600";
+  return styles[category] || "bg-[#244838] text-[#D8D0B8]";
 };
 
 
@@ -343,32 +343,32 @@ const Messages = () => {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-[#102A20] p-4 sm:p-6 lg:p-8">
       <div className="mx-auto max-w-[1600px]">
 
         {/* Page Header */}
         <div className="mb-8 flex flex-col justify-between gap-5 lg:flex-row lg:items-center">
           <div>
-            <p className="mb-1 text-sm font-medium text-indigo-600">
+            <p className="mb-1 text-sm font-medium text-[#F3D45D]">
               Admin Panel / Customer Support
             </p>
 
-            <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            <h1 className="text-2xl font-bold text-[#FFF4D6] sm:text-3xl">
               Messages
             </h1>
 
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Manage customer enquiries and support messages.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+          <div className="flex items-center gap-2 rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-3 shadow-sm">
             <MessageSquare
               size={20}
-              className="text-indigo-600"
+              className="text-[#F3D45D]"
             />
 
-            <span className="text-sm font-semibold text-slate-700">
+            <span className="text-sm font-semibold text-[#D8D0B8]">
               {summary.unread} Unread Messages
             </span>
           </div>
@@ -379,88 +379,88 @@ const Messages = () => {
         <div className="mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
 
           {/* Total */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
-              <div className="rounded-xl bg-indigo-100 p-3 text-indigo-600">
+              <div className="rounded-xl bg-[#244838] p-3 text-[#F3D45D]">
                 <MessageSquare size={21} />
               </div>
 
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-[#D8D0B8]/50">
                 Total
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {summary.total}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               All customer messages
             </p>
           </div>
 
 
           {/* Unread */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
               <div className="rounded-xl bg-blue-100 p-3 text-blue-600">
                 <Mail size={21} />
               </div>
 
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-[#D8D0B8]/50">
                 Pending
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {summary.unread}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               Unread messages
             </p>
           </div>
 
 
           {/* Read */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
-              <div className="rounded-xl bg-slate-100 p-3 text-slate-600">
+              <div className="rounded-xl bg-[#244838] p-3 text-[#D8D0B8]">
                 <MailOpen size={21} />
               </div>
 
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-[#D8D0B8]/50">
                 Reviewed
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {summary.read}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               Read messages
             </p>
           </div>
 
 
           {/* Replied */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="mb-4 flex items-center justify-between">
-              <div className="rounded-xl bg-emerald-100 p-3 text-emerald-600">
+              <div className="rounded-xl bg-emerald-500/15 p-3 text-emerald-600">
                 <Reply size={21} />
               </div>
 
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-[#D8D0B8]/50">
                 Completed
               </span>
             </div>
 
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-bold text-[#FFF4D6]">
               {summary.replied}
             </h2>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-[#D8D0B8]/70">
               Replied messages
             </p>
           </div>
@@ -468,16 +468,16 @@ const Messages = () => {
 
 
         {/* Messages Card */}
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <div className="overflow-hidden rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] shadow-sm transition-shadow duration-200 hover:shadow-md">
 
           {/* Toolbar */}
-          <div className="flex flex-col gap-4 border-b border-slate-200 p-5 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-4 border-b border-[#6D5B3C]/40 p-5 lg:flex-row lg:items-center lg:justify-between">
 
             {/* Search */}
             <div className="relative w-full lg:max-w-md">
               <Search
                 size={18}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-[#D8D0B8]/50"
               />
 
               <input
@@ -487,7 +487,7 @@ const Messages = () => {
                   handleSearchChange(event.target.value)
                 }
                 placeholder="Search name, email or subject..."
-                className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-700 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 py-3 pl-10 pr-4 text-sm text-[#D8D0B8] outline-none transition focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
               />
             </div>
 
@@ -496,7 +496,7 @@ const Messages = () => {
             <div className="flex items-center gap-2">
               <label
                 htmlFor="message-status"
-                className="text-sm font-medium text-slate-600"
+                className="text-sm font-medium text-[#D8D0B8]"
               >
                 Status:
               </label>
@@ -507,7 +507,7 @@ const Messages = () => {
                 onChange={(event) =>
                   handleFilterChange(event.target.value)
                 }
-                className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                className="rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
               >
                 <option value="All">All Messages</option>
                 <option value="Unread">Unread</option>
@@ -521,44 +521,44 @@ const Messages = () => {
           {/* Table */}
           <div className="overflow-x-auto">
             <table className="w-full min-w-[1050px] text-left">
-              <thead className="bg-slate-50">
-                <tr className="border-b border-slate-200">
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+              <thead className="bg-[#244838]/60">
+                <tr className="border-b border-[#6D5B3C]/40">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Customer
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Subject
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Category
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Priority
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Status
                   </th>
 
-                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Date
                   </th>
 
-                  <th className="px-5 py-4 text-right text-xs font-bold uppercase tracking-wide text-slate-500">
+                  <th className="px-5 py-4 text-right text-xs font-bold uppercase tracking-wide text-[#D8D0B8]/70">
                     Actions
                   </th>
                 </tr>
               </thead>
 
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-[#244838]">
                 {paginatedMessages.length > 0 ? (
                   paginatedMessages.map((message) => (
                     <tr
                       key={message.id}
-                      className={`transition hover:bg-slate-50 ${
+                      className={`transition hover:bg-[#244838]/60 ${
                         message.status === "Unread"
                           ? "bg-blue-50/30"
                           : ""
@@ -567,16 +567,16 @@ const Messages = () => {
                       {/* Customer */}
                       <td className="px-5 py-5">
                         <div className="flex items-center gap-3">
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-sm font-bold text-indigo-700">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#244838] text-sm font-bold text-[#DDBB45]">
                             {getInitials(message.name)}
                           </div>
 
                           <div>
-                            <p className="font-semibold text-slate-800">
+                            <p className="font-semibold text-[#FFF4D6]">
                               {message.name}
                             </p>
 
-                            <p className="mt-1 text-xs text-slate-500">
+                            <p className="mt-1 text-xs text-[#D8D0B8]/70">
                               {message.email}
                             </p>
                           </div>
@@ -586,11 +586,11 @@ const Messages = () => {
 
                       {/* Subject */}
                       <td className="max-w-[250px] px-5 py-5">
-                        <p className="truncate font-semibold text-slate-800">
+                        <p className="truncate font-semibold text-[#FFF4D6]">
                           {message.subject}
                         </p>
 
-                        <p className="mt-1 line-clamp-1 text-xs text-slate-500">
+                        <p className="mt-1 line-clamp-1 text-xs text-[#D8D0B8]/70">
                           {message.message}
                         </p>
                       </td>
@@ -650,7 +650,7 @@ const Messages = () => {
 
                       {/* Date */}
                       <td className="px-5 py-5">
-                        <div className="flex items-center gap-2 text-sm text-slate-500">
+                        <div className="flex items-center gap-2 text-sm text-[#D8D0B8]/70">
                           <Clock size={15} />
                           {message.date}
                         </div>
@@ -666,7 +666,7 @@ const Messages = () => {
                             onClick={() =>
                               handleOpenMessage(message)
                             }
-                            className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600"
+                            className="rounded-lg border border-[#6D5B3C]/40 p-2 text-[#D8D0B8] transition hover:border-[#6D5B3C]/50 hover:bg-[#244838]/50 hover:text-[#F3D45D]"
                           >
                             <Eye size={17} />
                           </button>
@@ -677,7 +677,7 @@ const Messages = () => {
                             onClick={() =>
                               setMessageToDelete(message)
                             }
-                            className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:border-red-200 hover:bg-red-50 hover:text-red-600"
+                            className="rounded-lg border border-[#6D5B3C]/40 p-2 text-[#D8D0B8] transition hover:border-red-200 hover:bg-red-500/10 hover:text-red-600"
                           >
                             <Trash2 size={17} />
                           </button>
@@ -693,14 +693,14 @@ const Messages = () => {
                     >
                       <MessageSquare
                         size={40}
-                        className="mx-auto mb-3 text-slate-300"
+                        className="mx-auto mb-3 text-[#6D5B3C]/60"
                       />
 
-                      <h3 className="text-lg font-semibold text-slate-700">
+                      <h3 className="text-lg font-semibold text-[#D8D0B8]">
                         No messages found
                       </h3>
 
-                      <p className="mt-1 text-sm text-slate-500">
+                      <p className="mt-1 text-sm text-[#D8D0B8]/70">
                         Try changing your search or status filter.
                       </p>
                     </td>
@@ -713,21 +713,21 @@ const Messages = () => {
 
           {/* Pagination */}
           {filteredMessages.length > 0 && (
-            <div className="flex flex-col gap-4 border-t border-slate-200 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-slate-500">
+            <div className="flex flex-col gap-4 border-t border-[#6D5B3C]/40 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-[#D8D0B8]/70">
                 Showing{" "}
-                <span className="font-semibold text-slate-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {(currentPage - 1) * itemsPerPage + 1}
                 </span>{" "}
                 to{" "}
-                <span className="font-semibold text-slate-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {Math.min(
                     currentPage * itemsPerPage,
                     filteredMessages.length,
                   )}
                 </span>{" "}
                 of{" "}
-                <span className="font-semibold text-slate-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {filteredMessages.length}
                 </span>{" "}
                 messages
@@ -742,12 +742,12 @@ const Messages = () => {
                       Math.max(page - 1, 1),
                     )
                   }
-                  className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="rounded-lg border border-[#6D5B3C]/40 p-2 text-[#D8D0B8] transition hover:bg-[#244838] disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   <ChevronLeft size={18} />
                 </button>
 
-                <span className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white">
+                <span className="rounded-lg bg-[#F3D45D] px-4 py-2 text-sm font-semibold text-[#102A20]">
                   {currentPage}
                 </span>
 
@@ -762,7 +762,7 @@ const Messages = () => {
                       Math.min(page + 1, totalPages),
                     )
                   }
-                  className="rounded-lg border border-slate-200 p-2 text-slate-600 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="rounded-lg border border-[#6D5B3C]/40 p-2 text-[#D8D0B8] transition hover:bg-[#244838] disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   <ChevronRight size={18} />
                 </button>
@@ -775,17 +775,17 @@ const Messages = () => {
 
       {/* Message Details Modal */}
       {selectedMessage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4">
-          <div className="max-h-[92vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white shadow-2xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0A150F]/60 p-4">
+          <div className="max-h-[92vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-[#18372A] shadow-2xl">
 
             {/* Modal Header */}
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white px-5 py-4">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#6D5B3C]/40 bg-[#18372A] px-5 py-4">
               <div>
-                <h2 className="text-lg font-bold text-slate-900">
+                <h2 className="text-lg font-bold text-[#FFF4D6]">
                   Message Details
                 </h2>
 
-                <p className="mt-1 text-xs text-slate-500">
+                <p className="mt-1 text-xs text-[#D8D0B8]/70">
                   Customer enquiry
                 </p>
               </div>
@@ -793,7 +793,7 @@ const Messages = () => {
               <button
                 type="button"
                 onClick={() => setSelectedMessage(null)}
-                className="rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
+                className="rounded-lg p-2 text-[#D8D0B8]/70 transition hover:bg-[#244838] hover:text-[#FFF4D6]"
               >
                 <X size={20} />
               </button>
@@ -804,9 +804,9 @@ const Messages = () => {
             <div className="space-y-6 p-5">
 
               {/* Customer Information */}
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-[#6D5B3C]/40 p-4">
                 <div className="mb-4 flex items-center justify-between gap-3">
-                  <h3 className="font-bold text-slate-900">
+                  <h3 className="font-bold text-[#FFF4D6]">
                     Customer Information
                   </h3>
 
@@ -823,15 +823,15 @@ const Messages = () => {
                   <div className="flex items-center gap-3">
                     <User
                       size={17}
-                      className="text-slate-400"
+                      className="text-[#D8D0B8]/50"
                     />
 
                     <div>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-[#D8D0B8]/50">
                         Name
                       </p>
 
-                      <p className="text-sm font-semibold text-slate-700">
+                      <p className="text-sm font-semibold text-[#D8D0B8]">
                         {selectedMessage.name}
                       </p>
                     </div>
@@ -840,15 +840,15 @@ const Messages = () => {
                   <div className="flex items-center gap-3">
                     <Mail
                       size={17}
-                      className="text-slate-400"
+                      className="text-[#D8D0B8]/50"
                     />
 
                     <div>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-[#D8D0B8]/50">
                         Email
                       </p>
 
-                      <p className="break-all text-sm font-semibold text-slate-700">
+                      <p className="break-all text-sm font-semibold text-[#D8D0B8]">
                         {selectedMessage.email}
                       </p>
                     </div>
@@ -857,15 +857,15 @@ const Messages = () => {
                   <div className="flex items-center gap-3">
                     <Phone
                       size={17}
-                      className="text-slate-400"
+                      className="text-[#D8D0B8]/50"
                     />
 
                     <div>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-[#D8D0B8]/50">
                         Phone
                       </p>
 
-                      <p className="text-sm font-semibold text-slate-700">
+                      <p className="text-sm font-semibold text-[#D8D0B8]">
                         {selectedMessage.phone}
                       </p>
                     </div>
@@ -874,15 +874,15 @@ const Messages = () => {
                   <div className="flex items-center gap-3">
                     <Clock
                       size={17}
-                      className="text-slate-400"
+                      className="text-[#D8D0B8]/50"
                     />
 
                     <div>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-[#D8D0B8]/50">
                         Received
                       </p>
 
-                      <p className="text-sm font-semibold text-slate-700">
+                      <p className="text-sm font-semibold text-[#D8D0B8]">
                         {selectedMessage.date}
                       </p>
                     </div>
@@ -892,9 +892,9 @@ const Messages = () => {
 
 
               {/* Message */}
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-[#6D5B3C]/40 p-4">
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                  <h3 className="font-bold text-slate-900">
+                  <h3 className="font-bold text-[#FFF4D6]">
                     {selectedMessage.subject}
                   </h3>
 
@@ -917,14 +917,14 @@ const Messages = () => {
                   </div>
                 </div>
 
-                <p className="whitespace-pre-wrap text-sm leading-7 text-slate-600">
+                <p className="whitespace-pre-wrap text-sm leading-7 text-[#D8D0B8]">
                   {selectedMessage.message}
                 </p>
 
                 {selectedMessage.orderId && (
-                  <div className="mt-4 rounded-lg bg-slate-50 px-4 py-3 text-sm text-slate-600">
+                  <div className="mt-4 rounded-lg bg-[#244838]/60 px-4 py-3 text-sm text-[#D8D0B8]">
                     Related Order:{" "}
-                    <span className="font-semibold text-slate-800">
+                    <span className="font-semibold text-[#FFF4D6]">
                       {selectedMessage.orderId}
                     </span>
                   </div>
@@ -934,7 +934,7 @@ const Messages = () => {
 
               {/* Previous Reply */}
               {selectedMessage.reply && (
-                <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+                <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4">
                   <div className="mb-2 flex items-center gap-2">
                     <CheckCircle
                       size={17}
@@ -954,14 +954,14 @@ const Messages = () => {
 
 
               {/* Reply Form */}
-              <div className="rounded-xl border border-slate-200 p-4">
+              <div className="rounded-xl border border-[#6D5B3C]/40 p-4">
                 <div className="mb-4 flex items-center gap-2">
                   <Reply
                     size={18}
-                    className="text-indigo-600"
+                    className="text-[#F3D45D]"
                   />
 
-                  <h3 className="font-bold text-slate-900">
+                  <h3 className="font-bold text-[#FFF4D6]">
                     Reply to Customer
                   </h3>
                 </div>
@@ -973,7 +973,7 @@ const Messages = () => {
                     setReplyText(event.target.value)
                   }
                   placeholder="Write your reply..."
-                  className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                  className="w-full resize-none rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 px-4 py-3 text-sm leading-6 text-[#D8D0B8] outline-none transition focus:border-[#F3D45D] focus:ring-2 focus:ring-[#244838]"
                 />
 
                 <div className="mt-3 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
@@ -982,7 +982,7 @@ const Messages = () => {
                     onClick={() =>
                       handleToggleReadStatus(selectedMessage.id)
                     }
-                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#6D5B3C]/40 px-4 py-2.5 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
                   >
                     {selectedMessage.status === "Unread" ? (
                       <MailOpen size={16} />
@@ -999,7 +999,7 @@ const Messages = () => {
                     type="button"
                     disabled={!replyText.trim()}
                     onClick={handleSendReply}
-                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#F3D45D] px-5 py-2.5 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45] disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     <Send size={16} />
                     Send Reply
@@ -1010,7 +1010,7 @@ const Messages = () => {
 
 
             {/* Modal Footer */}
-            <div className="flex justify-between gap-3 border-t border-slate-200 px-5 py-4">
+            <div className="flex justify-between gap-3 border-t border-[#6D5B3C]/40 px-5 py-4">
               <button
                 type="button"
                 onClick={() => {
@@ -1026,7 +1026,7 @@ const Messages = () => {
               <button
                 type="button"
                 onClick={() => setSelectedMessage(null)}
-                className="rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                className="rounded-xl border border-[#6D5B3C]/40 px-5 py-2.5 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
               >
                 Close
               </button>
@@ -1038,20 +1038,20 @@ const Messages = () => {
 
       {/* Delete Confirmation Modal */}
       {messageToDelete && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-950/60 p-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-[#0A150F]/60 p-4">
+          <div className="w-full max-w-md rounded-2xl bg-[#18372A] p-6 shadow-2xl">
 
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-100 text-red-600">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-500/15 text-red-600">
               <Trash2 size={24} />
             </div>
 
-            <h2 className="text-center text-xl font-bold text-slate-900">
+            <h2 className="text-center text-xl font-bold text-[#FFF4D6]">
               Delete Message?
             </h2>
 
-            <p className="mt-2 text-center text-sm leading-6 text-slate-500">
+            <p className="mt-2 text-center text-sm leading-6 text-[#D8D0B8]/70">
               Are you sure you want to delete this message from{" "}
-              <span className="font-semibold text-slate-700">
+              <span className="font-semibold text-[#D8D0B8]">
                 {messageToDelete.name}
               </span>
               ? This action cannot be undone.
@@ -1061,7 +1061,7 @@ const Messages = () => {
               <button
                 type="button"
                 onClick={() => setMessageToDelete(null)}
-                className="flex-1 rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                className="flex-1 rounded-xl border border-[#6D5B3C]/40 px-4 py-3 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]"
               >
                 Cancel
               </button>

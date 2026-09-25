@@ -42,16 +42,16 @@ const getStockStatus = (stock) => {
 const getStatusStyle = (status) => {
   switch (status) {
     case "Active":
-      return "bg-green-100 text-green-700";
+      return "bg-green-500/15 text-green-700";
 
     case "Low Stock":
-      return "bg-yellow-100 text-yellow-700";
+      return "bg-yellow-500/15 text-yellow-700";
 
     case "Out of Stock":
-      return "bg-red-100 text-red-700";
+      return "bg-red-500/15 text-red-700";
 
     default:
-      return "bg-gray-100 text-gray-700";
+      return "bg-[#244838] text-[#D8D0B8]";
   }
 };
 
@@ -441,7 +441,7 @@ const AdminProducts = () => {
   ============================================ */
 
   return (
-    <div className="min-h-screen bg-slate-50 px-4 py-6 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#102A20] px-4 py-6 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1600px]">
 
         {/* ========================================
@@ -450,31 +450,31 @@ const AdminProducts = () => {
 
         <div className="mb-7 flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
           <div>
-            <div className="mb-2 flex items-center gap-2 text-sm text-gray-500">
+            <div className="mb-2 flex items-center gap-2 text-sm text-[#D8D0B8]/70">
               <Link
                 to="/dashboard"
-                className="transition hover:text-indigo-600"
+                className="transition hover:text-[#F3D45D]"
               >
                 Admin Dashboard
               </Link>
 
               <span>/</span>
 
-              <span className="text-gray-700">
+              <span className="text-[#D8D0B8]">
                 Products
               </span>
             </div>
 
-            <h1 className="flex items-center gap-3 text-2xl font-bold text-gray-900 sm:text-3xl">
+            <h1 className="flex items-center gap-3 text-2xl font-bold text-[#FFF4D6] sm:text-3xl">
               <Package
-                className="text-indigo-600"
+                className="text-[#F3D45D]"
                 size={30}
               />
 
               Products
             </h1>
 
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Manage your product inventory and
               product listings.
             </p>
@@ -483,7 +483,7 @@ const AdminProducts = () => {
           <div className="flex flex-wrap items-center gap-3">
             <Link
               to="/dashboard"
-              className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 transition hover:border-indigo-200 hover:text-indigo-600"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-2.5 text-sm font-semibold text-[#D8D0B8] transition hover:border-[#6D5B3C]/50 hover:text-[#F3D45D]"
             >
               <ArrowLeft size={17} />
               Admin Dashboard
@@ -494,7 +494,7 @@ const AdminProducts = () => {
               onClick={() =>
                 setIsAddModalOpen(true)
               }
-              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#F3D45D] px-4 py-2.5 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
             >
               <Plus size={17} />
               Add Product
@@ -509,76 +509,76 @@ const AdminProducts = () => {
         <div className="mb-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
 
           {/* Total Products */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-[#D8D0B8]/70">
                   Total Products
                 </p>
 
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                   {totalProducts}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-indigo-100 p-3 text-indigo-600">
+              <div className="rounded-xl bg-[#244838] p-3 text-[#F3D45D]">
                 <Package size={22} />
               </div>
             </div>
           </div>
 
           {/* In Stock */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-[#D8D0B8]/70">
                   In Stock
                 </p>
 
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                   {activeProducts}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-green-100 p-3 text-green-600">
+              <div className="rounded-xl bg-green-500/15 p-3 text-green-600">
                 <CheckCircle size={22} />
               </div>
             </div>
           </div>
 
           {/* Low Stock */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-[#D8D0B8]/70">
                   Low Stock
                 </p>
 
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                   {lowStockProducts}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-yellow-100 p-3 text-yellow-600">
+              <div className="rounded-xl bg-yellow-500/15 p-3 text-yellow-600">
                 <AlertTriangle size={22} />
               </div>
             </div>
           </div>
 
           {/* Out of Stock */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-[#D8D0B8]/70">
                   Out of Stock
                 </p>
 
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                   {outOfStockProducts}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-red-100 p-3 text-red-600">
+              <div className="rounded-xl bg-red-500/15 p-3 text-red-600">
                 <XCircle size={22} />
               </div>
             </div>
@@ -589,17 +589,17 @@ const AdminProducts = () => {
             PRODUCTS CARD
         ======================================== */}
 
-        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] shadow-sm transition-shadow duration-200 hover:shadow-md">
 
           {/* Toolbar */}
-          <div className="border-b border-gray-100 p-5 sm:p-6">
+          <div className="border-b border-[#244838] p-5 sm:p-6">
             <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
 
               {/* Search */}
               <div className="relative w-full xl:max-w-md">
                 <Search
                   size={19}
-                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#D8D0B8]/50"
                 />
 
                 <input
@@ -609,7 +609,7 @@ const AdminProducts = () => {
                     handleSearch(event.target.value)
                   }
                   placeholder="Search products, SKU or category..."
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-4 text-sm outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+                  className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 py-3 pl-10 pr-4 text-sm outline-none transition focus:border-[#F3D45D] focus:bg-[#18372A] focus:ring-2 focus:ring-[#244838]"
                 />
               </div>
 
@@ -624,8 +624,8 @@ const AdminProducts = () => {
                   }
                   className={`inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition ${
                     showFilters
-                      ? "border-indigo-200 bg-indigo-50 text-indigo-600"
-                      : "border-gray-200 text-gray-600 hover:border-indigo-200 hover:text-indigo-600"
+                      ? "border-[#6D5B3C]/50 bg-[#244838]/50 text-[#F3D45D]"
+                      : "border-[#6D5B3C]/40 text-[#D8D0B8] hover:border-[#6D5B3C]/50 hover:text-[#F3D45D]"
                   }`}
                 >
                   <Filter size={17} />
@@ -636,14 +636,14 @@ const AdminProducts = () => {
                   <button
                     type="button"
                     onClick={deleteSelectedProducts}
-                    className="inline-flex items-center gap-2 rounded-xl border border-red-100 px-4 py-2.5 text-sm font-semibold text-red-500 transition hover:bg-red-50"
+                    className="inline-flex items-center gap-2 rounded-xl border border-red-500/15 px-4 py-2.5 text-sm font-semibold text-red-500 transition hover:bg-red-500/10"
                   >
                     <Trash2 size={17} />
                     Delete ({selectedProducts.length})
                   </button>
                 )}
 
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-[#D8D0B8]/70">
                   {filteredProducts.length} Products
                 </span>
               </div>
@@ -651,11 +651,11 @@ const AdminProducts = () => {
 
             {/* Filters */}
             {showFilters && (
-              <div className="mt-5 grid gap-4 rounded-xl border border-gray-100 bg-gray-50 p-4 sm:grid-cols-2">
+              <div className="mt-5 grid gap-4 rounded-xl border border-[#244838] bg-[#244838]/60 p-4 sm:grid-cols-2">
 
                 {/* Category Filter */}
                 <div>
-                  <label className="mb-2 block text-sm font-semibold text-gray-700">
+                  <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                     Category
                   </label>
 
@@ -666,7 +666,7 @@ const AdminProducts = () => {
                         event.target.value,
                       )
                     }
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 outline-none focus:border-indigo-500"
+                    className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D]"
                   >
                     {categories.map((item) => (
                       <option
@@ -681,7 +681,7 @@ const AdminProducts = () => {
 
                 {/* Stock Filter */}
                 <div>
-                  <label className="mb-2 block text-sm font-semibold text-gray-700">
+                  <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                     Stock Status
                   </label>
 
@@ -692,7 +692,7 @@ const AdminProducts = () => {
                         event.target.value,
                       )
                     }
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 outline-none focus:border-indigo-500"
+                    className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D]"
                   >
                     <option value="All Stock">
                       All Stock
@@ -716,7 +716,7 @@ const AdminProducts = () => {
                 <button
                   type="button"
                   onClick={resetFilters}
-                  className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+                  className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-[#F3D45D] hover:text-[#DDBB45]"
                 >
                   <X size={16} />
                   Reset Filters
@@ -732,14 +732,14 @@ const AdminProducts = () => {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[1050px] text-left">
 
-              <thead className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
+              <thead className="bg-[#244838]/60 text-xs uppercase tracking-wide text-[#D8D0B8]/70">
                 <tr>
                   <th className="w-12 px-5 py-4">
                     <input
                       type="checkbox"
                       checked={allCurrentSelected}
                       onChange={handleSelectAll}
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      className="h-4 w-4 rounded border-[#6D5B3C]/60 text-[#F3D45D] focus:ring-[#F3D45D]"
                     />
                   </th>
 
@@ -773,7 +773,7 @@ const AdminProducts = () => {
                 </tr>
               </thead>
 
-              <tbody className="divide-y divide-gray-100">
+              <tbody className="divide-y divide-[#244838]">
                 {paginatedProducts.map((product) => {
                   const status = getStockStatus(
                     product.stock,
@@ -782,7 +782,7 @@ const AdminProducts = () => {
                   return (
                     <tr
                       key={product.id}
-                      className="transition hover:bg-gray-50"
+                      className="transition hover:bg-[#244838]/60"
                     >
                       {/* Checkbox */}
                       <td className="px-5 py-4">
@@ -796,7 +796,7 @@ const AdminProducts = () => {
                               product.id,
                             )
                           }
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                          className="h-4 w-4 rounded border-[#6D5B3C]/60 text-[#F3D45D] focus:ring-[#F3D45D]"
                         />
                       </td>
 
@@ -809,7 +809,7 @@ const AdminProducts = () => {
                               "/placeholder-product.png"
                             }
                             alt={product.name}
-                            className="h-14 w-14 rounded-xl border border-gray-100 object-cover"
+                            className="h-14 w-14 rounded-xl border border-[#244838] object-cover"
                             onError={(event) => {
                               event.currentTarget.src =
                                 "/placeholder-product.png";
@@ -817,11 +817,11 @@ const AdminProducts = () => {
                           />
 
                           <div className="min-w-0">
-                            <h3 className="max-w-56 truncate text-sm font-semibold text-gray-900">
+                            <h3 className="max-w-56 truncate text-sm font-semibold text-[#FFF4D6]">
                               {product.name}
                             </h3>
 
-                            <p className="mt-1 text-xs text-gray-400">
+                            <p className="mt-1 text-xs text-[#D8D0B8]/50">
                               ID: {product.id}
                             </p>
                           </div>
@@ -829,17 +829,17 @@ const AdminProducts = () => {
                       </td>
 
                       {/* Category */}
-                      <td className="px-5 py-4 text-sm text-gray-600">
+                      <td className="px-5 py-4 text-sm text-[#D8D0B8]">
                         {product.category}
                       </td>
 
                       {/* SKU */}
-                      <td className="px-5 py-4 text-sm font-medium text-gray-500">
+                      <td className="px-5 py-4 text-sm font-medium text-[#D8D0B8]/70">
                         {product.sku}
                       </td>
 
                       {/* Price */}
-                      <td className="px-5 py-4 text-sm font-bold text-gray-900">
+                      <td className="px-5 py-4 text-sm font-bold text-[#FFF4D6]">
                         ₹
                         {Number(
                           product.price || 0,
@@ -847,7 +847,7 @@ const AdminProducts = () => {
                       </td>
 
                       {/* Stock */}
-                      <td className="px-5 py-4 text-sm font-semibold text-gray-700">
+                      <td className="px-5 py-4 text-sm font-semibold text-[#D8D0B8]">
                         {product.stock}
                       </td>
 
@@ -870,7 +870,7 @@ const AdminProducts = () => {
                           {/* View */}
                           <Link
                             to={`/products/${product.categorySlug}/${product.slug}`}
-                            className="rounded-lg p-2 text-gray-400 transition hover:bg-indigo-50 hover:text-indigo-600"
+                            className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-[#244838]/50 hover:text-[#F3D45D]"
                             title="View Product"
                           >
                             <Eye size={17} />
@@ -882,7 +882,7 @@ const AdminProducts = () => {
                             onClick={() =>
                               handleEditProduct(product)
                             }
-                            className="rounded-lg p-2 text-gray-400 transition hover:bg-blue-50 hover:text-blue-600"
+                            className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-blue-50 hover:text-blue-600"
                             title="Edit Product"
                           >
                             <Edit size={17} />
@@ -894,7 +894,7 @@ const AdminProducts = () => {
                             onClick={() =>
                               openDeleteModal(product)
                             }
-                            className="rounded-lg p-2 text-gray-400 transition hover:bg-red-50 hover:text-red-600"
+                            className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-red-500/10 hover:text-red-600"
                             title="Delete Product"
                           >
                             <Trash2 size={17} />
@@ -908,7 +908,7 @@ const AdminProducts = () => {
                                 `More options for ${product.name}`,
                               )
                             }
-                            className="rounded-lg p-2 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                            className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-[#244838] hover:text-[#D8D0B8]"
                             title="More Options"
                           >
                             <MoreVertical size={17} />
@@ -928,15 +928,15 @@ const AdminProducts = () => {
 
           {paginatedProducts.length === 0 && (
             <div className="px-6 py-16 text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 text-gray-400">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#244838] text-[#D8D0B8]/50">
                 <Package size={30} />
               </div>
 
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-[#FFF4D6]">
                 No Products Found
               </h3>
 
-              <p className="mt-2 text-sm text-gray-500">
+              <p className="mt-2 text-sm text-[#D8D0B8]/70">
                 Try changing your search or filter
                 settings.
               </p>
@@ -944,7 +944,7 @@ const AdminProducts = () => {
               <button
                 type="button"
                 onClick={resetFilters}
-                className="mt-4 text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+                className="mt-4 text-sm font-semibold text-[#F3D45D] hover:text-[#DDBB45]"
               >
                 Reset Filters
               </button>
@@ -956,23 +956,23 @@ const AdminProducts = () => {
           ======================================== */}
 
           {filteredProducts.length > 0 && (
-            <div className="flex flex-col gap-4 border-t border-gray-100 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-gray-500">
+            <div className="flex flex-col gap-4 border-t border-[#244838] px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-[#D8D0B8]/70">
                 Showing{" "}
-                <span className="font-semibold text-gray-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {(safePage - 1) *
                     productsPerPage +
                     1}
                 </span>{" "}
                 to{" "}
-                <span className="font-semibold text-gray-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {Math.min(
                     safePage * productsPerPage,
                     filteredProducts.length,
                   )}
                 </span>{" "}
                 of{" "}
-                <span className="font-semibold text-gray-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {filteredProducts.length}
                 </span>{" "}
                 products
@@ -987,7 +987,7 @@ const AdminProducts = () => {
                       (previous) => previous - 1,
                     )
                   }
-                  className="inline-flex items-center gap-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-600 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="inline-flex items-center gap-1 rounded-lg border border-[#6D5B3C]/40 px-3 py-2 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]/60 disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   <ChevronLeft size={16} />
                   Previous
@@ -1004,8 +1004,8 @@ const AdminProducts = () => {
                       }
                       className={`h-9 w-9 rounded-lg text-sm font-semibold transition ${
                         safePage === index + 1
-                          ? "bg-indigo-600 text-white"
-                          : "border border-gray-200 text-gray-600 hover:bg-gray-50"
+                          ? "bg-[#F3D45D] text-[#102A20]"
+                          : "border border-[#6D5B3C]/40 text-[#D8D0B8] hover:bg-[#244838]/60"
                       }`}
                     >
                       {index + 1}
@@ -1021,7 +1021,7 @@ const AdminProducts = () => {
                       (previous) => previous + 1,
                     )
                   }
-                  className="inline-flex items-center gap-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-600 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="inline-flex items-center gap-1 rounded-lg border border-[#6D5B3C]/40 px-3 py-2 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]/60 disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   Next
                   <ChevronRight size={16} />
@@ -1048,30 +1048,30 @@ const AdminProducts = () => {
 
       {showDeleteModal && productToDelete && (
         <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/50 px-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+          <div className="w-full max-w-md rounded-2xl bg-[#18372A] p-6 shadow-2xl">
 
             <div className="mb-5 flex items-center justify-between">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-red-100 text-red-600">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-red-500/15 text-red-600">
                 <Trash2 size={21} />
               </div>
 
               <button
                 type="button"
                 onClick={closeDeleteModal}
-                className="rounded-lg p-2 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-[#244838] hover:text-[#D8D0B8]"
                 aria-label="Close delete modal"
               >
                 <X size={20} />
               </button>
             </div>
 
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 className="text-xl font-bold text-[#FFF4D6]">
               Delete Product?
             </h2>
 
-            <p className="mt-2 text-sm leading-6 text-gray-500">
+            <p className="mt-2 text-sm leading-6 text-[#D8D0B8]/70">
               Are you sure you want to delete{" "}
-              <span className="font-semibold text-gray-700">
+              <span className="font-semibold text-[#D8D0B8]">
                 {productToDelete.name}
               </span>
               ? This action cannot be undone in this
@@ -1082,7 +1082,7 @@ const AdminProducts = () => {
               <button
                 type="button"
                 onClick={closeDeleteModal}
-                className="rounded-xl border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+                className="rounded-xl border border-[#6D5B3C]/40 px-4 py-2.5 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]/60"
               >
                 Cancel
               </button>

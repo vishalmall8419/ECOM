@@ -253,38 +253,38 @@ const formatDate = (date) => {
 const getOrderStatusStyle = (status) => {
   switch (status) {
     case "Delivered":
-      return "bg-green-100 text-green-700";
+      return "bg-green-500/15 text-green-700";
 
     case "Shipped":
       return "bg-blue-100 text-blue-700";
 
     case "Processing":
-      return "bg-yellow-100 text-yellow-700";
+      return "bg-yellow-500/15 text-yellow-700";
 
     case "Pending":
-      return "bg-orange-100 text-orange-700";
+      return "bg-orange-500/15 text-orange-700";
 
     case "Cancelled":
-      return "bg-red-100 text-red-700";
+      return "bg-red-500/15 text-red-700";
 
     default:
-      return "bg-gray-100 text-gray-700";
+      return "bg-[#244838] text-[#D8D0B8]";
   }
 };
 
 const getPaymentStatusStyle = (status) => {
   switch (status) {
     case "Paid":
-      return "bg-green-100 text-green-700";
+      return "bg-green-500/15 text-green-700";
 
     case "Pending":
-      return "bg-yellow-100 text-yellow-700";
+      return "bg-yellow-500/15 text-yellow-700";
 
     case "Failed":
-      return "bg-red-100 text-red-700";
+      return "bg-red-500/15 text-red-700";
 
     default:
-      return "bg-gray-100 text-gray-700";
+      return "bg-[#244838] text-[#D8D0B8]";
   }
 };
 
@@ -488,7 +488,7 @@ const AdminOrders = () => {
 ============================================ */
 
   return (
-    <div className="min-h-screen bg-slate-50 px-4 py-6 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#102A20] px-4 py-6 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1600px]">
         {/* ========================================
             HEADER
@@ -496,32 +496,32 @@ const AdminOrders = () => {
 
         <div className="mb-7 flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
           <div>
-            <div className="mb-2 flex items-center gap-2 text-sm text-gray-500">
+            <div className="mb-2 flex items-center gap-2 text-sm text-[#D8D0B8]/70">
               <Link
                 to="/dashboard"
-                className="transition hover:text-indigo-600"
+                className="transition hover:text-[#F3D45D]"
               >
                 Admin Dashboard
               </Link>
 
               <span>/</span>
 
-              <span className="text-gray-700">Orders</span>
+              <span className="text-[#D8D0B8]">Orders</span>
             </div>
 
-            <h1 className="flex items-center gap-3 text-2xl font-bold text-gray-900 sm:text-3xl">
-              <ShoppingBag size={30} className="text-indigo-600" />
+            <h1 className="flex items-center gap-3 text-2xl font-bold text-[#FFF4D6] sm:text-3xl">
+              <ShoppingBag size={30} className="text-[#F3D45D]" />
               Orders
             </h1>
 
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-[#D8D0B8]/70">
               Manage customer orders, payments and delivery status.
             </p>
           </div>
 
           <Link
             to="/dashboard"
-            className="inline-flex w-fit items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 transition hover:border-indigo-200 hover:text-indigo-600"
+            className="inline-flex w-fit items-center gap-2 rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-2.5 text-sm font-semibold text-[#D8D0B8] transition hover:border-[#6D5B3C]/50 hover:text-[#F3D45D]"
           >
             Back to Dashboard
           </Link>
@@ -533,85 +533,85 @@ const AdminOrders = () => {
 
         <div className="mb-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
           {/* Total Orders */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">Total Orders</p>
+                <p className="text-sm text-[#D8D0B8]/70">Total Orders</p>
 
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                   {totalOrders}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-indigo-100 p-3 text-indigo-600">
+              <div className="rounded-xl bg-[#244838] p-3 text-[#F3D45D]">
                 <ShoppingBag size={22} />
               </div>
             </div>
           </div>
 
           {/* Pending */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">Pending</p>
+                <p className="text-sm text-[#D8D0B8]/70">Pending</p>
 
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                   {pendingOrders}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-orange-100 p-3 text-orange-600">
+              <div className="rounded-xl bg-orange-500/15 p-3 text-orange-600">
                 <Clock size={22} />
               </div>
             </div>
           </div>
 
           {/* Processing */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">Processing</p>
+                <p className="text-sm text-[#D8D0B8]/70">Processing</p>
 
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                   {processingOrders}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-yellow-100 p-3 text-yellow-600">
+              <div className="rounded-xl bg-yellow-500/15 p-3 text-yellow-600">
                 <Package size={22} />
               </div>
             </div>
           </div>
 
           {/* Delivered */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">Delivered</p>
+                <p className="text-sm text-[#D8D0B8]/70">Delivered</p>
 
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-[#FFF4D6]">
                   {deliveredOrders}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-green-100 p-3 text-green-600">
+              <div className="rounded-xl bg-green-500/15 p-3 text-green-600">
                 <CheckCircle size={22} />
               </div>
             </div>
           </div>
 
           {/* Revenue */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-500">Revenue</p>
+                <p className="text-sm text-[#D8D0B8]/70">Revenue</p>
 
-                <h2 className="mt-2 text-xl font-bold text-gray-900">
+                <h2 className="mt-2 text-xl font-bold text-[#FFF4D6]">
                   {formatCurrency(totalRevenue)}
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-purple-100 p-3 text-purple-600">
+              <div className="rounded-xl bg-purple-500/15 p-3 text-purple-600">
                 <IndianRupee size={22} />
               </div>
             </div>
@@ -622,15 +622,15 @@ const AdminOrders = () => {
             ORDERS TABLE CARD
         ======================================== */}
 
-        <div className="rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <div className="rounded-2xl border border-[#6D5B3C]/40 bg-[#18372A] shadow-sm transition-shadow duration-200 hover:shadow-md">
           {/* Toolbar */}
-          <div className="border-b border-gray-100 p-5 sm:p-6">
+          <div className="border-b border-[#244838] p-5 sm:p-6">
             <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
               {/* Search */}
               <div className="relative w-full xl:max-w-md">
                 <Search
                   size={19}
-                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#D8D0B8]/50"
                 />
 
                 <input
@@ -638,7 +638,7 @@ const AdminOrders = () => {
                   value={search}
                   onChange={(event) => handleSearch(event.target.value)}
                   placeholder="Search order ID, customer..."
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-10 pr-4 text-sm outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+                  className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#244838]/60 py-3 pl-10 pr-4 text-sm outline-none transition focus:border-[#F3D45D] focus:bg-[#18372A] focus:ring-2 focus:ring-[#244838]"
                 />
               </div>
 
@@ -648,15 +648,15 @@ const AdminOrders = () => {
                   onClick={() => setShowFilters((previous) => !previous)}
                   className={`inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition ${
                     showFilters
-                      ? "border-indigo-200 bg-indigo-50 text-indigo-600"
-                      : "border-gray-200 text-gray-600 hover:border-indigo-200 hover:text-indigo-600"
+                      ? "border-[#6D5B3C]/50 bg-[#244838]/50 text-[#F3D45D]"
+                      : "border-[#6D5B3C]/40 text-[#D8D0B8] hover:border-[#6D5B3C]/50 hover:text-[#F3D45D]"
                   }`}
                 >
                   <Filter size={17} />
                   Filters
                 </button>
 
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-[#D8D0B8]/70">
                   {filteredOrders.length} Orders
                 </span>
               </div>
@@ -664,17 +664,17 @@ const AdminOrders = () => {
 
             {/* Filters */}
             {showFilters && (
-              <div className="mt-5 grid gap-4 rounded-xl border border-gray-100 bg-gray-50 p-4 sm:grid-cols-2">
+              <div className="mt-5 grid gap-4 rounded-xl border border-[#244838] bg-[#244838]/60 p-4 sm:grid-cols-2">
                 {/* Order Status */}
                 <div>
-                  <label className="mb-2 block text-sm font-semibold text-gray-700">
+                  <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                     Order Status
                   </label>
 
                   <select
                     value={statusFilter}
                     onChange={(event) => handleStatusFilter(event.target.value)}
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 outline-none focus:border-indigo-500"
+                    className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D]"
                   >
                     <option value="All Status">All Status</option>
 
@@ -692,7 +692,7 @@ const AdminOrders = () => {
 
                 {/* Payment Status */}
                 <div>
-                  <label className="mb-2 block text-sm font-semibold text-gray-700">
+                  <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                     Payment Status
                   </label>
 
@@ -701,7 +701,7 @@ const AdminOrders = () => {
                     onChange={(event) =>
                       handlePaymentFilter(event.target.value)
                     }
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 outline-none focus:border-indigo-500"
+                    className="w-full rounded-xl border border-[#6D5B3C]/40 bg-[#18372A] px-4 py-3 text-sm text-[#D8D0B8] outline-none focus:border-[#F3D45D]"
                   >
                     <option value="All Payments">All Payments</option>
 
@@ -716,7 +716,7 @@ const AdminOrders = () => {
                 <button
                   type="button"
                   onClick={resetFilters}
-                  className="text-left text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+                  className="text-left text-sm font-semibold text-[#F3D45D] hover:text-[#DDBB45]"
                 >
                   Reset Filters
                 </button>
@@ -730,7 +730,7 @@ const AdminOrders = () => {
 
           <div className="overflow-x-auto">
             <table className="w-full min-w-[1150px] text-left">
-              <thead className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
+              <thead className="bg-[#244838]/60 text-xs uppercase tracking-wide text-[#D8D0B8]/70">
                 <tr>
                   <th className="px-5 py-4 font-semibold">Order</th>
 
@@ -750,44 +750,44 @@ const AdminOrders = () => {
                 </tr>
               </thead>
 
-              <tbody className="divide-y divide-gray-100">
+              <tbody className="divide-y divide-[#244838]">
                 {paginatedOrders.map((order) => (
-                  <tr key={order.id} className="transition hover:bg-gray-50">
+                  <tr key={order.id} className="transition hover:bg-[#244838]/60">
                     {/* Order ID */}
                     <td className="px-5 py-4">
-                      <p className="text-sm font-bold text-indigo-600">
+                      <p className="text-sm font-bold text-[#F3D45D]">
                         {order.id}
                       </p>
 
-                      <p className="mt-1 text-xs text-gray-400">
+                      <p className="mt-1 text-xs text-[#D8D0B8]/50">
                         {order.items.length} Item(s)
                       </p>
                     </td>
 
                     {/* Customer */}
                     <td className="px-5 py-4">
-                      <p className="text-sm font-semibold text-gray-900">
+                      <p className="text-sm font-semibold text-[#FFF4D6]">
                         {order.customer.name}
                       </p>
 
-                      <p className="mt-1 text-xs text-gray-400">
+                      <p className="mt-1 text-xs text-[#D8D0B8]/50">
                         {order.customer.email}
                       </p>
                     </td>
 
                     {/* Date */}
-                    <td className="px-5 py-4 text-sm text-gray-600">
+                    <td className="px-5 py-4 text-sm text-[#D8D0B8]">
                       {formatDate(order.orderDate)}
                     </td>
 
                     {/* Total */}
-                    <td className="px-5 py-4 text-sm font-bold text-gray-900">
+                    <td className="px-5 py-4 text-sm font-bold text-[#FFF4D6]">
                       {formatCurrency(order.total)}
                     </td>
 
                     {/* Payment */}
                     <td className="px-5 py-4">
-                      <p className="text-sm text-gray-700">
+                      <p className="text-sm text-[#D8D0B8]">
                         {order.paymentMethod}
                       </p>
 
@@ -820,7 +820,7 @@ const AdminOrders = () => {
                         <button
                           type="button"
                           onClick={() => setSelectedOrder(order)}
-                          className="rounded-lg p-2 text-gray-400 transition hover:bg-indigo-50 hover:text-indigo-600"
+                          className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-[#244838]/50 hover:text-[#F3D45D]"
                           title="View Order"
                         >
                           <Eye size={17} />
@@ -832,7 +832,7 @@ const AdminOrders = () => {
                           onClick={() =>
                             window.alert(`More options for ${order.id}`)
                           }
-                          className="rounded-lg p-2 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                          className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-[#244838] hover:text-[#D8D0B8]"
                           title="More Options"
                         >
                           <MoreVertical size={17} />
@@ -842,7 +842,7 @@ const AdminOrders = () => {
                         <button
                           type="button"
                           onClick={() => setOrderToDelete(order)}
-                          className="rounded-lg p-2 text-gray-400 transition hover:bg-red-50 hover:text-red-600"
+                          className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-red-500/10 hover:text-red-600"
                           title="Delete Order"
                         >
                           <Trash2 size={17} />
@@ -858,22 +858,22 @@ const AdminOrders = () => {
           {/* Empty State */}
           {paginatedOrders.length === 0 && (
             <div className="px-6 py-16 text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100 text-gray-400">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#244838] text-[#D8D0B8]/50">
                 <ShoppingBag size={30} />
               </div>
 
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-[#FFF4D6]">
                 No Orders Found
               </h3>
 
-              <p className="mt-2 text-sm text-gray-500">
+              <p className="mt-2 text-sm text-[#D8D0B8]/70">
                 Try changing your search or filters.
               </p>
 
               <button
                 type="button"
                 onClick={resetFilters}
-                className="mt-4 text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+                className="mt-4 text-sm font-semibold text-[#F3D45D] hover:text-[#DDBB45]"
               >
                 Reset Filters
               </button>
@@ -882,18 +882,18 @@ const AdminOrders = () => {
 
           {/* Pagination */}
           {filteredOrders.length > 0 && (
-            <div className="flex flex-col gap-4 border-t border-gray-100 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-gray-500">
+            <div className="flex flex-col gap-4 border-t border-[#244838] px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-[#D8D0B8]/70">
                 Showing{" "}
-                <span className="font-semibold text-gray-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {(safePage - 1) * ordersPerPage + 1}
                 </span>{" "}
                 to{" "}
-                <span className="font-semibold text-gray-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {Math.min(safePage * ordersPerPage, filteredOrders.length)}
                 </span>{" "}
                 of{" "}
-                <span className="font-semibold text-gray-700">
+                <span className="font-semibold text-[#D8D0B8]">
                   {filteredOrders.length}
                 </span>{" "}
                 orders
@@ -904,7 +904,7 @@ const AdminOrders = () => {
                   type="button"
                   disabled={safePage === 1}
                   onClick={() => setCurrentPage((previous) => previous - 1)}
-                  className="inline-flex items-center gap-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-600 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="inline-flex items-center gap-1 rounded-lg border border-[#6D5B3C]/40 px-3 py-2 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]/60 disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   <ChevronLeft size={16} />
                   Previous
@@ -917,8 +917,8 @@ const AdminOrders = () => {
                     onClick={() => setCurrentPage(index + 1)}
                     className={`h-9 w-9 rounded-lg text-sm font-semibold transition ${
                       safePage === index + 1
-                        ? "bg-indigo-600 text-white"
-                        : "border border-gray-200 text-gray-600 hover:bg-gray-50"
+                        ? "bg-[#F3D45D] text-[#102A20]"
+                        : "border border-[#6D5B3C]/40 text-[#D8D0B8] hover:bg-[#244838]/60"
                     }`}
                   >
                     {index + 1}
@@ -929,7 +929,7 @@ const AdminOrders = () => {
                   type="button"
                   disabled={safePage === totalPages}
                   onClick={() => setCurrentPage((previous) => previous + 1)}
-                  className="inline-flex items-center gap-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-600 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+                  className="inline-flex items-center gap-1 rounded-lg border border-[#6D5B3C]/40 px-3 py-2 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]/60 disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   Next
                   <ChevronRight size={16} />
@@ -946,15 +946,15 @@ const AdminOrders = () => {
 
       {selectedOrder && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 px-4 py-6">
-          <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl">
+          <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-[#18372A] p-6 shadow-2xl">
             {/* Modal Header */}
             <div className="mb-6 flex items-center justify-between">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+                <p className="text-xs font-semibold uppercase tracking-wide text-[#D8D0B8]/50">
                   Order Details
                 </p>
 
-                <h2 className="mt-1 text-xl font-bold text-gray-900">
+                <h2 className="mt-1 text-xl font-bold text-[#FFF4D6]">
                   {selectedOrder.id}
                 </h2>
               </div>
@@ -962,64 +962,64 @@ const AdminOrders = () => {
               <button
                 type="button"
                 onClick={() => setSelectedOrder(null)}
-                className="rounded-lg p-2 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-[#244838] hover:text-[#D8D0B8]"
               >
                 <X size={20} />
               </button>
             </div>
 
             {/* Customer Information */}
-            <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
+            <div className="rounded-xl border border-[#244838] bg-[#244838]/60 p-4">
               <div className="mb-3 flex items-center gap-2">
-                <User size={18} className="text-indigo-600" />
+                <User size={18} className="text-[#F3D45D]" />
 
-                <h3 className="font-semibold text-gray-900">
+                <h3 className="font-semibold text-[#FFF4D6]">
                   Customer Information
                 </h3>
               </div>
 
-              <p className="text-sm font-semibold text-gray-800">
+              <p className="text-sm font-semibold text-[#FFF4D6]">
                 {selectedOrder.customer.name}
               </p>
 
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-[#D8D0B8]/70">
                 {selectedOrder.customer.email}
               </p>
 
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-[#D8D0B8]/70">
                 {selectedOrder.customer.phone}
               </p>
             </div>
 
             {/* Delivery Address */}
-            <div className="mt-4 rounded-xl border border-gray-100 bg-gray-50 p-4">
+            <div className="mt-4 rounded-xl border border-[#244838] bg-[#244838]/60 p-4">
               <div className="mb-3 flex items-center gap-2">
-                <MapPin size={18} className="text-indigo-600" />
+                <MapPin size={18} className="text-[#F3D45D]" />
 
-                <h3 className="font-semibold text-gray-900">
+                <h3 className="font-semibold text-[#FFF4D6]">
                   Delivery Address
                 </h3>
               </div>
 
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#D8D0B8]">
                 {selectedOrder.address.street}
               </p>
 
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1 text-sm text-[#D8D0B8]">
                 {selectedOrder.address.city}, {selectedOrder.address.state}
               </p>
 
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1 text-sm text-[#D8D0B8]">
                 PIN: {selectedOrder.address.pincode}
               </p>
             </div>
 
             {/* Order Items */}
-            <div className="mt-4 rounded-xl border border-gray-100 p-4">
+            <div className="mt-4 rounded-xl border border-[#244838] p-4">
               <div className="mb-4 flex items-center gap-2">
-                <Package size={18} className="text-indigo-600" />
+                <Package size={18} className="text-[#F3D45D]" />
 
-                <h3 className="font-semibold text-gray-900">Order Items</h3>
+                <h3 className="font-semibold text-[#FFF4D6]">Order Items</h3>
               </div>
 
               <div className="space-y-4">
@@ -1032,16 +1032,16 @@ const AdminOrders = () => {
                     />
 
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm font-semibold text-gray-800">
+                      <p className="text-sm font-semibold text-[#FFF4D6]">
                         {item.name}
                       </p>
 
-                      <p className="mt-1 text-xs text-gray-400">
+                      <p className="mt-1 text-xs text-[#D8D0B8]/50">
                         Quantity: {item.quantity}
                       </p>
                     </div>
 
-                    <p className="text-sm font-bold text-gray-900">
+                    <p className="text-sm font-bold text-[#FFF4D6]">
                       {formatCurrency(item.price * item.quantity)}
                     </p>
                   </div>
@@ -1053,7 +1053,7 @@ const AdminOrders = () => {
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               {/* Order Status */}
               <div>
-                <label className="mb-2 block text-sm font-semibold text-gray-700">
+                <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                   Order Status
                 </label>
 
@@ -1065,7 +1065,7 @@ const AdminOrders = () => {
                       event.target.value,
                     )
                   }
-                  className="w-full rounded-xl border border-gray-200 px-3 py-3 text-sm outline-none focus:border-indigo-500"
+                  className="w-full rounded-xl border border-[#6D5B3C]/40 px-3 py-3 text-sm outline-none focus:border-[#F3D45D]"
                 >
                   <option value="Pending">Pending</option>
 
@@ -1081,7 +1081,7 @@ const AdminOrders = () => {
 
               {/* Payment Status */}
               <div>
-                <label className="mb-2 block text-sm font-semibold text-gray-700">
+                <label className="mb-2 block text-sm font-semibold text-[#D8D0B8]">
                   Payment Status
                 </label>
 
@@ -1093,7 +1093,7 @@ const AdminOrders = () => {
                       event.target.value,
                     )
                   }
-                  className="w-full rounded-xl border border-gray-200 px-3 py-3 text-sm outline-none focus:border-indigo-500"
+                  className="w-full rounded-xl border border-[#6D5B3C]/40 px-3 py-3 text-sm outline-none focus:border-[#F3D45D]"
                 >
                   <option value="Pending">Pending</option>
 
@@ -1105,21 +1105,21 @@ const AdminOrders = () => {
             </div>
 
             {/* Order Summary */}
-            <div className="mt-5 rounded-xl bg-indigo-50 p-4">
+            <div className="mt-5 rounded-xl bg-[#244838]/50 p-4">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-indigo-600">Payment Method</span>
+                <span className="text-sm text-[#F3D45D]">Payment Method</span>
 
-                <span className="text-sm font-semibold text-indigo-700">
+                <span className="text-sm font-semibold text-[#DDBB45]">
                   {selectedOrder.paymentMethod}
                 </span>
               </div>
 
-              <div className="mt-3 flex items-center justify-between border-t border-indigo-100 pt-3">
-                <span className="font-semibold text-indigo-700">
+              <div className="mt-3 flex items-center justify-between border-t border-[#244838] pt-3">
+                <span className="font-semibold text-[#DDBB45]">
                   Total Amount
                 </span>
 
-                <span className="text-xl font-bold text-indigo-700">
+                <span className="text-xl font-bold text-[#DDBB45]">
                   {formatCurrency(selectedOrder.total)}
                 </span>
               </div>
@@ -1128,7 +1128,7 @@ const AdminOrders = () => {
             <button
               type="button"
               onClick={() => setSelectedOrder(null)}
-              className="mt-6 w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"
+              className="mt-6 w-full rounded-xl bg-[#F3D45D] px-4 py-3 text-sm font-semibold text-[#102A20] transition hover:bg-[#DDBB45]"
             >
               Close Details
             </button>
@@ -1142,28 +1142,28 @@ const AdminOrders = () => {
 
       {orderToDelete && (
         <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/50 px-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
+          <div className="w-full max-w-md rounded-2xl bg-[#18372A] p-6 shadow-2xl">
             <div className="flex items-center justify-between">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-red-100 text-red-600">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-red-500/15 text-red-600">
                 <Trash2 size={21} />
               </div>
 
               <button
                 type="button"
                 onClick={() => setOrderToDelete(null)}
-                className="rounded-lg p-2 text-gray-400 transition hover:bg-gray-100"
+                className="rounded-lg p-2 text-[#D8D0B8]/50 transition hover:bg-[#244838]"
               >
                 <X size={20} />
               </button>
             </div>
 
-            <h2 className="mt-5 text-xl font-bold text-gray-900">
+            <h2 className="mt-5 text-xl font-bold text-[#FFF4D6]">
               Delete Order?
             </h2>
 
-            <p className="mt-2 text-sm leading-6 text-gray-500">
+            <p className="mt-2 text-sm leading-6 text-[#D8D0B8]/70">
               Are you sure you want to delete order{" "}
-              <span className="font-semibold text-gray-700">
+              <span className="font-semibold text-[#D8D0B8]">
                 {orderToDelete.id}
               </span>
               ? This action cannot be undone in this frontend demo.
@@ -1173,7 +1173,7 @@ const AdminOrders = () => {
               <button
                 type="button"
                 onClick={() => setOrderToDelete(null)}
-                className="rounded-xl border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+                className="rounded-xl border border-[#6D5B3C]/40 px-4 py-2.5 text-sm font-semibold text-[#D8D0B8] transition hover:bg-[#244838]/60"
               >
                 Cancel
               </button>
